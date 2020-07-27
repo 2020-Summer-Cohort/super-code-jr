@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.clippy-display, .user-display,
+.question-display{
+    color: greenyellow;
+}
+.game-container{
+    background-color: greenyellow;
+}
+.rendered-display{
+    color: lightgray;
+}
