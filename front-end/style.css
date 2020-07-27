@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+  header {
+    font-family: 'VT323', monospace;
+    color: teal;
+  }
+
+  a {
+      color: teal;
+  }
+
+  a:visited {
+      color: teal;
+  }
+
+  body {
+      font-family: 'VT323', monospace;
+      background-color: black;
+      color: greenyellow;
+  }
+
+  p {
+      margin-left: 10px;
+  }
+
+  footer {
+    margin-top: 200px;
+    font-family: 'VT323', monospace;
+    color: greenyellow;
+  }
