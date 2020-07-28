@@ -1,54 +1,113 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+.about-us-header {
+    font-family: "VT323", monospace;
+    color: var(--text);
+  }
 
-html {
-  text-align: center;
+.bio {
+    border: solid 5px var(--cyan);
+    padding: 10px;
+    box-shadow: 0px 0px 20px 10px var(--cyan);
+    box-shadow: inset 0px 0px 10px 7px var(--cyan);
+  }
+  
+.bio-anchors, .bio-info, .bio-skills {
+  color: var(--text);
 }
 
-header {
-  font-family: "VT323", monospace;
-  color: teal;
+.bio-anchors:visited {
+  color: var(--text);
 }
-
-a {
-  color: teal;
-}
-
-a:visited {
-  color: teal;
-}
-
-body {
-  font-family: "VT323", monospace;
-  background-color: black;
-  color: greenyellow;
-}
-
-p {
-  margin-left: 10px;
-}
-
-.home {
-}
-
-footer {
-  margin-top: 15px;
-  font-family: "VT323", monospace;
-  color: greenyellow;
-}
-img {
+.bio-img {
   height: 100px;
   width: 100px;
   border-radius: 50px;
 }
 
 .bio-grid {
-  border: solid 5px greenyellow;
-  box-shadow: 0px 0px 10px 7px greenyellow;
+  border: solid 5px var(--cyan);
+  box-shadow: 0px 0px 10px 7px var(--cyan);
+  text-align: center;
+}
+.display-container {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    border: 2px solid var(--cyan);
+    height: 92vh;
+    width: 100vw;
+}
+.clippy-display{
+    display: flex;
+    text-align: center;
+}
+.clippy-display p {
+    padding-top:2em;
+}
+.clippy-img{
+    max-height: 25vh;
+    padding:3px;
+    margin:2px;
+    border: 2px solid var(--cyan);
+    box-shadow: 0px 0px 7px 2px var(--cyan);
+}
+.clippy-display, .question-display, 
+.rendered-display, .user-display, .header-display{
+    background-color: var(--offBlack);
+    border: 2px solid var(--cyan);
+    box-shadow: inset 0px 0px 5px 1px var(--cyan);
+}
+.header-display{
+    display:flex;
+    justify-content:center;
+    height: 8vh;
+}
+.home-button {
+    padding-top:1em;
+}
+.radio-img{
+    max-height: 25vh;
+    padding:3px;
+    margin:2px;
+    border: 2px solid var(--cyan);
+    box-shadow: 0px 0px 7px 2px var(--cyan);
+}
+.user-display{
+    display: flex;
+    text-align:center;
+}
+.user-display p {
+    padding-top: 2em;
 }
 
-.bio {
-  border: solid 5px greenyellow;
-  padding: 10px;
-  box-shadow: 0px 0px 20px 10px greenyellow;
-  box-shadow: inset 0px 0px 10px 7px greenyellow;
+/* ---------------------------------------------------------------------------------- */
+
+
+
+
+
+
+.bio-container {
+  display:flex;
+  flex-direction: column;
+  font-family: "VT323", monospace;
+  background-color: var(--offBlack);
+  color: var(--cyan);
+  height: 100vh;
 }
+
+.about-us-header{
+    text-align: center;
+    padding-bottom:1em;
+}
+
+.footer {
+  margin-top: 15px;
+  padding-top:1em;
+  font-family: "VT323", monospace;
+  color: var(--text);
+  background-color: var(--offBlack);
+}
+
+
+
