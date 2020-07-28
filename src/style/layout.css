@@ -3,9 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --textColor:#abebeb;
+}
 .clippy-display, .user-display,
 .question-display{
-    color: greenyellow;
+    color: var(--textColor);
 }
 .game-container{
     background-color: greenyellow;

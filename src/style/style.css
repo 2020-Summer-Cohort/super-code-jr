@@ -1,16 +1,43 @@
+:root{
+    --cyan:#51E8F0;
+    --offBlack:#18181a;
+}
 .display-container {
     display:grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 3fr 1fr;
-    border: 2px solid greenyellow;
+    border: 2px solid var(--cyan);
     height: 100vh;
     width: 100vw;
 }
+.clippy-display{
+    display: flex;
+    text-align: center;
+}
+.clippy-display p {
+    padding-top:2em;
+}
 .clippy-img{
-    max-height:100px;
+    max-height: 25vh;
+    padding:3px;
+    margin:2px;
+    border: 2px solid var(--cyan);
 }
 .rendered-display, .question-display, 
 .clippy-display, .user-display{
-    background-color: black;
-    border: 2px solid greenyellow;
+    background-color: var(--offBlack);
+    border: 2px solid var(--cyan);
+}
+.radio-img{
+    max-height: 25vh;
+    padding:3px;
+    margin:2px;
+    border: 2px solid var(--cyan);
+}
+.user-display{
+    display: flex;
+    text-align:center;
+}
+.user-display p {
+    padding-top: 2em;
 }
