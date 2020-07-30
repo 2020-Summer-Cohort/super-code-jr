@@ -10,12 +10,8 @@ import java.util.ArrayList;
 public class Populator implements CommandLineRunner {
     @Autowired QuestionRepo questionRepo;
 
-
-
     @Override
     public void run(String... args) throws Exception {
-
-
 
         Question question1 = new Question("JavaScript",
                 "export{\n" +
@@ -44,6 +40,6 @@ public class Populator implements CommandLineRunner {
                 "Check your brackets!",
                 "You've solved my HTML puzzle!") ;
 
-
+                questionRepo.save(question1);
     }
 }

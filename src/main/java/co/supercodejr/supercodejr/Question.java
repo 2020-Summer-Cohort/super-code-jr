@@ -1,19 +1,21 @@
 package co.supercodejr.supercodejr;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import java.util.ArrayList;
 import java.util.Collection;
 
+@Entity
 public class Question {
-
-
 
     @GeneratedValue
     @Id
     private long id;
 
     private String codeLanguage;
+    @Lob
     private String wholeQuestion;
     private String wrongCodeBlock;
     private String rightCodeBlock;
@@ -21,6 +23,8 @@ public class Question {
     private String codeyEndingDialogue;
     private String hintText;
     private String wholeQuestionCompletedDialogue;
+
+    protected Question (){}
 
     public Question( String codeLanguage, String wholeQuestion,  String wrongCodeBlock, String rightCodeBlock, String codeyStartingDialogue, String codeyEndingDialogue, String hintText, String wholeQuestionCompletedDialogue) {
 

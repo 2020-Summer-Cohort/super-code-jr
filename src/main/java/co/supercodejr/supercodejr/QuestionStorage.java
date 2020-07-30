@@ -20,4 +20,8 @@ public class QuestionStorage {
             return questionRepo.save(question);
         }
 
+    public Question findQuestionById(Long id) {
+        return questionRepo.findById(id).get();
+    }
+
 }
