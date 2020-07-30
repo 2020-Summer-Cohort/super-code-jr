@@ -1,11 +1,6 @@
 package co.supercodejr.supercodejr;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Lob;
-import java.util.ArrayList;
-import java.util.Collection;
+import javax.persistence.*;
 
 @Entity
 public class Question {
@@ -13,12 +8,19 @@ public class Question {
     @GeneratedValue
     @Id
     private long id;
-
     private String codeLanguage;
     @Lob
-    private String wholeQuestion;
+    @Column(length = 100000)
     private String wrongCodeBlock;
-    private String rightCodeBlock;
+    @Lob
+    @Column(length = 100000)
+    private String correctCodeBlock;
+    @Lob
+    @Column(length = 100000)
+    private String iframeWrong;
+    @Lob
+    @Column(length = 100000)
+    private String iframeCorrect;
     private String codeyStartingDialogue;
     private String codeyEndingDialogue;
     private String hintText;
@@ -26,37 +28,45 @@ public class Question {
 
     protected Question (){}
 
-    public Question( String codeLanguage, String wholeQuestion,  String wrongCodeBlock, String rightCodeBlock, String codeyStartingDialogue, String codeyEndingDialogue, String hintText, String wholeQuestionCompletedDialogue) {
+    public Question(String codeLanguage, String wrongCodeBlock, String correctCodeBlock, String iframeWrong, String iframeCorrect, String codeyStartingDialogue, String codeyEndingDialogue, String hintText, String wholeQuestionCompletedDialogue) {
 
         this.codeLanguage = codeLanguage;
-        this.wholeQuestion = wholeQuestion;
         this.wrongCodeBlock = wrongCodeBlock;
-        this.rightCodeBlock = rightCodeBlock;
+        this.correctCodeBlock = correctCodeBlock;
+        this.iframeWrong = iframeWrong;
+        this.iframeCorrect = iframeCorrect;
         this.codeyStartingDialogue = codeyStartingDialogue;
         this.codeyEndingDialogue = codeyEndingDialogue;
         this.hintText = hintText;
         this.wholeQuestionCompletedDialogue = wholeQuestionCompletedDialogue;
     }
 
+    public long getId() {
+        return id;
+    }
+
     public String getCodeLanguage() {
         return codeLanguage;
     }
-
-    public String getWholeQuestion() {
-        return wholeQuestion;
-    }
-
 
     public String getCodeyStartingDialogue() {
         return codeyStartingDialogue;
     }
 
-    public String getRightCodeBlock() {
-        return rightCodeBlock;
+    public String getCorrectCodeBlock() {
+        return correctCodeBlock;
     }
 
     public String getWrongCodeBlock() {
         return wrongCodeBlock;
+    }
+
+    public String getIframeWrong() {
+        return iframeWrong;
+    }
+
+    public String getIframeCorrect() {
+        return iframeCorrect;
     }
 
     public String getCodeyEndingDialogue() {

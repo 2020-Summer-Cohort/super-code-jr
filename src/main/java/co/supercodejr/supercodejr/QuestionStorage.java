@@ -14,8 +14,6 @@ public class QuestionStorage {
         return questionRepo;
     }
 
-
-
     public Question save(Question question){
             return questionRepo.save(question);
         }
