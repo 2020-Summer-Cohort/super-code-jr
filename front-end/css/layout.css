@@ -9,18 +9,35 @@
   --glow1: #e49a39;
   --text: #ebd8a6;
 }
+
 .bio-grid {
+  margin: 2em;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  column-gap: 2em;
+  row-gap: 2em;
 }
 .clippy-display,
 .user-display,
 .question-display,
-.header-display {
+.header-display,
+.bio-grid,
+.about-us-header,
+.footer-buttons {
   color: var(--text);
   text-shadow: 1px 1px 4px black, 0 0 1em var(--glow1), 0 0 0.2em var(--glow1);
 }
+
+.footer-buttons {
+  padding-top: 2em;
+  text-align: center;
+}
+.footer-buttons a {
+  color: var(--text);
+  text-shadow: 1px 1px 4px black, 0 0 1em var(--glow1), 0 0 0.2em var(--glow1);
+}
+
 .game-container {
   background-color: greenyellow;
 }
