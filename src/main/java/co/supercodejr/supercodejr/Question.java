@@ -22,8 +22,11 @@ public class Question {
     @Column(length = 100000)
     private String iframeCorrect;
     private String codeyStartingDialogue;
+    @Lob
     private String codeyEndingDialogue;
+    @Lob
     private String hintText;
+    @Lob
     private String wholeQuestionCompletedDialogue;
 
     protected Question (){}
