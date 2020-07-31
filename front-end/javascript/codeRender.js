@@ -14,26 +14,26 @@ const renderCorrectIFrameContent = () => {
 }
 
 const renderWrongCodeBlock = (question) => {
-  codeTag = document.querySelector(".question-code-block")
-  codeTag.innerHTML = `${question.wrongCodeBlock}`
+  const codeTag = document.querySelector(".question-code-block")
+  codeTag.innerText = `${question.iframeWrong}`
 }
 
 const renderCorrectCodeBlock = (question) => {
-  codeTag = document.querySelector(".question-code-block")
+  const  codeTag = document.querySelector(".question-code-block")
   codeTag.innerHTML = `${question.rightCodeBlock}`
 }
 
 const renderCodeyDialogue = (question) => {
-  pTag = document.querySelector(".codey-dialogue")
+  const pTag = document.querySelector(".codey-dialogue")
   pTag.innerHTML = `${question.codeyStartingDialogue}`
 }
 
 const renderGroundControl = (question) => {
-  pTag = document.querySelector(".ground-control-dialogue")
+  const pTag = document.querySelector(".ground-control-dialogue")
   pTag.innerHTML= `${question.wholeQuestionCompletedDialogue}`
 }
 
 const renderGroundControlHint = (question) => {
-  pTag = document.querySelector(".ground-control-dialogue")
+  const pTag = document.querySelector(".ground-control-dialogue")
   pTag.innerHTML = `${question.hintText}`
 }

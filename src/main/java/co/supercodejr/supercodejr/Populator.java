@@ -13,7 +13,7 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Question question1 = new Question("HTML/CSS", "                  &lt;&excl;&#68;&#79;&#67;&#84;&#89;&#80;&#69;&#32;&#104;&#116;&#109;&#108;&gt;\n" +
+        Question question1 = new Question("HTML/CSS", "&lt;&excl;&#68;&#79;&#67;&#84;&#89;&#80;&#69;&#32;&#104;&#116;&#109;&#108;&gt;\n" +
                 "                  &lt;&#104;&#116;&#109;&#108;&#32;&#108;&#97;&#110;&#103;&equals;&quot;&#101;&#110;&quot;&gt;\n" +
                 "                  &#32;&#32;&lt;&#104;&#101;&#97;&#100;&gt;\n" +
                 "                  &#32;&#32;&#32;&#32;&lt;&#109;&#101;&#116;&#97;&#32;&#99;&#104;&#97;&#114;&#115;&#101;&#116;&equals;&quot;&#85;&#84;&#70;&#45;&#56;&quot;&#32;&sol;&gt;\n" +
@@ -44,7 +44,7 @@ public class Populator implements CommandLineRunner {
                 "    &#32;&#32;&#32;&#32;&lt;&sol;&#99;&#111;&#110;&#116;&#97;&#105;&#110;&#101;&#114;&gt;\n" +
                 "    &#32;&#32;&#32;&#32;&lt;&#115;&#99;&#114;&#105;&#112;&#116;&#32;&#115;&#114;&#99;&equals;&quot;&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&sol;&#99;&#111;&#100;&#101;&#82;&#101;&#110;&#100;&#101;&#114;&period;&#106;&#115;&quot;&#32;&#116;&#121;&#112;&#101;&equals;&quot;&#109;&#111;&#100;&#117;&#108;&#101;&quot;&gt;&lt;&sol;&#115;&#99;&#114;&#105;&#112;&#116;&gt;\n" +
                 "    &#32;&#32;&lt;&sol;&#98;&#111;&#100;&#121;&gt;\n" +
-                "    &lt;&sol;&#104;&#116;&#109;&#108;&gt;","                  <html lang=\"en\">\n" +
+                "    &lt;&sol;&#104;&#116;&#109;&#108;&gt;","<html lang=\"en\">\n" +
                 "                    <head>\n" +
                 "                      <meta charset=\"UTF-8\" />\n" +
                 "                      <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n" +
@@ -58,7 +58,7 @@ public class Populator implements CommandLineRunner {
                 "                      </container>\n" +
                 "                      <script src=\"javascript/codeRender.js\" type=\"module\"></script>\n" +
                 "                    </body>\n" +
-                "                  </html>","    <!DOCTYPE html>\n" +
+                "                  </html>","<!DOCTYPE html>\n" +
                 "    <html lang=\"en\">\n" +
                 "      <head>\n" +
                 "        <meta charset=\"UTF-8\" />\n" +
@@ -78,7 +78,7 @@ public class Populator implements CommandLineRunner {
                 "It-it's not like I expected you to fix it!",
                 "Careful not to double type a letter!","Congratulations!, Remember to take your time typing, Your" +
                 " errors will quickly add up!");
-        Question question2 = new Question("HTML/CSS", "                  &lt;&excl;&#68;&#79;&#67;&#84;&#89;&#80;&#69;&#32;&#104;&#116;&#109;&#108;&gt;\n" +
+        Question question2 = new Question("HTML/CSS", "&lt;&excl;&#68;&#79;&#67;&#84;&#89;&#80;&#69;&#32;&#104;&#116;&#109;&#108;&gt;\n" +
                 "                  &lt;&#104;&#116;&#109;&#108;&#32;&#108;&#97;&#110;&#103;&equals;&quot;&#101;&#110;&quot;&gt;\n" +
                 "                  &#32;&#32;&lt;&#104;&#101;&#97;&#100;&gt;\n" +
                 "                  &#32;&#32;&#32;&#32;&lt;&#109;&#101;&#116;&#97;&#32;&#99;&#104;&#97;&#114;&#115;&#101;&#116;&equals;&quot;&#85;&#84;&#70;&#45;&#56;&quot;&#32;&sol;&gt;\n" +
