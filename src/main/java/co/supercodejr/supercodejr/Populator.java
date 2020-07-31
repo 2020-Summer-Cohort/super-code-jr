@@ -16,137 +16,6 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Question question1 = new Question("HTML/CSS", "&lt;&excl;&#68;&#79;&#67;&#84;&#89;&#80;&#69;&#32;&#104;&#116;&#109;&#108;&gt;\n" +
-                "                  &lt;&#104;&#116;&#109;&#108;&#32;&#108;&#97;&#110;&#103;&equals;&quot;&#101;&#110;&quot;&gt;\n" +
-                "                  &#32;&#32;&lt;&#104;&#101;&#97;&#100;&gt;\n" +
-                "                  &#32;&#32;&#32;&#32;&lt;&#109;&#101;&#116;&#97;&#32;&#99;&#104;&#97;&#114;&#115;&#101;&#116;&equals;&quot;&#85;&#84;&#70;&#45;&#56;&quot;&#32;&sol;&gt;\n" +
-                "                  &#32;&#32;&#32;&#32;&lt;&#109;&#101;&#116;&#97;&#32;&#110;&#97;&#109;&#101;&equals;&quot;&#118;&#105;&#101;&#119;&#112;&#111;&#114;&#116;&quot;&#32;&#99;&#111;&#110;&#116;&#101;&#110;&#116;&equals;&quot;&#119;&#105;&#100;&#116;&#104;&equals;&#100;&#101;&#118;&#105;&#99;&#101;&#45;&#119;&#105;&#100;&#116;&#104;&comma;&#32;&#105;&#110;&#105;&#116;&#105;&#97;&#108;&#45;&#115;&#99;&#97;&#108;&#101;&equals;&#49;&period;&#48;&quot;&#32;&sol;&gt;\n" +
-                "                  &#32;&#32;&#32;&#32;&lt;&#116;&#105;&#116;&#108;&#101;&gt;&#68;&#111;&#99;&#117;&#109;&#101;&#110;&#116;&lt;&sol;&#116;&#105;&#116;&#108;&#101;&gt;\n" +
-                "                  &#32;&#32;&#32;&#32;&lt;&#108;&#105;&#110;&#107;&#32;&#114;&#101;&#108;&equals;&quot;&#115;&#116;&#121;&#108;&#101;&#115;&#104;&#101;&#101;&#116;&quot;&#32;&#104;&#114;&#101;&#102;&equals;&quot;&period;&sol;&#99;&#115;&#115;&sol;&#114;&#101;&#110;&#100;&#101;&#114;&#101;&#100;&#45;&#99;&#111;&#100;&#101;&period;&#99;&#115;&#115;&quot;&#32;&sol;&gt;\n" +
-                "                  &#32;&#32;&lt;&sol;&#104;&#101;&#97;&#100;&gt;\n" +
-                "                  &#32;&#32;&lt;&#98;&#111;&#100;&#121;&gt;\n" +
-                "                  &#32;&#32;&#32;&#32;&lt;&#99;&#111;&#110;&#116;&#97;&#105;&#110;&#101;&#114;&#32;&#99;&#108;&#97;&#115;&#115;&equals;&quot;&#114;&#101;&#110;&#100;&#101;&#114;&#101;&#100;&#45;&#99;&#111;&#100;&#101;&#45;&#99;&#111;&#110;&#116;&#97;&#105;&#110;&#101;&#114;&quot;&gt;\n" +
-                "                  &#32;&#32;&#32;&#32;&#32;&#32;&lt;&#104;&#49;&gt;&#66;&#97;&#110;&#97;&#110;&#97;&#115;&lt;&sol;&#104;&#49;&gt;\n" +
-                "                  &#32;&#32;&#32;&#32;&#32;&#32;&lt;&#105;&#109;&#103;<span class = \"interactive-answer1\"> srrc</span>&equals;&quot;&#105;&#109;&#97;&#103;&#101;&#115;&sol;&#114;&#97;&#100;&#105;&#111;&#84;&#111;&#119;&#101;&#114;&period;&#106;&#112;&#103;&quot;&#32;&sol;&gt;\n" +
-                "                  &#32;&#32;&#32;&#32;&lt;&sol;&#99;&#111;&#110;&#116;&#97;&#105;&#110;&#101;&#114;&gt;\n" +
-                "                  &#32;&#32;&#32;&#32;&lt;&#115;&#99;&#114;&#105;&#112;&#116;&#32;&#115;&#114;&#99;&equals;&quot;&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&sol;&#99;&#111;&#100;&#101;&#82;&#101;&#110;&#100;&#101;&#114;&period;&#106;&#115;&quot;&#32;&#116;&#121;&#112;&#101;&equals;&quot;&#109;&#111;&#100;&#117;&#108;&#101;&quot;&gt;&lt;&sol;&#115;&#99;&#114;&#105;&#112;&#116;&gt;\n" +
-                "                  &#32;&#32;&lt;&sol;&#98;&#111;&#100;&#121;&gt;\n" +
-                "                  &lt;&sol;&#104;&#116;&#109;&#108;&gt;","\n" +
-                "    &lt;&excl;&#68;&#79;&#67;&#84;&#89;&#80;&#69;&#32;&#104;&#116;&#109;&#108;&gt;\n" +
-                "    &lt;&#104;&#116;&#109;&#108;&#32;&#108;&#97;&#110;&#103;&equals;&quot;&#101;&#110;&quot;&gt;\n" +
-                "    &#32;&#32;&lt;&#104;&#101;&#97;&#100;&gt;\n" +
-                "    &#32;&#32;&#32;&#32;&lt;&#109;&#101;&#116;&#97;&#32;&#99;&#104;&#97;&#114;&#115;&#101;&#116;&equals;&quot;&#85;&#84;&#70;&#45;&#56;&quot;&#32;&sol;&gt;\n" +
-                "    &#32;&#32;&#32;&#32;&lt;&#109;&#101;&#116;&#97;&#32;&#110;&#97;&#109;&#101;&equals;&quot;&#118;&#105;&#101;&#119;&#112;&#111;&#114;&#116;&quot;&#32;&#99;&#111;&#110;&#116;&#101;&#110;&#116;&equals;&quot;&#119;&#105;&#100;&#116;&#104;&equals;&#100;&#101;&#118;&#105;&#99;&#101;&#45;&#119;&#105;&#100;&#116;&#104;&comma;&#32;&#105;&#110;&#105;&#116;&#105;&#97;&#108;&#45;&#115;&#99;&#97;&#108;&#101;&equals;&#49;&period;&#48;&quot;&#32;&sol;&gt;\n" +
-                "    &#32;&#32;&#32;&#32;&lt;&#116;&#105;&#116;&#108;&#101;&gt;&#68;&#111;&#99;&#117;&#109;&#101;&#110;&#116;&lt;&sol;&#116;&#105;&#116;&#108;&#101;&gt;\n" +
-                "    &#32;&#32;&#32;&#32;&lt;&#108;&#105;&#110;&#107;&#32;&#114;&#101;&#108;&equals;&quot;&#115;&#116;&#121;&#108;&#101;&#115;&#104;&#101;&#101;&#116;&quot;&#32;&#104;&#114;&#101;&#102;&equals;&quot;&period;&sol;&#99;&#115;&#115;&sol;&#114;&#101;&#110;&#100;&#101;&#114;&#101;&#100;&#45;&#99;&#111;&#100;&#101;&period;&#99;&#115;&#115;&quot;&#32;&sol;&gt;\n" +
-                "    &#32;&#32;&lt;&sol;&#104;&#101;&#97;&#100;&gt;\n" +
-                "    &#32;&#32;&lt;&#98;&#111;&#100;&#121;&gt;\n" +
-                "    &#32;&#32;&#32;&#32;&lt;&#99;&#111;&#110;&#116;&#97;&#105;&#110;&#101;&#114;&#32;&#99;&#108;&#97;&#115;&#115;&equals;&quot;&#114;&#101;&#110;&#100;&#101;&#114;&#101;&#100;&#45;&#99;&#111;&#100;&#101;&#45;&#99;&#111;&#110;&#116;&#97;&#105;&#110;&#101;&#114;&quot;&gt;\n" +
-                "    &#32;&#32;&#32;&#32;&#32;&#32;&lt;&#104;&#49;&gt;&#66;&#97;&#110;&#97;&#110;&#97;&#115;&lt;&sol;&#104;&#49;&gt;\n" +
-                "    &#32;&#32;&#32;&#32;&#32;&#32;&lt;&#105;&#109;&#103;&#32;&#115;&#114;&#99;&equals;&quot;&#105;&#109;&#97;&#103;&#101;&#115;&sol;&#114;&#97;&#100;&#105;&#111;&#84;&#111;&#119;&#101;&#114;&period;&#106;&#112;&#103;&quot;&#32;&sol;&gt;\n" +
-                "    &#32;&#32;&#32;&#32;&lt;&sol;&#99;&#111;&#110;&#116;&#97;&#105;&#110;&#101;&#114;&gt;\n" +
-                "    &#32;&#32;&#32;&#32;&lt;&#115;&#99;&#114;&#105;&#112;&#116;&#32;&#115;&#114;&#99;&equals;&quot;&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&sol;&#99;&#111;&#100;&#101;&#82;&#101;&#110;&#100;&#101;&#114;&period;&#106;&#115;&quot;&#32;&#116;&#121;&#112;&#101;&equals;&quot;&#109;&#111;&#100;&#117;&#108;&#101;&quot;&gt;&lt;&sol;&#115;&#99;&#114;&#105;&#112;&#116;&gt;\n" +
-                "    &#32;&#32;&lt;&sol;&#98;&#111;&#100;&#121;&gt;\n" +
-                "    &lt;&sol;&#104;&#116;&#109;&#108;&gt;","<html lang=\"en\">\n" +
-                "                    <head>\n" +
-                "                      <meta charset=\"UTF-8\" />\n" +
-                "                      <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n" +
-                "                      <title>Document</title>\n" +
-                "                      <link rel=\"stylesheet\" href=\"./css/rendered-code.css\" />\n" +
-                "                    </head>\n" +
-                "                    <body>\n" +
-                "                      <container class=\"rendered-code-container\">\n" +
-                "                        <h1>Bananas</h1>\n" +
-                "                        <img srrc=\"images/radioTower.jpg\" />\n" +
-                "                      </container>\n" +
-                "                      <script src=\"javascript/codeRender.js\" type=\"module\"></script>\n" +
-                "                    </body>\n" +
-                "                  </html>","<!DOCTYPE html>\n" +
-                "    <html lang=\"en\">\n" +
-                "      <head>\n" +
-                "        <meta charset=\"UTF-8\" />\n" +
-                "        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n" +
-                "        <title>Document</title>\n" +
-                "        <link rel=\"stylesheet\" href=\"./css/rendered-code.css\" />\n" +
-                "      </head>\n" +
-                "      <body>\n" +
-                "        <container class=\"rendered-code-container\">\n" +
-                "          <h1>Bananas</h1>\n" +
-                "          <img src=\"images/radioTower.jpg\" />\n" +
-                "        </container>\n" +
-                "        <script src=\"javascript/codeRender.js\" type=\"module\"></script>\n" +
-                "      </body>\n" +
-                "    </html>",
-                "You can't even compare to me!",
-                "It-it's not like I expected you to fix it!",
-                "Careful not to double type a letter!","Congratulations!, Remember to take your time typing, Your" +
-                " errors will quickly add up!");
-        Question question2 = new Question("HTML/CSS", "&lt;&excl;&#68;&#79;&#67;&#84;&#89;&#80;&#69;&#32;&#104;&#116;&#109;&#108;&gt;\n" +
-                "                  &lt;&#104;&#116;&#109;&#108;&#32;&#108;&#97;&#110;&#103;&equals;&quot;&#101;&#110;&quot;&gt;\n" +
-                "                  &#32;&#32;&lt;&#104;&#101;&#97;&#100;&gt;\n" +
-                "                  &#32;&#32;&#32;&#32;&lt;&#109;&#101;&#116;&#97;&#32;&#99;&#104;&#97;&#114;&#115;&#101;&#116;&equals;&quot;&#85;&#84;&#70;&#45;&#56;&quot;&#32;&sol;&gt;\n" +
-                "                  &#32;&#32;&#32;&#32;&lt;&#109;&#101;&#116;&#97;&#32;&#110;&#97;&#109;&#101;&equals;&quot;&#118;&#105;&#101;&#119;&#112;&#111;&#114;&#116;&quot;&#32;&#99;&#111;&#110;&#116;&#101;&#110;&#116;&equals;&quot;&#119;&#105;&#100;&#116;&#104;&equals;&#100;&#101;&#118;&#105;&#99;&#101;&#45;&#119;&#105;&#100;&#116;&#104;&comma;&#32;&#105;&#110;&#105;&#116;&#105;&#97;&#108;&#45;&#115;&#99;&#97;&#108;&#101;&equals;&#49;&period;&#48;&quot;&#32;&sol;&gt;\n" +
-                "                  &#32;&#32;&#32;&#32;&lt;&#116;&#105;&#116;&#108;&#101;&gt;&#68;&#111;&#99;&#117;&#109;&#101;&#110;&#116;&lt;&sol;&#116;&#105;&#116;&#108;&#101;&gt;\n" +
-                "                  &#32;&#32;&#32;&#32;&lt;&#108;&#105;&#110;&#107;&#32;&#114;&#101;&#108;&equals;&quot;&#115;&#116;&#121;&#108;&#101;&#115;&#104;&#101;&#101;&#116;&quot;&#32;&#104;&#114;&#101;&#102;&equals;&quot;&period;&sol;&#99;&#115;&#115;&sol;&#114;&#101;&#110;&#100;&#101;&#114;&#101;&#100;&#45;&#99;&#111;&#100;&#101;&period;&#99;&#115;&#115;&quot;&#32;&sol;&gt;\n" +
-                "                  &#32;&#32;&lt;&sol;&#104;&#101;&#97;&#100;&gt;\n" +
-                "                  &#32;&#32;&lt;&#98;&#111;&#100;&#121;&gt;\n" +
-                "                  &#32;&#32;&#32;&#32;&lt;&#99;&#111;&#110;&#116;&#97;&#105;&#110;&#101;&#114;&#32;&#99;&#108;&#97;&#115;&#115;&equals;&quot;&#114;&#101;&#110;&#100;&#101;&#114;&#101;&#100;&#45;&#99;&#111;&#100;&#101;&#45;&#99;&#111;&#110;&#116;&#97;&#105;&#110;&#101;&#114;&quot;&gt;\n" +
-                "                  &#32;&#32;&#32;&#32;&#32;&#32;&lt;&#104;&#49;&gt;&#66;&#97;&#110;&#97;&#110;&#97;&#115;&lt;&sol;&#104;&#49;&gt;\n" +
-                "                  &#32;&#32;&#32;&#32;&#32;&#32;&lt;&#105;&#109;&#103;<span class = \"interactive-answer1\"> srrc</span>&equals;&quot;&#105;&#109;&#97;&#103;&#101;&#115;&sol;&#114;&#97;&#100;&#105;&#111;&#84;&#111;&#119;&#101;&#114;&period;&#106;&#112;&#103;&quot;&#32;&sol;&gt;\n" +
-                "                  &#32;&#32;&#32;&#32;&lt;&sol;&#99;&#111;&#110;&#116;&#97;&#105;&#110;&#101;&#114;&gt;\n" +
-                "                  &#32;&#32;&#32;&#32;&lt;&#115;&#99;&#114;&#105;&#112;&#116;&#32;&#115;&#114;&#99;&equals;&quot;&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&sol;&#99;&#111;&#100;&#101;&#82;&#101;&#110;&#100;&#101;&#114;&period;&#106;&#115;&quot;&#32;&#116;&#121;&#112;&#101;&equals;&quot;&#109;&#111;&#100;&#117;&#108;&#101;&quot;&gt;&lt;&sol;&#115;&#99;&#114;&#105;&#112;&#116;&gt;\n" +
-                "                  &#32;&#32;&lt;&sol;&#98;&#111;&#100;&#121;&gt;\n" +
-                "                  &lt;&sol;&#104;&#116;&#109;&#108;&gt;","\n" +
-                "    &lt;&excl;&#68;&#79;&#67;&#84;&#89;&#80;&#69;&#32;&#104;&#116;&#109;&#108;&gt;\n" +
-                "    &lt;&#104;&#116;&#109;&#108;&#32;&#108;&#97;&#110;&#103;&equals;&quot;&#101;&#110;&quot;&gt;\n" +
-                "    &#32;&#32;&lt;&#104;&#101;&#97;&#100;&gt;\n" +
-                "    &#32;&#32;&#32;&#32;&lt;&#109;&#101;&#116;&#97;&#32;&#99;&#104;&#97;&#114;&#115;&#101;&#116;&equals;&quot;&#85;&#84;&#70;&#45;&#56;&quot;&#32;&sol;&gt;\n" +
-                "    &#32;&#32;&#32;&#32;&lt;&#109;&#101;&#116;&#97;&#32;&#110;&#97;&#109;&#101;&equals;&quot;&#118;&#105;&#101;&#119;&#112;&#111;&#114;&#116;&quot;&#32;&#99;&#111;&#110;&#116;&#101;&#110;&#116;&equals;&quot;&#119;&#105;&#100;&#116;&#104;&equals;&#100;&#101;&#118;&#105;&#99;&#101;&#45;&#119;&#105;&#100;&#116;&#104;&comma;&#32;&#105;&#110;&#105;&#116;&#105;&#97;&#108;&#45;&#115;&#99;&#97;&#108;&#101;&equals;&#49;&period;&#48;&quot;&#32;&sol;&gt;\n" +
-                "    &#32;&#32;&#32;&#32;&lt;&#116;&#105;&#116;&#108;&#101;&gt;&#68;&#111;&#99;&#117;&#109;&#101;&#110;&#116;&lt;&sol;&#116;&#105;&#116;&#108;&#101;&gt;\n" +
-                "    &#32;&#32;&#32;&#32;&lt;&#108;&#105;&#110;&#107;&#32;&#114;&#101;&#108;&equals;&quot;&#115;&#116;&#121;&#108;&#101;&#115;&#104;&#101;&#101;&#116;&quot;&#32;&#104;&#114;&#101;&#102;&equals;&quot;&period;&sol;&#99;&#115;&#115;&sol;&#114;&#101;&#110;&#100;&#101;&#114;&#101;&#100;&#45;&#99;&#111;&#100;&#101;&period;&#99;&#115;&#115;&quot;&#32;&sol;&gt;\n" +
-                "    &#32;&#32;&lt;&sol;&#104;&#101;&#97;&#100;&gt;\n" +
-                "    &#32;&#32;&lt;&#98;&#111;&#100;&#121;&gt;\n" +
-                "    &#32;&#32;&#32;&#32;&lt;&#99;&#111;&#110;&#116;&#97;&#105;&#110;&#101;&#114;&#32;&#99;&#108;&#97;&#115;&#115;&equals;&quot;&#114;&#101;&#110;&#100;&#101;&#114;&#101;&#100;&#45;&#99;&#111;&#100;&#101;&#45;&#99;&#111;&#110;&#116;&#97;&#105;&#110;&#101;&#114;&quot;&gt;\n" +
-                "    &#32;&#32;&#32;&#32;&#32;&#32;&lt;&#104;&#49;&gt;&#66;&#97;&#110;&#97;&#110;&#97;&#115;&lt;&sol;&#104;&#49;&gt;\n" +
-                "    &#32;&#32;&#32;&#32;&#32;&#32;&lt;&#105;&#109;&#103;&#32;&#115;&#114;&#99;&equals;&quot;&#105;&#109;&#97;&#103;&#101;&#115;&sol;&#114;&#97;&#100;&#105;&#111;&#84;&#111;&#119;&#101;&#114;&period;&#106;&#112;&#103;&quot;&#32;&sol;&gt;\n" +
-                "    &#32;&#32;&#32;&#32;&lt;&sol;&#99;&#111;&#110;&#116;&#97;&#105;&#110;&#101;&#114;&gt;\n" +
-                "    &#32;&#32;&#32;&#32;&lt;&#115;&#99;&#114;&#105;&#112;&#116;&#32;&#115;&#114;&#99;&equals;&quot;&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&sol;&#99;&#111;&#100;&#101;&#82;&#101;&#110;&#100;&#101;&#114;&period;&#106;&#115;&quot;&#32;&#116;&#121;&#112;&#101;&equals;&quot;&#109;&#111;&#100;&#117;&#108;&#101;&quot;&gt;&lt;&sol;&#115;&#99;&#114;&#105;&#112;&#116;&gt;\n" +
-                "    &#32;&#32;&lt;&sol;&#98;&#111;&#100;&#121;&gt;\n" +
-                "    &lt;&sol;&#104;&#116;&#109;&#108;&gt;","                  <html lang=\"en\">\n" +
-                "                    <head>\n" +
-                "                      <meta charset=\"UTF-8\" />\n" +
-                "                      <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n" +
-                "                      <title>Document</title>\n" +
-                "                      <link rel=\"stylesheet\" href=\"./css/rendered-code.css\" />\n" +
-                "                    </head>\n" +
-                "                    <body>\n" +
-                "                      <container class=\"rendered-code-container\">\n" +
-                "                        <h1>Bananas</h1>\n" +
-                "                        <img srrc=\"images/radioTower.jpg\" />\n" +
-                "                      </container>\n" +
-                "                      <script src=\"javascript/codeRender.js\" type=\"module\"></script>\n" +
-                "                    </body>\n" +
-                "                  </html>","    <!DOCTYPE html>\n" +
-                "    <html lang=\"en\">\n" +
-                "      <head>\n" +
-                "        <meta charset=\"UTF-8\" />\n" +
-                "        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n" +
-                "        <title>Document</title>\n" +
-                "        <link rel=\"stylesheet\" href=\"./css/rendered-code.css\" />\n" +
-                "      </head>\n" +
-                "      <body>\n" +
-                "        <container class=\"rendered-code-container\">\n" +
-                "          <h1>Bananas</h1>\n" +
-                "          <img src=\"images/radioTower.jpg\" />\n" +
-                "        </container>\n" +
-                "        <script src=\"javascript/codeRender.js\" type=\"module\"></script>\n" +
-                "      </body>\n" +
-                "    </html>",
-                "You can't even compare to me!",
-                "It-it's not like I expected you to fix it!",
-                "Careful not to double type a letter!","Congratulations!, Remember to take your time typing, Your" +
-                " errors will quickly add up!");
-
         String fileName = "src/main/resources/test/";
         File dir = new File(fileName);
         File[] dirFiles = dir.listFiles();
@@ -155,41 +24,19 @@ public class Populator implements CommandLineRunner {
             String content = new String(Files.readAllBytes(file.toPath()));
             String[] testArray = content.split("###");
             String codeLanguage = testArray[0];
-            String wholeQuestionBefore = testArray[1];
-            String wholeQuestionAfter = testArray[2];
-            String iframeWrong = testArray[3];
-            String iframeCorrect = testArray[4];
-            Question question = new Question(codeLanguage, wholeQuestionBefore, wholeQuestionAfter, iframeWrong, iframeCorrect, "", "", "");
+            String beforeErrorCode = testArray[1];
+            String errorCode = testArray[2];
+            String afterErrorCode = testArray[3];
+            String correctCodeBlock = testArray[4];
+            String iframeWrong = testArray[5];
+            String iframeCorrect = testArray[6];
+            String codeyStartDialogue = testArray[7];
+            String codeyEndingDialogue = testArray[8];
+            String hintText = testArray[9];
+            String groundControlBeginningDialogue = testArray[10];
+            String wholeQuestionCompletedDialogue = testArray[11];
+            Question question = new Question(codeLanguage, beforeErrorCode, errorCode, afterErrorCode, correctCodeBlock, iframeWrong, iframeCorrect, codeyStartDialogue, codeyEndingDialogue, hintText, groundControlBeginningDialogue, wholeQuestionCompletedDialogue);
             questionRepo.save(question);
         }
-
-        Question question1 = new Question("JavaScript",
-                "export{\n" +
-                        "    createHeader\n" +
-                        "const createHeader = () => {\n" +
-                        "    const header = document.createElement(\"header\");\n" +
-                        "    header.classList.add('header');\n" +
-                        "    header.innerHTML = '<h1>Meet the Developers</h1>'\n" +
-                        "    return header;\n" +
-                        "}\n" +
-                        "export {\n" +
-                        "    createFooter\n" +
-                        "}\n" +
-                        "const createFooter = () => {\n" +
-                        "    const footer = document.createElement(\"footer\");\n" +
-                        "    footer.classList.add('footer');\n" +
-                        "    footer.innerHTML = '<h5>Super Coder Jr. | 2020</h5>'\n" +
-                        "    return footer;\n" +
-                        "} ",
-                "export{\n\" +\n" +
-                "                        \"    createHeader\n",
-                "export{\n\" +\n" +
-                "                        \"    createHeader}\n",
-                "This is the first Question!",
-                "Well done! Always make sure you close your brackets.",
-                "Check your brackets!",
-                "You've solved my HTML puzzle!") ;
-
-                questionRepo.save(question1);
     }
 }
