@@ -1,6 +1,6 @@
-export { renderWrongCodeBlock, renderCorrectCodeBlock, renderWrongIframeContent, renderCorrectIFrameContent, 
-  renderCodeyDialogue, renderGroundControl };
-import { fetchQuestion, fetchQuestions} from "./fetchQuestions.js"
+export { renderBeforeError, renderErrorCode, renderAfterError, renderCorrectCodeBlock, renderWrongIframeContent, 
+  renderCorrectIFrameContent, renderCodeyDialogue, renderGroundControlBeginning, renderGroundControlFinished, 
+  renderGroundControlHint };
 
 
 const renderWrongIframeContent = () => {
@@ -12,10 +12,17 @@ const renderCorrectIFrameContent = () => {
   const iframeDisplay = document.querySelector(".iframe-display")
   iframeDisplay.src = "./right-rendered-code.html"
 }
-
-const renderWrongCodeBlock = (question) => {
-  const codeTag = document.querySelector(".question-code-block")
-  codeTag.innerText = `${question.iframeWrong}`
+const renderBeforeError = (question) => {
+  const codeTag = document.querySelector(".before-error")
+  codeTag.innerText = `${question.beforeErrorCode}`
+}
+const renderErrorCode = (question) => {
+  const codeTag = document.querySelector(".error-code")
+  codeTag.innerHTML = `${question.errorCode}`
+}
+const renderAfterError = (question) => {
+  const codeTag = document.querySelector(".after-error")
+  codeTag.innerText = `${question.afterErrorCode}`
 }
 
 const renderCorrectCodeBlock = (question) => {
@@ -28,7 +35,12 @@ const renderCodeyDialogue = (question) => {
   pTag.innerHTML = `${question.codeyStartingDialogue}`
 }
 
-const renderGroundControl = (question) => {
+const renderGroundControlBeginning = (question) => {
+  const pTag = document.querySelector(".ground-control-dialogue")
+  pTag.innerText = `${question.groundControlBeginningDialogue}`
+}
+
+const renderGroundControlFinished = (question) => {
   const pTag = document.querySelector(".ground-control-dialogue")
   pTag.innerHTML= `${question.wholeQuestionCompletedDialogue}`
 }

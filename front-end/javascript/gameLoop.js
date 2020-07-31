@@ -1,5 +1,6 @@
-import { renderWrongCodeBlock, renderCorrectCodeBlock, renderWrongIframeContent, renderCorrectIFrameContent, 
-    renderCodeyDialogue, renderGroundControl}from "./codeRender.js"
+import { renderBeforeError, renderErrorCode, renderAfterError, renderCorrectCodeBlock, renderWrongIframeContent, 
+    renderCorrectIFrameContent, renderCodeyDialogue, renderGroundControlBeginning, renderGroundControlFinished, 
+    renderGroundControlHint}from "./codeRender.js"
 import { errorInteractivity} from "./answerEvent.js"
 import { fetchQuestion, fetchQuestions} from "./fetchQuestions.js"
 
@@ -9,9 +10,11 @@ const questionGrabber = (turnCounter) => {
     fetchQuestion(turnCounter)
       .then(question => {
         renderWrongIframeContent()
-        renderWrongCodeBlock(question)
+        renderBeforeError(question)
+        renderErrorCode(question)
+        renderAfterError(question)
         renderCodeyDialogue(question)
-        renderGroundControl(question)
+        renderGroundControlBeginning(question)
     })
 }
 
