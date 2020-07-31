@@ -2,6 +2,8 @@ package co.supercodejr.supercodejr;
 
 import org.springframework.stereotype.Service;
 
+import java.util.Collection;
+
 @Service
 public class QuestionStorage {
     private QuestionRepo questionRepo;
@@ -22,4 +24,7 @@ public class QuestionStorage {
         return questionRepo.findById(id).get();
     }
 
+    public Collection<Question> retrieveAllQuestions() {
+        return (Collection<Question>) questionRepo.findAll();
+    }
 }
