@@ -1,2 +1,41 @@
-This is a test.
-Adding a question.
+CSS
+###
+&#32;&#32;&#32;&#32;&#32;&#32;&lt;&#105;&#109;&#103;<span class = "interactive-answer1"> srrc</span>&equals;&quot;&#105;&#109;&#97;&#103;&#101;&#115;&sol;&#114;&#97;&#100;&#105;&#111;&#84;&#111;&#119;&#101;&#114;&period;&#106;&#112;&#103;&quot;&#32;&sol;&gt;
+###
+32;&#32;&lt;&#104;&#101;&#97;&#100;&gt;
+&#32;&#32;&#32;&#32;&lt;&#109;&#101;&#116;&#97;&#32;&#110;&#97;&#109;&#101;&equals;&quot;&#118;&#105;&#101;&#119;&#112;&#111;&#114;&#116;&quot;&#32;&#99;&#111;&#110;&#116;&#101;&#110;&#116;&equals;&quot;&#119;&#105;&#100;&#116;&#104;&equals;&#100;&#101;&#118;&#105;&#99;&#101;&#45;&#119;&#105;&#100;&#116;&#104;&comma;&#32;&#105;&#110;&#105;&#116;&#105;&#97;&#108;&#45;&#115;&#99;&#97;&#108;&#101;&equals;&#49;&period;&#48;&quot;&#32;&sol;&gt;
+                                                                                                                                                                                                                                                                                                          &#45;&#99;&#111;&#110;&#116;&#97;&#105;&#110;&#101;&#114;&quot;&gt;
+###
+<!DOCTYPE html>
+                        <html lang="en">
+                          <head>
+                            <meta charset="UTF-8" />
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                            <title>Document</title>
+                            <link rel="stylesheet" href="./css/rendered-code.css" />
+                          </head>
+                          <body>
+                            <container class="rendered-code-container">
+                              <h1>Bananas</h1>
+                              <img srrc="images/radioTower.jpg" />
+                            </container>
+                            <script src="javascript/codeRender.js" type="module"></script>
+                          </body>
+                        </html>
+###
+<!DOCTYPE html>
+                        <html lang="en">
+                          <head>
+                            <meta charset="UTF-8" />
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                            <title>Document</title>
+                            <link rel="stylesheet" href="./css/rendered-code.css" />
+                          </head>
+                          <body>
+                            <container class="rendered-code-container">
+                              <h1>Bananas</h1>
+                              <img src="images/radioTower.jpg" />
+                            </container>
+                            <script src="javascript/codeRender.js" type="module"></script>
+                          </body>
+                        </html>

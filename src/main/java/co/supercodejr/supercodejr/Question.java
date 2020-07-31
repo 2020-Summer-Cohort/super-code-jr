@@ -17,11 +17,17 @@ public class Question {
     private String codeLanguage;
     @Lob
     private String wholeQuestion;
+    @Lob
     private String wrongCodeBlock;
+    @Lob
     private String rightCodeBlock;
+    @Lob
     private String codeyStartingDialogue;
+    @Lob
     private String codeyEndingDialogue;
+    @Lob
     private String hintText;
+    @Lob
     private String wholeQuestionCompletedDialogue;
 
     protected Question (){}

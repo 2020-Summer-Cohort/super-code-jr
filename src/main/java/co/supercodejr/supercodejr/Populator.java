@@ -4,7 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.io.File;
+import java.nio.file.Files;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 @Component
 public class Populator implements CommandLineRunner {
@@ -12,6 +15,22 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+
+        String fileName = "src/main/resources/test/";
+        File dir = new File(fileName);
+        File[] dirFiles = dir.listFiles();
+        Arrays.sort(dirFiles);
+        for (File file : dirFiles) {
+            String content = new String(Files.readAllBytes(file.toPath()));
+            String[] testArray = content.split("###");
+            String codeLanguage = testArray[0];
+            String wholeQuestionBefore = testArray[1];
+            String wholeQuestionAfter = testArray[2];
+            String iframeWrong = testArray[3];
+            String iframeCorrect = testArray[4];
+            Question question = new Question(codeLanguage, wholeQuestionBefore, wholeQuestionAfter, iframeWrong, iframeCorrect, "", "", "");
+            questionRepo.save(question);
+        }
 
         Question question1 = new Question("JavaScript",
                 "export{\n" +
