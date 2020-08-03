@@ -78,7 +78,7 @@ public class Populator implements CommandLineRunner {
                 "It-it's not like I expected you to fix it!",
                 "Careful not to double type a letter!","Congratulations!, Remember to take your time typing, Your" +
                 " errors will quickly add up!");
-        Question question2 = new Question("HTML/CSS", "&lt;&excl;&#68;&#79;&#67;&#84;&#89;&#80;&#69;&#32;&#104;&#116;&#109;&#108;&gt;\n" +
+        Question question2 = new Question("yrMOM", "&lt;&excl;&#68;&#79;&#67;&#84;&#89;&#80;&#69;&#32;&#104;&#116;&#109;&#108;&gt;\n" +
                 "                  &lt;&#104;&#116;&#109;&#108;&#32;&#108;&#97;&#110;&#103;&equals;&quot;&#101;&#110;&quot;&gt;\n" +
                 "                  &#32;&#32;&lt;&#104;&#101;&#97;&#100;&gt;\n" +
                 "                  &#32;&#32;&#32;&#32;&lt;&#109;&#101;&#116;&#97;&#32;&#99;&#104;&#97;&#114;&#115;&#101;&#116;&equals;&quot;&#85;&#84;&#70;&#45;&#56;&quot;&#32;&sol;&gt;\n" +
@@ -139,10 +139,10 @@ public class Populator implements CommandLineRunner {
                 "        <script src=\"javascript/codeRender.js\" type=\"module\"></script>\n" +
                 "      </body>\n" +
                 "    </html>",
-                "You can't even compare to me!",
-                "It-it's not like I expected you to fix it!",
-                "Careful not to double type a letter!","Congratulations!, Remember to take your time typing, Your" +
-                " errors will quickly add up!");
+                "gughfghfgfhhfhgfhdhfhg!",
+                "HUTTKKHFGHGF!",
+                "CBGHFhgfh!","CGUHHMhfh" +
+                "gGFDGFD");
 
         questionRepo.save(question1);
         questionRepo.save(question2);
