@@ -27,15 +27,15 @@ public class Populator implements CommandLineRunner {
             String beforeErrorCode = testArray[1];
             String errorCode = testArray[2];
             String afterErrorCode = testArray[3];
-            String correctCodeBlock = testArray[4];
+            String correctedError = testArray[4];
             String iframeWrong = testArray[5];
             String iframeCorrect = testArray[6];
             String codeyStartDialogue = testArray[7];
             String codeyEndingDialogue = testArray[8];
             String hintText = testArray[9];
             String groundControlBeginningDialogue = testArray[10];
-            String wholeQuestionCompletedDialogue = testArray[11];
-            Question question = new Question(codeLanguage, beforeErrorCode, errorCode, afterErrorCode, correctCodeBlock, iframeWrong, iframeCorrect, codeyStartDialogue, codeyEndingDialogue, hintText, groundControlBeginningDialogue, wholeQuestionCompletedDialogue);
+            String groundControlCompletedDialogue = testArray[11];
+            Question question = new Question(codeLanguage, beforeErrorCode, errorCode, afterErrorCode, correctedError, iframeWrong, iframeCorrect, codeyStartDialogue, codeyEndingDialogue, hintText, groundControlBeginningDialogue, groundControlCompletedDialogue);
             questionRepo.save(question);
         }
     }

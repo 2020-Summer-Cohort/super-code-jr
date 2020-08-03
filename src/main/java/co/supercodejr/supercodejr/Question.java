@@ -20,7 +20,7 @@ public class Question {
     private String afterErrorCode;
     @Lob
     @Column(length = 100000)
-    private String correctCodeBlock;
+    private String correctedError;
     @Lob
     @Column(length = 100000)
     private String iframeWrong;
@@ -35,24 +35,24 @@ public class Question {
     @Lob
     private String groundControlBeginningDialogue;
     @Lob
-    private String wholeQuestionCompletedDialogue;
+    private String groundControlCompletedDialogue;
 
     protected Question (){}
 
-    public Question(String codeLanguage, String beforeErrorCode, String errorCode, String afterErrorCode, String correctCodeBlock, String iframeWrong, String iframeCorrect, String codeyStartingDialogue, String codeyEndingDialogue, String hintText, String groundControlBeginningDialogue, String wholeQuestionCompletedDialogue) {
+    public Question(String codeLanguage, String beforeErrorCode, String errorCode, String afterErrorCode, String correctedError, String iframeWrong, String iframeCorrect, String codeyStartingDialogue, String codeyEndingDialogue, String hintText, String groundControlBeginningDialogue, String groundControlCompletedDialogue) {
 
         this.codeLanguage = codeLanguage;
         this.beforeErrorCode = beforeErrorCode;
         this.errorCode = errorCode;
         this.afterErrorCode = afterErrorCode;
-        this.correctCodeBlock = correctCodeBlock;
+        this.correctedError = correctedError;
         this.iframeWrong = iframeWrong;
         this.iframeCorrect = iframeCorrect;
         this.codeyStartingDialogue = codeyStartingDialogue;
         this.codeyEndingDialogue = codeyEndingDialogue;
         this.hintText = hintText;
         this.groundControlBeginningDialogue = groundControlBeginningDialogue;
-        this.wholeQuestionCompletedDialogue = wholeQuestionCompletedDialogue;
+        this.groundControlCompletedDialogue = groundControlCompletedDialogue;
     }
 
     public long getId() {
@@ -67,8 +67,8 @@ public class Question {
         return codeyStartingDialogue;
     }
 
-    public String getCorrectCodeBlock() {
-        return correctCodeBlock;
+    public String getCorrectedError() {
+        return correctedError;
     }
 
     public String getBeforeErrorCode() {
@@ -103,7 +103,7 @@ public class Question {
         return groundControlBeginningDialogue;
     }
 
-    public String getWholeQuestionCompletedDialogue() {
-        return wholeQuestionCompletedDialogue;
+    public String getGroundControlCompletedDialogue() {
+        return groundControlCompletedDialogue;
     }
 }
