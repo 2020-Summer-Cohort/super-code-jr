@@ -9,7 +9,7 @@ import {
 } from "./codeRender.js";
 import { fetchQuestion, fetchQuestions } from "./fetchQuestions.js";
 
-let turnStart = 1;
+var turnStart = 1;
 
 const rightCodeContainer = document.querySelector(".right-code-container");
 const indexContainer = document.querySelector(".game-container");
@@ -20,10 +20,32 @@ const groundControlContainer = document.querySelector(
 );
 const continueButton = document.createElement("button");
 continueButton.addEventListener("click", () => {
-  turnStart++;
-  startGame(turnStart);
+  newQuestion(turnStart);
 });
 
+const newQuestion = (turnCounter) => {
+  turnCounter = turnCounter + 1;
+  console.log(turnCounter);
+  if (rightCodeContainer != null) {
+    fetchQuestion(turnCounter).then((question) => {
+      rightCodeContainer.innerHTML = `${question.codeyStartingDialogue}`;
+    });
+  }
+  if (wrongCodeContainer != null) {
+    fetchQuestion(turnCounter).then((question) => {
+      wrongCodeContainer.innerHTML = `${question.codeLanguage}`;
+    });
+  }
+  if (indexContainer != null) {
+    fetchQuestion(turnCounter).then((question) => {
+      renderWrongIframeContent();
+      renderWrongCodeBlock(question);
+      errorInteractivity(question, questionCodeBlock);
+      renderCodeyDialogue(question);
+      renderGroundControl(question);
+    });
+  }
+};
 const startGame = (turnCounter) => {
   if (indexContainer != null) {
     fetchQuestion(turnCounter).then((question) => {
