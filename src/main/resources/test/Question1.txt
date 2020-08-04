@@ -13,9 +13,9 @@ public VirtualPet(String name, int happiness, int health, int boredom) {
 }
 ###
 public String <span class ="interactive-answer1">getname</span>(){
+###
   return name;
 }
-###
 public int getHealth() {
   return health;
 }
@@ -29,8 +29,6 @@ public int getHappiness() {
 }
 ###
 public String getName(){
-  return name;
-}
 ###
 <html lang=\"en\">
 <head>
