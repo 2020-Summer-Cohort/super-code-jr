@@ -1,0 +1,83 @@
+
+.display-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3fr 1fr;
+  border: 2px solid var(--cyan);
+  height: 92vh;
+  width: 100vw;
+}
+.clippy-display {
+  display: flex;
+  text-align: center;
+}
+.clippy-display p {
+  padding-top: 2em;
+}
+.clippy-img {
+  max-height: 25vh;
+  padding: 3px;
+  margin: 2px;
+  border: 2px solid var(--cyan);
+  box-shadow: 0px 0px 7px 2px var(--cyan);
+}
+.clippy-display,
+.question-display,
+.rendered-display,
+.user-display,
+.header-display {
+  background-color: var(--offBlack);
+  border: 2px solid var(--cyan);
+  box-shadow: inset 0px 0px 5px 1px var(--cyan);
+}
+.header-display {
+  display: flex;
+  justify-content: center;
+  height: 8vh;
+}
+.home-button {
+  padding: 1em;
+  border: 2px solid var(--cyan);
+  box-shadow: 0px 0px 7px 2px var(--cyan);
+}
+.radio-img {
+  max-height: 25vh;
+  padding: 3px;
+  margin: 2px;
+  border: 2px solid var(--cyan);
+  box-shadow: 0px 0px 7px 2px var(--cyan);
+}
+.user-display {
+  display: flex;
+  text-align: center;
+}
+.user-display p {
+  padding-top: 2em;
+}
+
+/* ---------------------------------------------------------------------------------- */
+
+.bio-container {
+  display: flex;
+  flex-direction: column;
+  font-family: "VT323", monospace;
+  background-color: var(--offBlack);
+  color: var(--cyan);
+  height: 100vh;
+}
+
+.about-us-header {
+  text-align: center;
+  /* border-bottom: 0.2em;
+  border-bottom-style: solid;
+  border-color: var(--glow1); */
+  /* box-shadow: 1px 1px 4px black, 0 0 1em var(--glow1), 0 0 0.2em var(--glow1); */
+  padding: 1em;
+}
+
+.footer {
+  margin-top: 15px;
+  padding-top: 1em;
+  font-family: "VT323", monospace;
+  color: var(--text);
+}

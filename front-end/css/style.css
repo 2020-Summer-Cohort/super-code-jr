@@ -1,8 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
-.about-us-header {
-  font-family: "VT323", monospace;
-  color: var(--text);
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=VT323&display=swap');
+
+@font-face
+{
+    font-family: 'cyber';
+    src: url('/super-code-jr/Cyberspace\ Raceway\ Front.otf');
+    font-style:normal;
+    font-weight: 400;
+    font-size: 50px;
 }
+.about-us-header {
+  margin-top: 20px;
+  font-family: cyber;
+  font-size: 30px;
+  letter-spacing: 9px;
+  color: var(--text);
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+  margin-bottom: 80px;
+}
+
+#avatar
+{
+  width:100px;
+  height:100px;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 1 1 12px #ebd8a6, 0 0 20px #ebd8a6, 0 0 30px #e49a39, 0 0 40px #e49a39,
+    50px #e49a39, 0 0 60px #e49a39, 0 0 70px #e49a39;
+  }
+  to {
+  text-shadow: 0 0 20px #ebd8a6, 0 0 30px #ebd8a6, 0 0 40px #ebd8a6, 0 0 #ebd8a6;
+  }
+  }
 
 .bio {
   border: solid 5px var(--cyan);
@@ -11,13 +44,24 @@
   box-shadow: inset 0px 0px 10px 7px var(--cyan);
 }
 
+.bio {
+  background-color: rgba(0, 0, 255, 10%);
+  border: solid 5px var(--cyan);
+  box-shadow: 0px 0px 7px 3px var(--cyan);
+  text-align: center;
+}
+
 .bio-anchors,
 .bio-info,
 .bio-skills {
   color: var(--text);
 }
-
+.bio-anchors {
+  font-size:25px;
+  text-transform: uppercase;
+}
 .bio-anchors:visited {
+  text-transform: uppercase;
   color: var(--text);
 }
 .bio-img {
@@ -32,11 +76,20 @@
   object-fit: cover;
 }
 
-.bio {
-  background-color: rgba(0, 0, 255, 10%);
-  border: solid 5px var(--cyan);
-  box-shadow: 0px 0px 7px 3px var(--cyan);
-  text-align: center;
+.bio-info
+{
+  margin-top: 15px;
+  font-family: 'ubuntu', monospace;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.bio-skills
+{
+  margin-top: 12px;
+  font-family:VT323;
+  font-size: 25px;
+  text-transform: uppercase;
 }
 
 .display-container {
@@ -108,10 +161,10 @@
 
 .about-us-header {
   text-align: center;
-  border-bottom: 0.2em;
+  /* border-bottom: 0.2em;
   border-bottom-style: solid;
   border-color: var(--glow1);
-  box-shadow: 1px 1px 4px black, 0 0 1em var(--glow1), 0 0 0.2em var(--glow1);
+  box-shadow: 1px 1px 4px black, 0 0 1em var(--glow1), 0 0 0.2em var(--glow1); */
   padding: 1em;
 }
 
