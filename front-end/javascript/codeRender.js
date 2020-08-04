@@ -9,6 +9,7 @@ const renderAllContent = (question, turnCounter) => {
   renderAfterError(question);
   renderCodeyStartingDialogue(question);
   renderGroundControlBeginning(question);
+  developerTabClickable()
 };
 const renderWrongIframeContent = (question) => {
   const renderIFrameQuestion = document.querySelector(".iframe-display");
@@ -84,3 +85,21 @@ const renderGroundControlHint = (question) => {
   const pTag = document.querySelector(".ground-control-dialogue");
   pTag.innerHTML = `${question.hintText}`;
 };
+
+
+const developerTabClickable = () => {
+  const sTag = document.querySelector(".developer-tab")
+  sTag.innerText = `Developers`
+  sTag.addEventListener("click", () => {
+    renderDeveloperTab()
+  })
+}
+
+const renderDeveloperTab = () => {
+  let devIFrame = document.querySelector("developer-iframe")
+  if (devIFrame.style.display === "none") {
+    devIFrame.style.display = "block";
+  } else {
+    devIFrame.style.display = "none";
+  }
+}
