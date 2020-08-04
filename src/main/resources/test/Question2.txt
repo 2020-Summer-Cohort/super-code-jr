@@ -13,34 +13,29 @@ public class FizzBuzzTest {
         String spokenWord = underTest.say(2);
         assertThat(spokenWord).isEqualTo("2");
     }
-###
     @Test
     public void whenGiven3FizzBuzzSaysFizz() {
         FizzBuzz underTest = new FizzBuzz();
         String spokenWord = underTest.say(3);
-        assertThat(spokenWord).isEqualTo(<span class ="interactive-answer1">"Buzz"</span>);
-    }
 ###
-    @Test
-    public void whenGiven5FizzBuzzSaysBuzz() {
-        FizzBuzz underTest = new FizzBuzz();
-        String spokenWord = underTest.say(5);
-        assertThat(spokenWord).isEqualTo("Buzz");
-    }
-    @Test
-    public void multiplesOf3And5FizzBuzzSaysFizzBuzz() {
+        assertThat(spokenWord).isEqualTo(<span class ="interactive-answer1">"Buzz"</span>);
+###
+   }
+   @Test
+   public void whenGiven5FizzBuzzSaysBuzz() {
+       FizzBuzz underTest = new FizzBuzz();
+       String spokenWord = underTest.say(5);
+       assertThat(spokenWord).isEqualTo("Buzz");
+   }
+   @Test
+   public void multiplesOf3And5FizzBuzzSaysFizzBuzz() {
         FizzBuzz underTest = new FizzBuzz();
         String spokenWord = underTest.say(15);
         assertThat(spokenWord).isEqualTo("FizzBuzz");
     }
 }
 ###
-    @Test
-    public void whenGiven3FizzBuzzSaysFizz() {
-        FizzBuzz underTest = new FizzBuzz();
-        String spokenWord = underTest.say(3);
         assertThat(spokenWord).isEqualTo("Fizz");
-    }
 ###
 <!DOCTYPE html>
 <html lang="en">
