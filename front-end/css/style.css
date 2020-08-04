@@ -57,19 +57,23 @@
 .bio-skills {
   color: var(--text);
 }
+
 .bio-anchors {
   font-size:25px;
   text-transform: uppercase;
 }
+
 .bio-anchors:visited {
   text-transform: uppercase;
   color: var(--text);
 }
+
 .bio-img {
   height: 100px;
   width: 100px;
   border-radius: 50px;
 }
+
 .bio-container {
   background-image: url(../images/bg-grid.png);
   background-repeat: no-repeat;
@@ -92,7 +96,19 @@
   font-size: 25px;
   text-transform: uppercase;
 }
-
+.developer-tab {
+  display:flex;
+  justify-items: center;
+  justify-content: space-around;
+  background-color: var(--cyan);
+  color: var(--text);
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+  padding:.5em;
+  margin-top:.2em;
+  margin-left:.2em;
+  font-size: 20px;
+}
 .display-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -125,9 +141,14 @@
   box-shadow: inset 0px 0px 5px 1px var(--cyan);
 }
 .header-display {
+  display:grid;
+  grid-template-columns: 1fr 8fr;
+  height: 8vh;
+}
+.header-text {
   display: flex;
   justify-content: center;
-  height: 8vh;
+  
 }
 .home-button {
   padding: 1em;
