@@ -22,7 +22,7 @@ public class Populator implements CommandLineRunner {
         Arrays.sort(dirFiles);
         for (File file : dirFiles) {
             String content = new String(Files.readAllBytes(file.toPath()));
-            String[] testArray = content.split("###");
+            String[] testArray = content.split("###\\r?\\n");
             String codeLanguage = testArray[0];
             String beforeErrorCode = testArray[1];
             String errorCode = testArray[2];

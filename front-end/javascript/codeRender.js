@@ -2,11 +2,14 @@ export { renderAllContent };
 import { fetchQuestion, fetchQuestions } from "./fetchQuestions.js";
 import { questionGrabber } from "./gameLoop.js";
 
+const walkieTalkie = new Audio("audio/walkie-talkie.mp3");
+
 const renderAllContent = (question, turnCounter) => {
   renderWrongIframeContent(question);
-  renderBeforeError(question);
-  renderErrorCode(question, turnCounter);
-  renderAfterError(question);
+  renderWholeErrorCode(question, turnCounter);
+  // renderBeforeError(question);
+  // renderErrorCode(question, turnCounter);
+  // renderAfterError(question);
   renderCodeyStartingDialogue(question);
   renderGroundControlBeginning(question);
 };
@@ -19,18 +22,54 @@ const renderCorrectIFrameContent = (question) => {
   const iframeDisplay = document.querySelector(".iframe-display");
   iframeDisplay.srcdoc = question.iframeCorrect;
 };
-const renderBeforeError = (question) => {
-  const codeTag = document.querySelector(".before-error");
-  codeTag.innerText = `${question.beforeErrorCode}`;
-};
-const renderErrorCode = (question, turnCounter) => {
-  const codeTag = document.querySelector(".error-code");
-  codeTag.innerHTML = `${question.errorCode}`;
-  codeTag.addEventListener("click", () => {
-    alert("you found bad code!");
-    updateAllDisplays(question, turnCounter);
+
+const renderWholeErrorCode = (question, turnCounter) => {
+  const codeBlock = document.querySelector(".question-code-block");
+    while (codeBlock.firstChild) {
+        codeBlock.firstChild.remove();
+    }
+  const beforeError = document.createElement("p");
+  beforeError.innerText = `${question.beforeErrorCode}`;
+  beforeError.addEventListener("click", () => {
+    renderGroundControlHint(question);
+    walkieTalkie.play();
   });
+  codeBlock.appendChild(beforeError);
+  const errorCode = document.createElement("p");
+  errorCode.classList.add("error--block");
+  errorCode.classList.remove("highlight--corrected");
+  errorCode.innerHTML = `${question.errorCode}`;
+  errorCode.addEventListener("click", () => {
+    updateAllDisplays(question, turnCounter);
+    alert("you found bad code!");
+  });
+  codeBlock.appendChild(errorCode);
+  const afterError = document.createElement("p");
+  afterError.innerText = `${question.afterErrorCode}`;
+  afterError.addEventListener("click", () => {
+    renderGroundControlHint(question);
+    walkieTalkie.play();
+  });
+  codeBlock.appendChild(afterError);
 };
+
+// const renderBeforeError = (question) => {
+//   const codeTag = document.querySelector(".before-error");
+//   codeTag.innerText = `${question.beforeErrorCode}`;
+//   codeTag.addEventListener("click", () => {
+//     renderGroundControlHint(question);
+//     walkieTalkie.play();
+//   });
+// };
+// const renderErrorCode = (question, turnCounter) => {
+//   const codeTag = document.querySelector(".error-code");
+//   codeTag.classList.remove("highlight--corrected");
+//   codeTag.innerHTML = `${question.errorCode}`;
+//   codeTag.addEventListener("click", () => {
+//     updateAllDisplays(question, turnCounter);
+//     alert("you found bad code!");
+//   });
+// };
 
 const updateAllDisplays = (question, turnCounter) => {
   renderGroundControlFinished(question, turnCounter);
@@ -40,18 +79,21 @@ const updateAllDisplays = (question, turnCounter) => {
 };
 
 const renderCorrectedError = (question) => {
-  const codeTag = document.querySelector(".error-code");
+  const codeTag = document.querySelector(".error--block");
+  codeTag.classList.add("highlight--corrected");
   codeTag.innerHTML = `${question.correctedError}`;
 };
-const renderAfterError = (question) => {
-  const codeTag = document.querySelector(".after-error");
-  codeTag.innerText = `${question.afterErrorCode}`;
-};
+// const renderAfterError = (question) => {
+//   const codeTag = document.querySelector(".after-error");
+//   codeTag.innerText = `${question.afterErrorCode}`;
+//   codeTag.addEventListener("click", () => {
+//     renderGroundControlHint(question);
+//     walkieTalkie.play();
+//   });
+// };
 
 const renderCorrectCodeBlock = (question) => {
-  renderBeforeError(question);
   renderCorrectedError(question);
-  renderAfterError(question);
 };
 const renderCodeyEndingDialogue = (question) => {
   const pTag = document.querySelector(".codey-dialogue");
