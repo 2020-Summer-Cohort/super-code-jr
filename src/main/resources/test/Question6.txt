@@ -1,0 +1,120 @@
+CSS
+###
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Red Alert!</h1>
+        <nav>
+            <div class="alert__log">
+                <p>The Ship Is Down!</p>
+                <p>All Systems Failing</p>
+                <p>Help!</p>
+            </div>
+        </nav>
+    </header>
+</body>
+</html>
+
+html {
+	color: dark;
+	font: 14px/1.618 sans-serif;
+}
+body{
+	background-color: gray;
+}
+h1{
+	color: darkred;
+}
+###
+.alert__log{
+	color:#000000;
+
+}
+###
+
+###
+.alert__log{
+	color: red
+	font-weight: bold;;
+}
+###
+
+###
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body {background-color: gray;}
+    h1 {color: darkred;}
+    p {color: #000000;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Red Alert!</h1>
+        <nav>
+            <div class="alert__log">
+                <p>The Ship Is Down!</p>
+                <p>All Systems Failing</p>
+                <p>Help!</p>
+            </div>
+        </nav>
+    </header>
+</body>
+</html>
+
+
+
+###
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+         body {background-color: gray;}
+         h1 {color: darkred;}
+         p {color: darkred;
+         font-weight: bold;}
+         </style>
+</head>
+<body>
+    <header>
+        <h1>Red Alert!</h1>
+        <nav>
+            <div class="alert__log">
+                <p>The Ship Is Down!</p>
+                <p>All Systems Failing</p>
+                <p>Help!</p>
+            </div>
+        </nav>
+    </header>
+</body>
+</html>
+
+
+
+###
+I want those alerts to be red and BOLD!
+###
+I guess I forgot to style my text. Anyone could do it.
+###
+Make sure to check to see if your text styling matches
+###
+Bzzzzt!!!.........
+###
+Well done! Now you can see all the text is big and bold!
