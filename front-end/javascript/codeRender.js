@@ -3,6 +3,8 @@ import { fetchQuestion, fetchQuestions } from "./fetchQuestions.js";
 import { questionGrabber } from "./gameLoop.js";
 
 const walkieTalkie = new Audio("audio/walkie-talkie.mp3");
+const numberOfTries = document.querySelector(".score");
+const totalNumberOfTries = document.querySelector(".total-score")
 
 const renderAllContent = (question, turnCounter) => {
   renderWrongIframeContent(question);
@@ -33,6 +35,8 @@ const renderWholeErrorCode = (question, turnCounter) => {
   beforeError.addEventListener("click", () => {
     renderGroundControlHint(question);
     walkieTalkie.play();
+    numberOfTries.innerHTML = Number(numberOfTries.innerHTML) + 1;
+    totalNumberOfTries.innerHTML = Number(totalNumberOfTries.innerHTML) + 1;
   });
   codeBlock.appendChild(beforeError);
   const errorCode = document.createElement("p");
@@ -49,6 +53,8 @@ const renderWholeErrorCode = (question, turnCounter) => {
   afterError.addEventListener("click", () => {
     renderGroundControlHint(question);
     walkieTalkie.play();
+    numberOfTries.innerHTML = Number(numberOfTries.innerHTML) + 1;
+    totalNumberOfTries.innerHTML = Number(totalNumberOfTries.innerHTML) + 1;
   });
   codeBlock.appendChild(afterError);
 };
@@ -117,6 +123,7 @@ const renderGroundControlFinished = (question, turnCounter) => {
   continueButton.addEventListener("click", () => {
     alert("Next Question!");
     console.log(turnCounter);
+    numberOfTries.firstChild.remove();
     questionGrabber();
   });
   pTag.append(continueButton);
