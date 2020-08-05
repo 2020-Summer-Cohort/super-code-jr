@@ -68,43 +68,84 @@ const renderCorrectCodeBlock = (question) => {
 };
 const renderCodeyEndingDialogue = (question) => {
   const pTag = document.querySelector(".codey-dialogue");
-  pTag.innerHTML = `${question.codeyEndingDialogue}`;
-};
-const renderCodeyStartingDialogue = (question) => {
-  const pTag = document.querySelector(".codey-dialogue");
-  var text = `${question.codeyStartingDialogue}`;
-  var i = 0;
+  pTag.innerHTML = "";
+  const text = `${question.codeyEndingDialogue}`;
+  let i = 0;
   typeWriter();
   function typeWriter() {
     if (i < text.length) {
-      console.log("after");
-      console.log(text.charAt(i));
       pTag.innerHTML += text.charAt(i);
       i++;
-      setTimeout(typeWriter, 100);
+      setTimeout(typeWriter, 50);
+    }
+  }
+};
+const renderCodeyStartingDialogue = (question) => {
+  const pTag = document.querySelector(".codey-dialogue");
+  pTag.innerHTML = "";
+  const text = `${question.codeyStartingDialogue}`;
+  let i = 0;
+  typeWriter();
+  function typeWriter() {
+    if (i < text.length) {
+      pTag.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 50);
     }
   }
 };
 
 const renderGroundControlBeginning = (question) => {
   const pTag = document.querySelector(".ground-control-dialogue");
-  pTag.innerText = `${question.groundControlBeginningDialogue}`;
+  pTag.innerHTML = "";
+  const text = `${question.groundControlBeginningDialogue}`;
+  let i = 0;
+  typeWriter();
+  function typeWriter() {
+    if (i < text.length) {
+      pTag.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 50);
+    }
+  }
 };
 
 const renderGroundControlFinished = (question, turnCounter) => {
   const pTag = document.querySelector(".ground-control-dialogue");
-  pTag.innerHTML = `${question.groundControlCompletedDialogue}`;
+  pTag.innerHTML = "";
+  const text = `${question.groundControlCompletedDialogue}`;
+  let i = 0;
+  typeWriter();
+  function typeWriter() {
+    if (i < text.length) {
+      pTag.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 50);
+    }
+  }
+  const continueContainer = document.querySelector(".continue-button");
   const continueButton = document.createElement("button");
   continueButton.innerText = "continue";
   continueButton.addEventListener("click", () => {
     alert("Next Question!");
     console.log(turnCounter);
+    continueContainer.firstChild.remove();
     questionGrabber();
   });
-  pTag.append(continueButton);
+  continueContainer.prepend(continueButton);
 };
 
 const renderGroundControlHint = (question) => {
   const pTag = document.querySelector(".ground-control-dialogue");
-  pTag.innerHTML = `${question.hintText}`;
+  pTag.innerHTML = "";
+  const text = `${question.hintText}`;
+  let i = 0;
+  typeWriter();
+  function typeWriter() {
+    if (i < text.length) {
+      pTag.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 50);
+    }
+  }
 };
