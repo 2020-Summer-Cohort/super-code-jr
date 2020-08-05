@@ -54,24 +54,6 @@ const renderWholeErrorCode = (question, turnCounter) => {
   codeBlock.appendChild(afterError);
 };
 
-// const renderBeforeError = (question) => {
-//   const codeTag = document.querySelector(".before-error");
-//   codeTag.innerText = `${question.beforeErrorCode}`;
-//   codeTag.addEventListener("click", () => {
-//     renderGroundControlHint(question);
-//     walkieTalkie.play();
-//   });
-// };
-// const renderErrorCode = (question, turnCounter) => {
-//   const codeTag = document.querySelector(".error-code");
-//   codeTag.classList.remove("highlight--corrected");
-//   codeTag.innerHTML = `${question.errorCode}`;
-//   codeTag.addEventListener("click", () => {
-//     updateAllDisplays(question, turnCounter);
-//     alert("you found bad code!");
-//   });
-// };
-
 const updateAllDisplays = (question, turnCounter) => {
   renderGroundControlFinished(question, turnCounter);
   renderCorrectIFrameContent(question);
@@ -84,14 +66,6 @@ const renderCorrectedError = (question) => {
   codeTag.classList.add("highlight--corrected");
   codeTag.innerHTML = `${question.correctedError}`;
 };
-// const renderAfterError = (question) => {
-//   const codeTag = document.querySelector(".after-error");
-//   codeTag.innerText = `${question.afterErrorCode}`;
-//   codeTag.addEventListener("click", () => {
-//     renderGroundControlHint(question);
-//     walkieTalkie.play();
-//   });
-// };
 
 const renderCorrectCodeBlock = (question) => {
   renderCorrectedError(question);
@@ -120,7 +94,6 @@ const renderGroundControlFinished = (question, turnCounter) => {
     console.log(turnCounter);
     questionGrabber();
   });
-  pTag.append(continueButton);
 };
 
 const renderGroundControlHint = (question) => {
