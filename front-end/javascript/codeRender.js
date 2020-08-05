@@ -138,10 +138,10 @@ const developerTabClickable = () => {
 }
 
 const renderDeveloperTab = () => {
-  let devIFrame = document.querySelector("developer-iframe")
-  if (devIFrame.style.display === "none") {
-    devIFrame.style.display = "block";
-  } else {
-    devIFrame.style.display = "none";
+  const modal = document.getElementById("developer-modal")
+  modal.style.display = "block"
+  const sTag = document.getElementsByClassName("close-modal")[0];
+  sTag.onclick = () => {
+    modal.style.display = "none"
   }
 }
