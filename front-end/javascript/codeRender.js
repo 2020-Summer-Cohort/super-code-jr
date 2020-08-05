@@ -67,6 +67,7 @@ const renderCorrectedError = (question) => {
 const renderCorrectCodeBlock = (question) => {
   renderCorrectedError(question);
 };
+
 const renderCodeyEndingDialogue = (question) => {
   const pTag = document.querySelector(".codey-dialogue");
   pTag.innerHTML = "";
@@ -81,6 +82,7 @@ const renderCodeyEndingDialogue = (question) => {
     }
   }
 };
+
 const renderCodeyStartingDialogue = (question) => {
   const pTag = document.querySelector(".codey-dialogue");
   pTag.innerHTML = "";

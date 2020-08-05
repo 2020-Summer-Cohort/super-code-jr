@@ -27,13 +27,6 @@ public class FizzBuzzTest {
        String spokenWord = underTest.say(5);
        assertThat(spokenWord).isEqualTo("Buzz");
    }
-   @Test
-   public void multiplesOf3And5FizzBuzzSaysFizzBuzz() {
-        FizzBuzz underTest = new FizzBuzz();
-        String spokenWord = underTest.say(15);
-        assertThat(spokenWord).isEqualTo("FizzBuzz");
-    }
-}
 ###
         assertThat(spokenWord).isEqualTo("Fizz");
 ###
