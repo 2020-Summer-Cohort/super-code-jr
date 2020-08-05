@@ -7,9 +7,6 @@ const walkieTalkie = new Audio("audio/walkie-talkie.mp3");
 const renderAllContent = (question, turnCounter) => {
   renderWrongIframeContent(question);
   renderWholeErrorCode(question, turnCounter);
-  // renderBeforeError(question);
-  // renderErrorCode(question, turnCounter);
-  // renderAfterError(question);
   renderCodeyStartingDialogue(question);
   renderGroundControlBeginning(question);
 };
@@ -25,9 +22,9 @@ const renderCorrectIFrameContent = (question) => {
 
 const renderWholeErrorCode = (question, turnCounter) => {
   const codeBlock = document.querySelector(".question-code-block");
-    while (codeBlock.firstChild) {
-        codeBlock.firstChild.remove();
-    }
+  while (codeBlock.firstChild) {
+    codeBlock.firstChild.remove();
+  }
   const beforeError = document.createElement("p");
   beforeError.innerText = `${question.beforeErrorCode}`;
   beforeError.addEventListener("click", () => {
@@ -53,24 +50,6 @@ const renderWholeErrorCode = (question, turnCounter) => {
   codeBlock.appendChild(afterError);
 };
 
-// const renderBeforeError = (question) => {
-//   const codeTag = document.querySelector(".before-error");
-//   codeTag.innerText = `${question.beforeErrorCode}`;
-//   codeTag.addEventListener("click", () => {
-//     renderGroundControlHint(question);
-//     walkieTalkie.play();
-//   });
-// };
-// const renderErrorCode = (question, turnCounter) => {
-//   const codeTag = document.querySelector(".error-code");
-//   codeTag.classList.remove("highlight--corrected");
-//   codeTag.innerHTML = `${question.errorCode}`;
-//   codeTag.addEventListener("click", () => {
-//     updateAllDisplays(question, turnCounter);
-//     alert("you found bad code!");
-//   });
-// };
-
 const updateAllDisplays = (question, turnCounter) => {
   renderGroundControlFinished(question, turnCounter);
   renderCorrectIFrameContent(question);
@@ -83,14 +62,6 @@ const renderCorrectedError = (question) => {
   codeTag.classList.add("highlight--corrected");
   codeTag.innerHTML = `${question.correctedError}`;
 };
-// const renderAfterError = (question) => {
-//   const codeTag = document.querySelector(".after-error");
-//   codeTag.innerText = `${question.afterErrorCode}`;
-//   codeTag.addEventListener("click", () => {
-//     renderGroundControlHint(question);
-//     walkieTalkie.play();
-//   });
-// };
 
 const renderCorrectCodeBlock = (question) => {
   renderCorrectedError(question);
@@ -101,7 +72,18 @@ const renderCodeyEndingDialogue = (question) => {
 };
 const renderCodeyStartingDialogue = (question) => {
   const pTag = document.querySelector(".codey-dialogue");
-  pTag.innerHTML = `${question.codeyStartingDialogue}`;
+  var text = `${question.codeyStartingDialogue}`;
+  var i = 0;
+  typeWriter();
+  function typeWriter() {
+    if (i < text.length) {
+      console.log("after");
+      console.log(text.charAt(i));
+      pTag.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 100);
+    }
+  }
 };
 
 const renderGroundControlBeginning = (question) => {
