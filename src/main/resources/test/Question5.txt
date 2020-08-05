@@ -1,9 +1,12 @@
 Javascript
-###const canvas = document.querySelector("canvas");
+###
+const canvas = document.querySelector("canvas");
       var ctx = canvas.getContext("2d");
       var redColor = 0;
-      var colorSwitch = true;###
- const drawSquare = ()  {###
+      var colorSwitch = true;
+###
+ const drawSquare = ()  {
+###
 if (redColor == 255) {
           colorSwitch = false;
         } else if (redColor == 0) {
@@ -22,8 +25,11 @@ if (redColor == 255) {
         ctx.strokeStyle = "rgb(" + redColor + ", 255, 255)";
         ctx.rect(x, y, 10, 10);
         ctx.stroke();
-      };###
- const drawSquare = () => {###<!DOCTYPE html>
+      };
+###
+ const drawSquare = () => {
+###
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -66,7 +72,8 @@ if (redColor == 255) {
     </script>
   </body>
 </html>
-###<!DOCTYPE html>
+###
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -110,6 +117,12 @@ if (redColor == 255) {
   </body>
 </html>
 ###
-All my friends agree that javascript is the dumbest language. This draw square function doesn't even work! When I move my mouse in the window nothing happens!###
-Whatever, it's not like I needed your help. ### When you use "const" to define a function, don't forget the parentheses!
- Even if it's not taking in parameters!### Well done! Try moving your mouse in the window now! Codey might have a unique way of expressing gratitude, but he's thankful his code works.
+All my friends agree that javascript is the dumbest language. This draw square function doesn't even work! When I move my mouse in the window nothing happens!
+###
+Whatever, it's not like I needed your help.
+###
+When you use "const" to define a function, don't forget the parentheses! Even if it's not taking in parameters!
+###
+Bzzzzt!.....
+###
+Well done! Try moving your mouse in the window now! Codey might have a unique way of expressing gratitude, but he's thankful his code works.
