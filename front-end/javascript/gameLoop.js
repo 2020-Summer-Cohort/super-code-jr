@@ -6,8 +6,8 @@ let turnCounter = -1;
 
 const questionGrabber = () => {
   turnCounter++;
-  fetchQuestions().then((question) => {
-    renderAllContent(question[turnCounter], turnCounter);
+  fetchQuestions().then((questions) => {
+    renderAllContent(questions[turnCounter], turnCounter);
   });
 };
 const startGame = () => {
