@@ -1,0 +1,98 @@
+CSS
+###
+.head {
+	width: 200px;
+	margin: 0 auto;
+	height: 150px;
+	border-radius: 200px 200px 0 0;
+	margin-bottom: 10px;
+}
+
+.eyes {
+	display:flex;
+
+}
+###
+.head {
+###
+	width: 300px;
+    transition: 1s ease-in-out;
+}
+###
+.head:hover {
+###
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RoboPage</title>
+	<link rel="stylesheet" href="./css/question-css/robotdancewrong.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+<br>
+<br>
+<br>
+	<div class="robots">
+		<div class="android">
+			<div class="head">
+				<div class="eyes">
+					<div class="left_eye"></div>
+					<div class="right_eye"></div>
+				</div>
+			</div>
+			<div class="upper_body">
+				<div class="left_arm"></div>
+				<div class="torso"></div>
+				<div class="right_arm"></div>
+			</div>
+			<div class="lower_body">
+				<div class="left_leg"></div>
+				<div class="right_leg"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+###
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RoboPage</title>
+	<link rel="stylesheet" href="./css/question-css/robotdance.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<br>
+<br>
+<br>
+<body>
+	<div class="robots">
+		<div class="android">
+			<div class="head">
+				<div class="eyes">
+					<div class="left_eye"></div>
+					<div class="right_eye"></div>
+				</div>
+			</div>
+			<div class="upper_body">
+				<div class="left_arm"></div>
+				<div class="torso"></div>
+				<div class="right_arm"></div>
+			</div>
+			<div class="lower_body">
+				<div class="left_leg"></div>
+				<div class="right_leg"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+###
+Why isn't the robot's head moving when I hover over it? Please, like you'll be able to figure it out...
+###
+Psh, I knew that.
+###
+Isn't there a way to specific an action when your mouse moves over something?
+###
+Bzzzzt!
+###
+Great job! Remember to use :hover when necessary!
