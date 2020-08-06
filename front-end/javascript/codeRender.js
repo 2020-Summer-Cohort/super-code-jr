@@ -43,7 +43,8 @@ const renderWholeErrorCode = (question, turnCounter) => {
   errorCode.innerHTML = `${question.errorCode}`;
   errorCode.addEventListener("click", () => {
     updateAllDisplays(question, turnCounter);
-    alert("you found bad code!");
+    numberOfTries.innerHTML = Number(numberOfTries.innerHTML) + 1;
+    totalNumberOfTries.innerHTML = Number(totalNumberOfTries.innerHTML) + 1;
   });
   codeBlock.appendChild(errorCode);
   const afterError = document.createElement("p");
@@ -131,18 +132,18 @@ const renderGroundControlFinished = (question, turnCounter) => {
       i++;
       setTimeout(typeWriter, 50);
     }
+    if (i == text.length) {
+      continueContainer.prepend(continueButton);
+    }
   }
   const continueContainer = document.querySelector(".continue-button");
   const continueButton = document.createElement("button");
-  continueButton.innerText = "continue";
+  continueButton.innerText = "Continue";
   continueButton.addEventListener("click", () => {
-    alert("Next Question!");
-    console.log(turnCounter);
     numberOfTries.firstChild.remove();
     continueContainer.firstChild.remove();
     questionGrabber();
   });
-  continueContainer.prepend(continueButton);
 };
 
 const renderGroundControlHint = (question) => {
