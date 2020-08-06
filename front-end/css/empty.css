@@ -1,3 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=VT323&display=swap");
+
+@font-face {
+  font-family: "cyber";
+  src: url("/super-code-jr/Cyberspace\ Raceway\ Front.otf");
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 1 1 12px #ebd8a6, 0 0 20px #ebd8a6, 0 0 30px #e49a39,
+      0 0 40px #e49a39, 50px #e49a39, 0 0 60px #e49a39, 0 0 70px #e49a39;
+  }
+  to {
+    text-shadow: 0 0 20px #ebd8a6, 0 0 30px #ebd8a6, 0 0 40px #ebd8a6,
+      0 0 #ebd8a6;
+  }
+}
+
 * {
   /* background: black; */
   padding: 0;
@@ -14,11 +36,92 @@
 body {
   background-image: url(../images/sunset.png);
   background-position: sticky;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .game-container {
   z-index: 100;
 }
+
+/* --------------------------TAB & HEADER THINGS--------------------------------------------------------- */
+
+.clicks {
+  max-height: 25px;
+  padding: 3px;
+  align-self: center;
+}
+.developer-tab {
+  display: flex;
+  justify-items: flex-start;
+  justify-content: space-around;
+  background-color: rgba(54, 226, 248, 0.5);
+  color: var(--text);
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+  padding: 0.7em;
+  margin-top: 0.5em;
+  margin-left: 0.2em;
+  font-size: 20px;
+}
+.game-tab {
+  display: flex;
+  justify-items: center;
+  justify-content: space-around;
+  background-color: rgba(54, 226, 248, 0.5);
+  color: var(--text);
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+  padding: 0.7em;
+  margin-top: 0.5em;
+  margin-left: 0.2em;
+  font-size: 20px;
+}
+
+.game-tab:hover {
+  background-color: rgba(54, 226, 248, 0.8);
+}
+.developer-tab:hover {
+  background-color: rgba(54, 226, 248, 0.8);
+}
+.game-header,
+.number-of-tries {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}
+/* -------------------DEV MODAL------------------------------------------------- */
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.developer-iframe {
+  background-color: #fefefe;
+  width: 100%;
+  height: 100%;
+}
+
+.close-modal {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /*  -------------------------------------- Background & Grid here---------------------------------------------------*/
 .grid-container {
   position: absolute;
@@ -105,15 +208,17 @@ body {
     top: -15%;
   }
 }
-/* --------------------------old css test */
+/* --------------------------old css test -------------------------------------- */
 
 .display-container {
   justify-self: center;
   display: grid;
   z-index: 100;
   grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
   grid-template-rows: 70% 30%;
-  border: 2px solid var(--cyan);
+  /* border: 2px solid var(--cyan); */
   height: 85vh;
   width: 95%;
   margin-left: 3%;
@@ -130,17 +235,15 @@ body {
   max-height: 25vh;
   padding: 3px;
   margin: 2px;
-  border: 2px solid var(--cyan);
-  box-shadow: 0px 0px 7px 2px var(--cyan);
+  /* border: 2px solid var(--cyan); */
+  box-shadow: 0px 0px 7px 2px rgba(54, 226, 248, 0.5);
 }
 .clippy-display,
 .question-display,
-.rendered-display,
-.user-display,
-.header-display {
+.user-display {
   background-color: var(--offBlack);
-  border: 2px solid var(--cyan);
-  box-shadow: inset 0px 0px 5px 1px var(--cyan);
+  /* border: 2px solid var(--cyan); */
+  box-shadow: inset 0px 0px 5px 1px rgba(54, 226, 248, 0.5);
 }
 .question-display {
   padding: 3px;
@@ -152,23 +255,19 @@ body {
 }
 
 .header-display {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
   margin-left: 3%;
   height: 10vh;
   width: 95%;
 }
-.home-button {
-  padding: 1em;
-  border: 2px solid var(--cyan);
-  box-shadow: 0px 0px 7px 2px var(--cyan);
-}
+
 .radio-img {
   max-height: 25vh;
   padding: 3px;
   margin: 2px;
-  border: 2px solid var(--cyan);
-  box-shadow: 0px 0px 7px 2px var(--cyan);
+  /* border: 2px solid var(--cyan); */
+  box-shadow: 0px 0px 7px 2px rgba(54, 226, 248, 0.5);
 }
 .user-display {
   display: flex;
@@ -189,6 +288,10 @@ body {
 .iframe-display {
   height: 100%;
   width: 100%;
+  border-style: none;
+  border-radius: 5px;
+  border-top-left-radius: 0px;
+  margin-left: 4px;
 }
 
 /* ----------pre------------ */
