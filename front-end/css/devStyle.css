@@ -1,0 +1,78 @@
+@font-face {
+    font-family: "cyber";
+    src: url("/super-code-jr/Cyberspace\ Raceway\ Front.otf");
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text);
+}
+
+:root {
+  --cyan: #51e8f0;
+  --offBlack: #18181a;
+  --glow1: #e49a39;
+  --text: #ebd8a6;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 1 1 12px #ebd8a6, 0 0 20px #ebd8a6, 0 0 30px #e49a39,
+      0 0 40px #e49a39, 50px #e49a39, 0 0 60px #e49a39, 0 0 70px #e49a39;
+  }
+  to {
+    text-shadow: 0 0 20px #ebd8a6, 0 0 30px #ebd8a6, 0 0 40px #ebd8a6,
+      0 0 #ebd8a6;
+  }
+}
+body {
+    background-color: var(--offBlack);  
+    background-image: url("../images/bg-grid.png");
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+.about-us-header {
+  display: flex;
+  justify-content:center;
+  margin-top: 20px;
+  font-family: cyber;
+  color: var(--text);
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+  margin-bottom: 1em;
+}
+
+.bio-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 5em 5em 5em 5em 5em 5em;
+    padding-bottom: 2em;
+}
+
+.bio img {
+    width: 100px;
+    height: 100px;
+    padding-top: 2px;
+    clip-path: polygon(25% 0, 100% 0, 75% 100%, 0 100%);
+}
+
+.developer-display {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    
+}
+
+.developer-display img {
+    max-width: 300px;
+    max-width: 300px;
+}
+
+.developer-info-box {
+    display: grid;
+}
