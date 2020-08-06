@@ -23,10 +23,6 @@ public int getHealth() {
 public int getBoredom(){
 return boredom;
 }
-
-public int getHappiness() {
-  return happiness;
-}
 ###
 public String getName(){
 ###

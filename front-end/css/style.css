@@ -56,19 +56,23 @@
 .bio-skills {
   color: var(--text);
 }
+
 .bio-anchors {
   font-size: 25px;
   text-transform: uppercase;
 }
+
 .bio-anchors:visited {
   text-transform: uppercase;
   color: var(--text);
 }
+
 .bio-img {
   height: 100px;
   width: 100px;
   border-radius: 50px;
 }
+
 .bio-container {
   background-image: url(../images/bg-grid.png);
   background-repeat: no-repeat;
@@ -89,7 +93,32 @@
   font-size: 25px;
   text-transform: uppercase;
 }
-
+.developer-tab {
+  display:flex;
+  justify-items: center;
+  justify-content: space-around;
+  background-color: var(--cyan);
+  color: var(--text);
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+  padding:.5em;
+  margin-top:.2em;
+  margin-left:.2em;
+  font-size: 20px;
+}
+.game-tab {
+  display:flex;
+  justify-items: center;
+  justify-content: space-around;
+  background-color: var(--cyan);
+  color: var(--text);
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+  padding:.5em;
+  margin-top:.2em;
+  margin-left:.2em;
+  font-size: 20px;
+}
 .display-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -97,6 +126,10 @@
   border: 2px solid var(--cyan);
   height: 92vh;
   width: 100vw;
+}
+
+.display-iframe {
+  
 }
 .clippy-display {
   display: flex;
@@ -122,15 +155,53 @@
   box-shadow: inset 0px 0px 5px 1px var(--cyan);
 }
 .header-display {
-  display: flex;
-  justify-content: center;
+  display:grid;
+  grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
   height: 8vh;
 }
+.header-text {
+  display: flex;
+  justify-content: center;
+  
+}
+
 .home-button {
   padding: 1em;
   border: 2px solid var(--cyan);
   box-shadow: 0px 0px 7px 2px var(--cyan);
 }
+
+.modal {
+  display: none;  
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.developer-iframe {
+  background-color: #fefefe;
+  width: 100%;
+  height: 100%;
+}
+
+.close-modal {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .radio-img {
   max-height: 25vh;
   padding: 3px;
@@ -179,8 +250,11 @@
   text-shadow: 1px 1px 4px black, 0 0 1em var(--text), 0 0 0.2em var(--text);
 }
 
-.score {
-  padding-right: 20px;
+.game-header,
+.number-of-tries {
+  display: flex;
+  justify-self: center;
+  align-self: center;
 }
 
 

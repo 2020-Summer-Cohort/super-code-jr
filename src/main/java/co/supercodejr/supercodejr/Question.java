@@ -27,14 +27,20 @@ public class Question {
     @Lob
     @Column(length = 100000)
     private String iframeCorrect;
+    @Lob
+    @Column(length = 100000)
     private String codeyStartingDialogue;
     @Lob
+    @Column(length = 100000)
     private String codeyEndingDialogue;
     @Lob
+    @Column(length = 100000)
     private String hintText;
     @Lob
+    @Column(length = 100000)
     private String groundControlBeginningDialogue;
     @Lob
+    @Column(length = 100000)
     private String groundControlCompletedDialogue;
 
     protected Question (){}

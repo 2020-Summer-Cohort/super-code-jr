@@ -11,6 +11,7 @@ const renderAllContent = (question, turnCounter) => {
   renderWholeErrorCode(question, turnCounter);
   renderCodeyStartingDialogue(question);
   renderGroundControlBeginning(question);
+  developerTabClickable()
 };
 const renderWrongIframeContent = (question) => {
   const renderIFrameQuestion = document.querySelector(".iframe-display");
@@ -42,7 +43,8 @@ const renderWholeErrorCode = (question, turnCounter) => {
   errorCode.innerHTML = `${question.errorCode}`;
   errorCode.addEventListener("click", () => {
     updateAllDisplays(question, turnCounter);
-    alert("you found bad code!");
+    numberOfTries.innerHTML = Number(numberOfTries.innerHTML) + 1;
+    totalNumberOfTries.innerHTML = Number(totalNumberOfTries.innerHTML) + 1;
   });
   codeBlock.appendChild(errorCode);
   const afterError = document.createElement("p");
@@ -72,6 +74,7 @@ const renderCorrectedError = (question) => {
 const renderCorrectCodeBlock = (question) => {
   renderCorrectedError(question);
 };
+
 const renderCodeyEndingDialogue = (question) => {
   const pTag = document.querySelector(".codey-dialogue");
   pTag.innerHTML = "";
@@ -86,6 +89,7 @@ const renderCodeyEndingDialogue = (question) => {
     }
   }
 };
+
 const renderCodeyStartingDialogue = (question) => {
   const pTag = document.querySelector(".codey-dialogue");
   pTag.innerHTML = "";
@@ -128,18 +132,18 @@ const renderGroundControlFinished = (question, turnCounter) => {
       i++;
       setTimeout(typeWriter, 50);
     }
+    if (i == text.length) {
+      continueContainer.prepend(continueButton);
+    }
   }
   const continueContainer = document.querySelector(".continue-button");
   const continueButton = document.createElement("button");
-  continueButton.innerText = "continue";
+  continueButton.innerText = "Continue";
   continueButton.addEventListener("click", () => {
-    alert("Next Question!");
-    console.log(turnCounter);
     numberOfTries.firstChild.remove();
     continueContainer.firstChild.remove();
     questionGrabber();
   });
-  continueContainer.prepend(continueButton);
 };
 
 const renderGroundControlHint = (question) => {
@@ -156,3 +160,23 @@ const renderGroundControlHint = (question) => {
     }
   }
 };
+
+
+const developerTabClickable = () => {
+  const sTag = document.querySelector(".developer-tab")
+  sTag.innerText = `Developers`
+  const gTab = document.querySelector(".game-tab")
+  gTab.innerText = `Codeys Game`
+  sTag.addEventListener("click", () => {
+    renderDeveloperTab()
+  })
+}
+
+const renderDeveloperTab = () => {
+  const modal = document.getElementById("developer-modal")
+  modal.style.display = "block"
+  const sTag = document.getElementsByClassName("close-modal")[0];
+  sTag.onclick = () => {
+    modal.style.display = "none"
+  }
+}
