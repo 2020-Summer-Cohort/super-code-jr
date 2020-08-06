@@ -236,3 +236,9 @@
   color: whitesmoke;
   text-shadow: 1px 1px 4px black, 0 0 1em var(--text), 0 0 0.2em var(--text);
 }
+
+.score {
+  padding-right: 20px;
+}
+
+
