@@ -164,6 +164,8 @@ const renderGroundControlHint = (question) => {
 const developerTabClickable = () => {
   const sTag = document.querySelector(".developer-tab")
   sTag.innerText = `Developers`
+  const gTab = document.querySelector(".game-tab")
+  gTab.innerText = `Codeys Game`
   sTag.addEventListener("click", () => {
     renderDeveloperTab()
   })

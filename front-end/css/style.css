@@ -106,6 +106,19 @@
   margin-left:.2em;
   font-size: 20px;
 }
+.game-tab {
+  display:flex;
+  justify-items: center;
+  justify-content: space-around;
+  background-color: var(--cyan);
+  color: var(--text);
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+  padding:.5em;
+  margin-top:.2em;
+  margin-left:.2em;
+  font-size: 20px;
+}
 .display-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -143,7 +156,7 @@
 }
 .header-display {
   display:grid;
-  grid-template-columns: 1fr 8fr;
+  grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
   height: 8vh;
 }
 .header-text {
@@ -237,8 +250,11 @@
   text-shadow: 1px 1px 4px black, 0 0 1em var(--text), 0 0 0.2em var(--text);
 }
 
-.score {
-  padding-right: 20px;
+.game-header,
+.number-of-tries {
+  display: flex;
+  justify-self: center;
+  align-self: center;
 }
 
 
