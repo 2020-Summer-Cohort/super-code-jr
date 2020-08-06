@@ -1,38 +1,48 @@
-*
-{
-    background: black;
-    padding:0;
-    margin:0;
-    display: border-box;
+* {
+  /* background: black; */
+  padding: 0;
+  margin: 0;
+  display: border-box;
+}
+:root {
+  --cyan: #51e8f0;
+  --offBlack: rgba(16, 4, 66, 0.671);
+  --glow1: #e49a39;
+  --text: #ebd8a6;
 }
 
-.game-container
-{
-    z-index: 100;
+body {
+  background-image: url(../images/sunset.png);
+  background-position: sticky;
+  background-repeat: no-repeat;
+}
+.game-container {
+  z-index: 100;
 }
 /*  -------------------------------------- Background & Grid here---------------------------------------------------*/
-.grid-container
-{
-    overflow: hidden;
-    height: 100vh;
-    z-index:1;
+.grid-container {
+  position: absolute;
+  overflow: hidden;
+  height: 100vh;
+  z-index: -1;
 }
 
-.sunset
-{
-    position: fixed;
-    background-size: cover;
-    height:100vh;
-    width:100vw;
-    max-width: 100%;
-    max-height: 100%;
-    z-index:1;
+.sunset {
+  position: absolute;
+  top: 0;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  max-height: 100%;
+  z-index: -1;
 }
 
-.grid
-{
-    
-    background: linear-gradient(
+.grid {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  background: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0) 0px,
       rgba(54, 226, 248, 0.5) 0%,
@@ -48,62 +58,145 @@
     );
 }
 
-.grid
-{
-    
-    background-size: 4em 2em, 4em 2em;
-    background-color: black;
-    border-top: 5px solid rgba(54, 226, 248, 0.5);
-    box-shadow: 0 -25px 45px rgba(54, 226, 248, 0.5);
-    height: 40em;
-    perspective: 1000px;
-    transform: perspective(200px) scale(1.26) rotateX(80deg); 
-    position: absolute; 
-    width: 100%;
-    z-index: 1;
+.grid {
+  background-size: 4em 2em, 4em 2em;
+  background-color: black;
+  border-top: 5px solid rgba(54, 226, 248, 0.5);
+  box-shadow: 0 -25px 45px rgba(54, 226, 248, 0.5);
+  height: 50vh;
+  perspective: 1000px;
+  transform: perspective(200px) scale(1.26) rotateX(80deg);
+  width: 100%;
 }
 /*  -------------------------------------- Background & Grid here---------------------------------------------------*/
 
-
-
-
-
-
-
 /*  -------------------------------------- Background & Grid here Media queries -------------------------------------*/
 @media only screen and (min-width: 768px) {
- 
   img {
-      top: -3%;
-    }
-  
+    top: -3%;
   }
-  
-  @media only screen and (min-width: 950px) {
-    body {
-      background-position: 50% 0%;
-    }
-  }
-  
-  @media only screen and (min-width: 1100px) {
-    img {
-      top: 8%;
-    }
-  }
+}
 
-  @media only screen and (min-width: 1167px) {
-    img {
-      top: -11%;
-    }
+@media only screen and (min-width: 950px) {
+  body {
+    background-position: 50% 0%;
   }
+}
 
-  @media only screen and (min-width: 1297px) {
-    img  {
-      top: 20%;
-    }
+@media only screen and (min-width: 1100px) {
+  img {
+    top: 8%;
   }
-  @media only screen and (min-width: 1500px) {
-    img {
-      top: -15%;
-    }
+}
+
+@media only screen and (min-width: 1167px) {
+  img {
+    top: -11%;
   }
+}
+
+@media only screen and (min-width: 1297px) {
+  img {
+    top: 20%;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  img {
+    top: -15%;
+  }
+}
+/* --------------------------old css test */
+
+.display-container {
+  justify-self: center;
+  display: grid;
+  z-index: 100;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 70% 30%;
+  border: 2px solid var(--cyan);
+  height: 85vh;
+  width: 95%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+.clippy-display {
+  display: flex;
+  text-align: center;
+}
+.clippy-display p {
+  padding-top: 2em;
+}
+.clippy-img {
+  max-height: 25vh;
+  padding: 3px;
+  margin: 2px;
+  border: 2px solid var(--cyan);
+  box-shadow: 0px 0px 7px 2px var(--cyan);
+}
+.clippy-display,
+.question-display,
+.rendered-display,
+.user-display,
+.header-display {
+  background-color: var(--offBlack);
+  border: 2px solid var(--cyan);
+  box-shadow: inset 0px 0px 5px 1px var(--cyan);
+}
+.question-display {
+  padding: 3px;
+  display: flex;
+  justify-content: left;
+  text-align: left;
+  flex-flow: column;
+  overflow-wrap: break-word;
+}
+
+.header-display {
+  display: flex;
+  justify-content: center;
+  margin-left: 3%;
+  height: 10vh;
+  width: 95%;
+}
+.home-button {
+  padding: 1em;
+  border: 2px solid var(--cyan);
+  box-shadow: 0px 0px 7px 2px var(--cyan);
+}
+.radio-img {
+  max-height: 25vh;
+  padding: 3px;
+  margin: 2px;
+  border: 2px solid var(--cyan);
+  box-shadow: 0px 0px 7px 2px var(--cyan);
+}
+.user-display {
+  display: flex;
+  text-align: center;
+}
+.user-display p {
+  padding-top: 2em;
+}
+
+.clippy-display,
+.user-display,
+.question-display,
+.header-display {
+  color: var(--text);
+  text-shadow: 1px 1px 4px black, 0 0 1em var(--glow1), 0 0 0.2em var(--glow1);
+}
+
+.iframe-display {
+  height: 100%;
+  width: 100%;
+}
+
+/* ----------pre------------ */
+pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
