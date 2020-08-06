@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/style.css" /> -->
+    <link rel="stylesheet" href="./css/empty.css">
+    <title>Super Coder Jr.</title>
+  </head>
+  <body>
+    <header>
+
+    </header>
+<img class="sunset" src="../front-end/images/sunset.png" alt="sunset">
+<div class="grid-container">
+    <div class="grid">
+
+    </div>
+</div>
+
+
+    <container class="game-container">
+      <header class="header-display">
+        <h1>Welcome to Super Code Jr.</h1>
+        <h2>Number of Tries:</h2>
+        <p class="score"></p>
+        <h2>Total Number of Tries:</h2>
+        <p class="total-score"></p>
+      </header>
+      <container class="display-container">
+        <section class="rendered-display">
+          <iframe
+            src="./wrong-rendered-code.html"
+            class="iframe-display"
+          ></iframe>
+        </section>
+        <section class="question-display">
+          <h2>Fix codeys code!</h2>
+          <pre>
+              <code class = "question-code-block">
+                              </code>
+          </pre>
+        </section>
+        <section class="clippy-display">
+          <img class="clippy-img" src="./images/dataClippy.JPG" />
+          <p class="codey-dialogue"></p>
+        </section>
+        <section class="user-display">
+          <img class="radio-img" src="./images/radioTower.jpg" />
+          <div>
+            <p class="ground-control-dialogue"></p>
+            <p class="continue-button"></p>
+          </div>
+        </section>
+      </container>
+    </container>
+    <script src="./javascript/gameLoop.js" type="module"></script>
+  </body>
+</html>
