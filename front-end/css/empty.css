@@ -241,7 +241,8 @@ body {
 }
 .clippy-display,
 .question-display,
-.user-display {
+.user-display,
+.victory-container {
   background-color: var(--offBlack);
   /* border: 2px solid var(--cyan); */
   box-shadow: inset 0px 0px 5px 1px rgba(54, 226, 248, 0.5);
@@ -309,4 +310,14 @@ pre {
   white-space: -pre-wrap;
   white-space: -o-pre-wrap;
   word-wrap: break-word;
+}
+
+/* ---------------------VICTORY PAGE CSS------------------ */
+.victory-container {
+  display: grid;
+  justify-self: stretch;
+  grid-column: 1 span 3;
+  text-align: center;
+  color: var(--cyan);
+  width: 200%;
 }

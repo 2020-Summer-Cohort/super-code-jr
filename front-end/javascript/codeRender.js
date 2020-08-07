@@ -4,14 +4,15 @@ import { questionGrabber } from "./gameLoop.js";
 
 const walkieTalkie = new Audio("audio/walkie-talkie.mp3");
 const numberOfTries = document.querySelector(".score");
-const totalNumberOfTries = document.querySelector(".total-score")
+const totalNumberOfTries = document.querySelector(".total-score");
 
 const renderAllContent = (question, turnCounter) => {
   renderWrongIframeContent(question);
   renderWholeErrorCode(question, turnCounter);
   renderCodeyStartingDialogue(question);
   renderGroundControlBeginning(question);
-  developerTabClickable()
+  codeyMoodShift("bored");
+  developerTabClickable();
 };
 const renderWrongIframeContent = (question) => {
   const renderIFrameQuestion = document.querySelector(".iframe-display");
@@ -62,6 +63,7 @@ const updateAllDisplays = (question, turnCounter) => {
   renderGroundControlFinished(question, turnCounter);
   renderCorrectIFrameContent(question);
   renderCorrectCodeBlock(question);
+  codeyMoodShift("surprised");
   renderCodeyEndingDialogue(question);
 };
 
@@ -146,6 +148,25 @@ const renderGroundControlFinished = (question, turnCounter) => {
   });
 };
 
+function typeWriter() {
+  if (i < text.length) {
+    pTag.innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, 50);
+  }
+  if (i == text.length) {
+    continueContainer.prepend(continueButton);
+  }
+}
+const continueContainer = document.querySelector(".continue-button");
+const continueButton = document.createElement("button");
+continueButton.innerText = "Continue";
+continueButton.addEventListener("click", () => {
+  numberOfTries.firstChild.remove();
+  continueContainer.firstChild.remove();
+  questionGrabber();
+});
+
 const renderGroundControlHint = (question) => {
   const pTag = document.querySelector(".ground-control-dialogue");
   pTag.innerHTML = "";
@@ -161,22 +182,30 @@ const renderGroundControlHint = (question) => {
   }
 };
 
-
 const developerTabClickable = () => {
-  const sTag = document.querySelector(".developer-tab")
-  sTag.innerText = `Developers`
-  const gTab = document.querySelector(".game-tab")
-  gTab.innerText = `Codeys Game`
+  const sTag = document.querySelector(".developer-tab");
+  sTag.innerText = `Developers`;
+  const gTab = document.querySelector(".game-tab");
+  gTab.innerText = `Codeys Game`;
   sTag.addEventListener("click", () => {
-    renderDeveloperTab()
-  })
-}
+    renderDeveloperTab();
+  });
+};
 
 const renderDeveloperTab = () => {
-  const modal = document.getElementById("developer-modal")
-  modal.style.display = "block"
+  const modal = document.getElementById("developer-modal");
+  modal.style.display = "block";
   const sTag = document.getElementsByClassName("close-modal")[0];
   sTag.onclick = () => {
-    modal.style.display = "none"
+    modal.style.display = "none";
+  };
+};
+
+const codeyMoodShift = (mood) => {
+  const codeyImg = document.querySelector(".clippy-img");
+  if (mood === "bored") {
+    codeyImg.src = "./images/dataClippy.JPG";
+  } else if (mood === "surprised") {
+    codeyImg.src = "./images/radioTower.JPG";
   }
-}
+};
