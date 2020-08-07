@@ -4,14 +4,14 @@ import { questionGrabber } from "./gameLoop.js";
 
 const walkieTalkie = new Audio("audio/walkie-talkie.mp3");
 const numberOfTries = document.querySelector(".score");
-const totalNumberOfTries = document.querySelector(".total-score")
+const totalNumberOfTries = document.querySelector(".total-score");
 
 const renderAllContent = (question, turnCounter) => {
   renderWrongIframeContent(question);
   renderWholeErrorCode(question, turnCounter);
   renderCodeyStartingDialogue(question);
   renderGroundControlBeginning(question);
-  developerTabClickable()
+  developerTabClickable();
 };
 const renderWrongIframeContent = (question) => {
   const renderIFrameQuestion = document.querySelector(".iframe-display");
@@ -30,7 +30,8 @@ const renderWholeErrorCode = (question, turnCounter) => {
   }
   const beforeError = document.createElement("p");
   beforeError.innerText = `${question.beforeErrorCode}`;
-  beforeError.addEventListener("click", () => {
+  beforeError.addEventListener("click", function beforeListener() {
+    beforeError.removeEventListener("click", beforeListener);
     renderGroundControlHint(question);
     walkieTalkie.play();
     numberOfTries.innerHTML = Number(numberOfTries.innerHTML) + 1;
@@ -41,7 +42,10 @@ const renderWholeErrorCode = (question, turnCounter) => {
   errorCode.classList.add("error--block");
   errorCode.classList.remove("highlight--corrected");
   errorCode.innerHTML = `${question.errorCode}`;
-  errorCode.addEventListener("click", () => {
+  errorCode.addEventListener("click", function listener() {
+    errorCode.removeEventListener("click", listener);
+    afterError.removeEventListener("click", listener);
+    beforeError.removeEventListener("click", listener);
     updateAllDisplays(question, turnCounter);
     numberOfTries.innerHTML = Number(numberOfTries.innerHTML) + 1;
     totalNumberOfTries.innerHTML = Number(totalNumberOfTries.innerHTML) + 1;
@@ -49,7 +53,8 @@ const renderWholeErrorCode = (question, turnCounter) => {
   codeBlock.appendChild(errorCode);
   const afterError = document.createElement("p");
   afterError.innerText = `${question.afterErrorCode}`;
-  afterError.addEventListener("click", () => {
+  afterError.addEventListener("click", function afterListener() {
+    afterError.removeEventListener("click", afterListener);
     renderGroundControlHint(question);
     walkieTalkie.play();
     numberOfTries.innerHTML = Number(numberOfTries.innerHTML) + 1;
@@ -161,22 +166,21 @@ const renderGroundControlHint = (question) => {
   }
 };
 
-
 const developerTabClickable = () => {
-  const sTag = document.querySelector(".developer-tab")
-  sTag.innerText = `Developers`
-  const gTab = document.querySelector(".game-tab")
-  gTab.innerText = `Codeys Game`
+  const sTag = document.querySelector(".developer-tab");
+  sTag.innerText = `Developers`;
+  const gTab = document.querySelector(".game-tab");
+  gTab.innerText = `Codeys Game`;
   sTag.addEventListener("click", () => {
-    renderDeveloperTab()
-  })
-}
+    renderDeveloperTab();
+  });
+};
 
 const renderDeveloperTab = () => {
-  const modal = document.getElementById("developer-modal")
-  modal.style.display = "block"
+  const modal = document.getElementById("developer-modal");
+  modal.style.display = "block";
   const sTag = document.getElementsByClassName("close-modal")[0];
   sTag.onclick = () => {
-    modal.style.display = "none"
-  }
-}
+    modal.style.display = "none";
+  };
+};
