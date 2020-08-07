@@ -44,8 +44,6 @@ const renderWholeErrorCode = (question, turnCounter) => {
   errorCode.innerHTML = `${question.errorCode}`;
   errorCode.addEventListener("click", function listener() {
     errorCode.removeEventListener("click", listener);
-    afterError.removeEventListener("click", listener);
-    beforeError.removeEventListener("click", listener);
     updateAllDisplays(question, turnCounter);
     numberOfTries.innerHTML = Number(numberOfTries.innerHTML) + 1;
     totalNumberOfTries.innerHTML = Number(totalNumberOfTries.innerHTML) + 1;
