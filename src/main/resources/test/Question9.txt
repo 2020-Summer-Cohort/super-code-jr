@@ -1,0 +1,40 @@
+CSS
+###
+<img class="clip" width="600" height="650"
+src="https://www.crozetgazette.com/wp-content/uploads/2020/01/iStock-1147108546.jpg">
+###
+clip-path: polygon(50% 0, 100% 50%, 100% 100%, 0 50%);
+###
+
+###
+clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+###
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="./css/question-css/polygonwrong.css">
+</head>
+<body>
+<img class="clip" src="https://www.crozetgazette.com/wp-content/uploads/2020/01/iStock-1147108546.jpg" width="600" height="650">
+</body>
+</html>
+###
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="./css/question-css/polygonright.css">
+</head>
+<body>
+<img class="clip" src="https://www.crozetgazette.com/wp-content/uploads/2020/01/iStock-1147108546.jpg" width="600" height="650">
+</body>
+</html>
+###
+Why isn't this picture in the shape of a diamond?!
+###
+Huh, you must think you're real smart.
+###
+Those percentages seem a bit off...
+###
+Bzzzzt!
+###
+Great job!
