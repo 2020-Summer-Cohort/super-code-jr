@@ -1,5 +1,5 @@
 export { renderAllContent };
-import { fetchQuestion, fetchQuestions } from "./fetchQuestions.js";
+import { fetchQuestion, fetchQuestions, submitQuestion } from "./fetchQuestions.js";
 import { questionGrabber } from "./gameLoop.js";
 
 const walkieTalkie = new Audio("audio/walkie-talkie.mp3");

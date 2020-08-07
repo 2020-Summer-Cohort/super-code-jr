@@ -1,4 +1,4 @@
-export {fetchQuestion, fetchQuestions}
+export {fetchQuestion, fetchQuestions, submitQuestion}
 
 const fetchQuestions = async () =>{
     return fetch(`http://localhost:8080/api/questions/`)
@@ -13,3 +13,15 @@ const fetchQuestion = async (id) =>{
             response.json()
     );
 }
+
+const submitQuestion = async (questions) => {
+    return fetch(`http://localhost:8080/api/questions/submitQuestion`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        }, 
+    body: JSON.stringify(questions)
+    }).then(response => response.json())
+}
+
+
