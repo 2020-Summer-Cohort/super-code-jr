@@ -11,6 +11,7 @@
   padding: 0;
   box-sizing: border-box;
   color: var(--text);
+  text-decoration: none;
 }
 
 :root {
@@ -55,11 +56,16 @@ body {
     padding-bottom: 2em;
 }
 
-.bio img {
+.bio-img {
     width: 100px;
     height: 100px;
     padding-top: 2px;
     clip-path: polygon(25% 0, 100% 0, 75% 100%, 0 100%);
+}
+
+.bio-img:hover {
+  border: solid;
+  border-color:red;
 }
 
 .bio-anchors {
@@ -67,13 +73,13 @@ body {
 }
 
 .developer-display {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
 }
 
 .developer-display img {
-    max-width: 300px;
-    max-width: 300px;
+  width: 300px;
+  height: 300px;
 }
 
 .developer-info-box {
@@ -83,7 +89,12 @@ body {
 .footer {
   display:flex;
   justify-content: center;
-  padding-top:5em
+  padding-top:5em;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  padding-bottom: 1em;
+
 }
 
 .skill-bar-1,
