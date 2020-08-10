@@ -1,3 +1,4 @@
+import { submitQuestion } from "./fetchQuestions.js";
 const submitButton = document.getElementById("submitButton");
 const codeLanguage = document.getElementById("codeLanguage");
 const beforeError = document.getElementById("beforeErrorCode");
@@ -17,12 +18,11 @@ const groundControlCompletedDialogue = document.getElementById(
 );
 
 submitButton.addEventListener("click", () => {
-
   var question = {
     codeLanguage: codeLanguage.value,
-    beforeError: beforeError.value,
+    beforeErrorCode: beforeError.value,
     errorCode: errorCode.value,
-    afterError: afterError.value,
+    afterErrorCode: afterError.value,
     correctedError: correctedError.value,
     iframeWrong: iframeWrong.value,
     iframeCorrect: iframeCorrect.value,
@@ -30,49 +30,50 @@ submitButton.addEventListener("click", () => {
     codeyEndingDialogue: codeyEndingDialogue.value,
     hintText: hintText.value,
     groundControlBeginningDialogue: groundControlBeginningDialogue.value,
-    groundControlCompletedDialogue: groundControlCompletedDialogue.value
+    groundControlCompletedDialogue: groundControlCompletedDialogue.value,
   };
 
   console.log(question);
-//   console.log("Hello");
-//   let data =
-//     codeLanguage.value +
-//     "\r\n###\r\n" +
-//     beforeError.value +
-//     "\r\n###\r\n" +
-//     errorCode.value +
-//     "\r\n###\r\n" +
-//     afterError.value +
-//     "\r\n###\r\n" +
-//     correctedError.value +
-//     "\r\n###\r\n" +
-//     iframeWrong.value +
-//     "\r\n###\r\n" +
-//     iframeCorrect.value +
-//     "\r\n###\r\n" +
-//     codeyStartingDialogue.value +
-//     "\r\n###\r\n" +
-//     codeyEndingDialogue.value +
-//     "\r\n###\r\n" +
-//     hintText.value +
-//     "\r\n###\r\n" +
-//     groundControlBeginningDialogue.value +
-//     "\r\n###\r\n" +
-//     groundControlCompletedDialogue.value;
+  submitQuestion(question);
+  //   console.log("Hello");
+  //   let data =
+  //     codeLanguage.value +
+  //     "\r\n###\r\n" +
+  //     beforeError.value +
+  //     "\r\n###\r\n" +
+  //     errorCode.value +
+  //     "\r\n###\r\n" +
+  //     afterError.value +
+  //     "\r\n###\r\n" +
+  //     correctedError.value +
+  //     "\r\n###\r\n" +
+  //     iframeWrong.value +
+  //     "\r\n###\r\n" +
+  //     iframeCorrect.value +
+  //     "\r\n###\r\n" +
+  //     codeyStartingDialogue.value +
+  //     "\r\n###\r\n" +
+  //     codeyEndingDialogue.value +
+  //     "\r\n###\r\n" +
+  //     hintText.value +
+  //     "\r\n###\r\n" +
+  //     groundControlBeginningDialogue.value +
+  //     "\r\n###\r\n" +
+  //     groundControlCompletedDialogue.value;
 
-//   const textToBlob = new Blob([data], { type: "text/plain" });
-//   const fileName = "testQuestion.txt";
+  //   const textToBlob = new Blob([data], { type: "text/plain" });
+  //   const fileName = "testQuestion.txt";
 
-//   /// call api
-//   let newLink = document.createElement("a");
-//   newLink.download = fileName;
+  //   /// call api
+  //   let newLink = document.createElement("a");
+  //   newLink.download = fileName;
 
-//   if (window.webkitURL != null) {
-//     newLink.href = window.webkitURL.createObjectURL(textToBlob);
-//   } else {
-//     newLink.href = window.URL.createObjectURL(textToBlOB);
-//     newLink.style.display = "none";
-//     document.body.appendChild(newLink);
-//   }
-//   newLink.click();
+  //   if (window.webkitURL != null) {
+  //     newLink.href = window.webkitURL.createObjectURL(textToBlob);
+  //   } else {
+  //     newLink.href = window.URL.createObjectURL(textToBlOB);
+  //     newLink.style.display = "none";
+  //     document.body.appendChild(newLink);
+  //   }
+  //   newLink.click();
 });
