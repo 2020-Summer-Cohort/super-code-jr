@@ -72,7 +72,9 @@ const updateAllDisplays = (question, turnCounter) => {
 const renderCorrectedError = (question) => {
   const fakeCode = document.querySelector(".overlay");
   fakeCode.innerHTML = ``;
-  fakeCode.innerHTML = `<pre>${question.beforeErrorCode}${question.correctedError}${question.afterErrorCode}</pre>`;
+  const fakeCodeContainer = document.createElement("code");
+  fakeCodeContainer.innerText = `${question.beforeErrorCode}${question.correctedError}${question.afterErrorCode}`;
+  fakeCode.appendChild(fakeCodeContainer);
   const codeTag = document.querySelector(".error--block");
   codeTag.classList.add("highlight--corrected");
   codeTag.innerHTML = `${question.correctedError}`;
@@ -87,10 +89,8 @@ const renderCorrectCodeBlock = (question) => {
 
 const renderCodeyEndingDialogue = (question) => {
   const pTag = document.querySelector(".codey-dialogue");
-  // pTag.classList.add("typewriter-text");
   pTag.innerHTML = "";
   const text = `${question.codeyEndingDialogue}`;
-  // pTag.innerHTML = text;
   let i = 0;
   typeWriter();
   function typeWriter() {
@@ -108,10 +108,8 @@ const renderCodeyEndingDialogue = (question) => {
 
 const renderCodeyStartingDialogue = (question) => {
   const pTag = document.querySelector(".codey-dialogue");
-  // pTag.classList.add("typewriter-text");
   pTag.innerHTML = "";
   const text = `${question.codeyStartingDialogue}`;
-  // pTag.innerHTML = text;
   let i = 0;
   typeWriter();
   function typeWriter() {
@@ -131,7 +129,6 @@ const renderGroundControlBeginning = (question) => {
   const pTag = document.querySelector(".ground-control-dialogue");
   pTag.innerHTML = "";
   const text = `${question.groundControlBeginningDialogue}`;
-  // pTag.innerHTML = text;
   let i = 0;
   typeWriter();
   on();
@@ -151,7 +148,6 @@ const renderGroundControlFinished = (question, turnCounter) => {
   const pTag = document.querySelector(".ground-control-dialogue");
   pTag.innerHTML = "";
   const text = `${question.groundControlCompletedDialogue}`;
-  // pTag.innerHTML = text;
   let i = 0;
   typeWriter();
   function typeWriter() {
@@ -232,7 +228,6 @@ function on() {
   wholeCode.style.display = "none";
   overlay.style.display = "block";
   overlay.style.zIndex = "2";
-  console.log("ON");
 }
 
 function off() {
@@ -241,5 +236,4 @@ function off() {
   wholeCode.style.display = "block";
   overlay.style.zIndex = "-1";
   overlay.style.display = "none";
-  console.log("OFF");
 }
