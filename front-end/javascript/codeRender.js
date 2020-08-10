@@ -48,7 +48,8 @@ const renderWholeErrorCode = (question, turnCounter) => {
   const errorCode = document.createElement("p");
   errorCode.classList.add("error--block");
   errorCode.classList.remove("highlight--corrected");
-  errorCode.innerHTML = `${question.errorCode}`;
+  errorCode.innerText = `${question.errorCode}`;
+
   errorCode.addEventListener("click", function listener() {
     errorCode.removeEventListener("click", listener);
     updateAllDisplays(question, turnCounter);
@@ -67,7 +68,10 @@ const renderWholeErrorCode = (question, turnCounter) => {
   });
   codeBlock.appendChild(afterError);
   const fakeCode = document.querySelector(".overlay");
-  fakeCode.innerHTML = `<pre>${question.beforeErrorCode}${question.errorCode}${question.afterErrorCode}</pre>`;
+  fakeCode.innerText = ``;
+  const fakeCodeContainer = document.createElement("code");
+  fakeCodeContainer.innerText = `${question.beforeErrorCode}${question.errorCode}${question.afterErrorCode}`;
+  fakeCode.appendChild(fakeCodeContainer);
 };
 
 const updateAllDisplays = (question, turnCounter) => {
@@ -80,13 +84,13 @@ const updateAllDisplays = (question, turnCounter) => {
 
 const renderCorrectedError = (question) => {
   const fakeCode = document.querySelector(".overlay");
-  fakeCode.innerHTML = ``;
+  fakeCode.innerText = ``;
   const fakeCodeContainer = document.createElement("code");
   fakeCodeContainer.innerText = `${question.beforeErrorCode}${question.correctedError}${question.afterErrorCode}`;
   fakeCode.appendChild(fakeCodeContainer);
   const codeTag = document.querySelector(".error--block");
   codeTag.classList.add("highlight--corrected");
-  codeTag.innerHTML = `${question.correctedError}`;
+  codeTag.innerText = `${question.correctedError}`;
   codeTag.removeEventListener("click", () => {
     updateAllDisplays(question, turnCounter);
   });
