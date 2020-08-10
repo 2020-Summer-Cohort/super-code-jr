@@ -79,7 +79,9 @@ const updateAllDisplays = (question, turnCounter) => {
 const renderCorrectedError = (question) => {
   const fakeCode = document.querySelector(".overlay");
   fakeCode.innerHTML = ``;
-  fakeCode.innerHTML = `<pre>${question.beforeErrorCode}${question.correctedError}${question.afterErrorCode}</pre>`;
+  const fakeCodeContainer = document.createElement("code");
+  fakeCodeContainer.innerText = `${question.beforeErrorCode}${question.correctedError}${question.afterErrorCode}`;
+  fakeCode.appendChild(fakeCodeContainer);
   const codeTag = document.querySelector(".error--block");
   codeTag.classList.add("highlight--corrected");
   codeTag.innerHTML = `${question.correctedError}`;
@@ -233,7 +235,6 @@ function on() {
   wholeCode.style.display = "none";
   overlay.style.display = "block";
   overlay.style.zIndex = "2";
-  console.log("ON");
 }
 
 function off() {
@@ -242,5 +243,4 @@ function off() {
   wholeCode.style.display = "block";
   overlay.style.zIndex = "-1";
   overlay.style.display = "none";
-  console.log("OFF");
 }
