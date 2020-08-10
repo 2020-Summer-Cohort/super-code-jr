@@ -57,6 +57,8 @@ const renderWholeErrorCode = (question, turnCounter) => {
     totalNumberOfTries.innerHTML = Number(totalNumberOfTries.innerHTML) + 1;
   });
   codeBlock.appendChild(afterError);
+  const fakeCode = document.querySelector(".overlay");
+  fakeCode.innerHTML = `<pre>${question.beforeErrorCode}${question.errorCode}${question.afterErrorCode}</pre>`;
 };
 
 const updateAllDisplays = (question, turnCounter) => {
@@ -68,9 +70,15 @@ const updateAllDisplays = (question, turnCounter) => {
 };
 
 const renderCorrectedError = (question) => {
+  const fakeCode = document.querySelector(".overlay");
+  fakeCode.innerHTML = ``;
+  fakeCode.innerHTML = `<pre>${question.beforeErrorCode}${question.correctedError}${question.afterErrorCode}</pre>`;
   const codeTag = document.querySelector(".error--block");
   codeTag.classList.add("highlight--corrected");
   codeTag.innerHTML = `${question.correctedError}`;
+  codeTag.removeEventListener("click", () => {
+    updateAllDisplays(question, turnCounter);
+  });
 };
 
 const renderCorrectCodeBlock = (question) => {
@@ -79,30 +87,42 @@ const renderCorrectCodeBlock = (question) => {
 
 const renderCodeyEndingDialogue = (question) => {
   const pTag = document.querySelector(".codey-dialogue");
+  // pTag.classList.add("typewriter-text");
   pTag.innerHTML = "";
   const text = `${question.codeyEndingDialogue}`;
+  // pTag.innerHTML = text;
   let i = 0;
   typeWriter();
   function typeWriter() {
+    on();
     if (i < text.length) {
       pTag.innerHTML += text.charAt(i);
       i++;
-      setTimeout(typeWriter, 50);
+      setTimeout(typeWriter, 30);
+    }
+    if (i == text.length) {
+      off();
     }
   }
 };
 
 const renderCodeyStartingDialogue = (question) => {
   const pTag = document.querySelector(".codey-dialogue");
+  // pTag.classList.add("typewriter-text");
   pTag.innerHTML = "";
   const text = `${question.codeyStartingDialogue}`;
+  // pTag.innerHTML = text;
   let i = 0;
   typeWriter();
   function typeWriter() {
+    on();
     if (i < text.length) {
       pTag.innerHTML += text.charAt(i);
       i++;
-      setTimeout(typeWriter, 50);
+      setTimeout(typeWriter, 30);
+    }
+    if (i == text.length) {
+      off();
     }
   }
 };
@@ -111,14 +131,19 @@ const renderGroundControlBeginning = (question) => {
   const pTag = document.querySelector(".ground-control-dialogue");
   pTag.innerHTML = "";
   const text = `${question.groundControlBeginningDialogue}`;
+  // pTag.innerHTML = text;
   let i = 0;
   typeWriter();
+  on();
   function typeWriter() {
     if (i < text.length) {
       pTag.innerHTML += text.charAt(i);
       i++;
-      setTimeout(typeWriter, 50);
+      setTimeout(typeWriter, 30);
     }
+  }
+  if (i == text.length) {
+    off();
   }
 };
 
@@ -126,16 +151,21 @@ const renderGroundControlFinished = (question, turnCounter) => {
   const pTag = document.querySelector(".ground-control-dialogue");
   pTag.innerHTML = "";
   const text = `${question.groundControlCompletedDialogue}`;
+  // pTag.innerHTML = text;
   let i = 0;
   typeWriter();
   function typeWriter() {
+    on();
     if (i < text.length) {
       pTag.innerHTML += text.charAt(i);
       i++;
-      setTimeout(typeWriter, 50);
+      setTimeout(typeWriter, 30);
     }
     if (i == text.length) {
       continueContainer.prepend(continueButton);
+    }
+    if (i == text.length) {
+      off();
     }
   }
   const continueContainer = document.querySelector(".continue-button");
@@ -148,25 +178,6 @@ const renderGroundControlFinished = (question, turnCounter) => {
   });
 };
 
-function typeWriter() {
-  if (i < text.length) {
-    pTag.innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeWriter, 50);
-  }
-  if (i == text.length) {
-    continueContainer.prepend(continueButton);
-  }
-}
-const continueContainer = document.querySelector(".continue-button");
-const continueButton = document.createElement("button");
-continueButton.innerText = "Continue";
-continueButton.addEventListener("click", () => {
-  numberOfTries.firstChild.remove();
-  continueContainer.firstChild.remove();
-  questionGrabber();
-});
-
 const renderGroundControlHint = (question) => {
   const pTag = document.querySelector(".ground-control-dialogue");
   pTag.innerHTML = "";
@@ -174,10 +185,15 @@ const renderGroundControlHint = (question) => {
   let i = 0;
   typeWriter();
   function typeWriter() {
+    on();
     if (i < text.length) {
       pTag.innerHTML += text.charAt(i);
       i++;
-      setTimeout(typeWriter, 50);
+      setTimeout(typeWriter, 30);
+    }
+
+    if (i == text.length) {
+      off();
     }
   }
 };
@@ -204,8 +220,26 @@ const renderDeveloperTab = () => {
 const codeyMoodShift = (mood) => {
   const codeyImg = document.querySelector(".clippy-img");
   if (mood === "bored") {
-    codeyImg.src = "./images/dataClippy.JPG";
+    codeyImg.src = "./images/codeyboredloop1darker.gif";
   } else if (mood === "surprised") {
-    codeyImg.src = "./images/radioTower.JPG";
+    codeyImg.src = "./images/codeysurprised1darker.gif";
   }
 };
+
+function on() {
+  const overlay = document.querySelector(".overlay");
+  const wholeCode = document.querySelector(".whole-code");
+  wholeCode.style.display = "none";
+  overlay.style.display = "block";
+  overlay.style.zIndex = "2";
+  console.log("ON");
+}
+
+function off() {
+  const overlay = document.querySelector(".overlay");
+  const wholeCode = document.querySelector(".whole-code");
+  wholeCode.style.display = "block";
+  overlay.style.zIndex = "-1";
+  overlay.style.display = "none";
+  console.log("OFF");
+}

@@ -172,6 +172,20 @@ body {
   transform: perspective(200px) scale(1.26) rotateX(80deg);
   width: 100%;
 }
+
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 50%; /* Full width (cover the whole page) */
+  height: 50%; /* Full height (cover the whole page) */
+  top: 12.7vh;
+  left: 50.5vw;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: wait; /* Add a pointer on hover */
+}
 /*  -------------------------------------- Background & Grid here---------------------------------------------------*/
 
 /*  -------------------------------------- Background & Grid here Media queries -------------------------------------*/
@@ -214,7 +228,7 @@ body {
 .display-container {
   justify-self: center;
   display: grid;
-  z-index: 100;
+  z-index: 1;
   grid-template-columns: 1fr 1fr;
   column-gap: 10px;
   row-gap: 10px;
@@ -255,7 +269,7 @@ body {
 }
 .question-display {
   padding: 3px;
-  display: flex;
+  display: absolute;
   justify-content: left;
   text-align: left;
   flex-flow: column;
@@ -303,7 +317,7 @@ body {
 }
 
 /* ----------pre------------ */
-pre {
+.whole-code {
   overflow-x: auto;
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
