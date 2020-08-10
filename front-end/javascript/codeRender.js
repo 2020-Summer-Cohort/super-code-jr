@@ -7,6 +7,8 @@ import {
 import { questionGrabber } from "./gameLoop.js";
 
 const walkieTalkie = new Audio("audio/walkie-talkie.mp3");
+const codeyStart = new Audio("audio/codey-start.wav");
+const codeyEnd = new Audio("audio/codey-end.wav");
 const numberOfTries = document.querySelector(".score");
 const totalNumberOfTries = document.querySelector(".total-score");
 
@@ -47,6 +49,7 @@ const renderWholeErrorCode = (question, turnCounter) => {
   errorCode.classList.add("error--block");
   errorCode.classList.remove("highlight--corrected");
   errorCode.innerText = `${question.errorCode}`;
+
   errorCode.addEventListener("click", function listener() {
     errorCode.removeEventListener("click", listener);
     updateAllDisplays(question, turnCounter);
@@ -102,6 +105,7 @@ const renderCodeyEndingDialogue = (question) => {
   pTag.innerHTML = "";
   const text = `${question.codeyEndingDialogue}`;
   let i = 0;
+  codeyEnd.play();
   typeWriter();
   function typeWriter() {
     on();
@@ -121,6 +125,7 @@ const renderCodeyStartingDialogue = (question) => {
   pTag.innerHTML = "";
   const text = `${question.codeyStartingDialogue}`;
   let i = 0;
+  codeyStart.play();
   typeWriter();
   function typeWriter() {
     on();
