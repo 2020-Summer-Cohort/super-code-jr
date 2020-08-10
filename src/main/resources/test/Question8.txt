@@ -9,11 +9,11 @@ JavaScript
     <span class="num" onclick="document.calc.txt.value +='-'">-</span>
     <span class="num" onclick="document.calc.txt.value +='4'">4</span>
 ###
-    &lt;span class="num" onclick="document.calc.txt.value +=''">5&lt;/span&gt;
+    <span class="num" onclick="document.calc.txt.value +=''">5</span>
 ###
     <span class="num" onclick="document.calc.txt.value +='6'">6</span>
 ###
-    &lt;span class="num" onclick="document.calc.txt.value +='5'">5&lt;/span&gt;
+    <span class="num" onclick="document.calc.txt.value +='5'">5</span>
 ###
 <!DOCTYPE html>
 <html>
