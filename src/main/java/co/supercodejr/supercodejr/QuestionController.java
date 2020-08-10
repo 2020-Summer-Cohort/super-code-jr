@@ -1,9 +1,6 @@
 package co.supercodejr.supercodejr;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
@@ -26,4 +23,12 @@ public class QuestionController {
     public Question findQuestionById(@PathVariable Long id) {
         return questionStorage.findQuestionById(id);
     }
+
+    @PostMapping("/api/questions/submitQuestion")
+    public Question addQuestion(@RequestBody Question question){
+        questionStorage.save(question);
+        return question;
+    }
 }
+
+

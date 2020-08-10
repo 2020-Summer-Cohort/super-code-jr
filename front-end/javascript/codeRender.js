@@ -1,5 +1,9 @@
 export { renderAllContent };
-import { fetchQuestion, fetchQuestions } from "./fetchQuestions.js";
+import {
+  fetchQuestion,
+  fetchQuestions,
+  submitQuestion,
+} from "./fetchQuestions.js";
 import { questionGrabber } from "./gameLoop.js";
 
 const walkieTalkie = new Audio("audio/walkie-talkie.mp3");
@@ -31,7 +35,8 @@ const renderWholeErrorCode = (question, turnCounter) => {
   }
   const beforeError = document.createElement("p");
   beforeError.innerText = `${question.beforeErrorCode}`;
-  beforeError.addEventListener("click", () => {
+  beforeError.addEventListener("click", function beforeListener() {
+    beforeError.removeEventListener("click", beforeListener);
     renderGroundControlHint(question);
     walkieTalkie.play();
     numberOfTries.innerHTML = Number(numberOfTries.innerHTML) + 1;
@@ -42,7 +47,8 @@ const renderWholeErrorCode = (question, turnCounter) => {
   errorCode.classList.add("error--block");
   errorCode.classList.remove("highlight--corrected");
   errorCode.innerHTML = `${question.errorCode}`;
-  errorCode.addEventListener("click", () => {
+  errorCode.addEventListener("click", function listener() {
+    errorCode.removeEventListener("click", listener);
     updateAllDisplays(question, turnCounter);
     numberOfTries.innerHTML = Number(numberOfTries.innerHTML) + 1;
     totalNumberOfTries.innerHTML = Number(totalNumberOfTries.innerHTML) + 1;
@@ -50,7 +56,8 @@ const renderWholeErrorCode = (question, turnCounter) => {
   codeBlock.appendChild(errorCode);
   const afterError = document.createElement("p");
   afterError.innerText = `${question.afterErrorCode}`;
-  afterError.addEventListener("click", () => {
+  afterError.addEventListener("click", function afterListener() {
+    afterError.removeEventListener("click", afterListener);
     renderGroundControlHint(question);
     walkieTalkie.play();
     numberOfTries.innerHTML = Number(numberOfTries.innerHTML) + 1;
