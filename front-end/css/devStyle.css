@@ -1,6 +1,6 @@
 @font-face {
     font-family: "cyber";
-    src: url("/super-code-jr/Cyberspace\ Raceway\ Front.otf");
+    src: url("/super-code-jr/front-end/images/Cyberspace\ Raceway\ Front.otf");
     font-style: normal;
     font-weight: 400;
     font-size: 50px;
@@ -11,7 +11,7 @@
   padding: 0;
   box-sizing: border-box;
   color: var(--text);
-  text-decoration: none;
+  list-style-type: none;
 }
 
 :root {
@@ -65,7 +65,7 @@ body {
 
 .bio-img:hover {
   border: solid;
-  border-color:red;
+  border-color: var(--glow1);
 }
 
 .bio-anchors {
@@ -74,12 +74,18 @@ body {
 
 .developer-display {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
-.developer-display img {
+.developer-img {
   width: 300px;
   height: 300px;
+}
+
+.developer-img-container {
+  display:flex;
+  justify-content: flex-end;
+  padding-right: 3em;
 }
 
 .developer-info-box {
@@ -97,6 +103,9 @@ body {
 
 }
 
+.skill-ul {
+  text-decoration: none;
+}
 .skill-bar-1,
 .skill-bar-2,
 .skill-bar-3,
