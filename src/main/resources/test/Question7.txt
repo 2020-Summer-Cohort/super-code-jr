@@ -91,7 +91,7 @@ Why isn't the robot's head moving when I hover over it? Please, like you'll be a
 ###
 Psh, I knew that.
 ###
-Isn't there a way to specific an action when your mouse moves over something?
+Isn't there a way to specify an action when your mouse moves over something?
 ###
 Bzzzzt!
 ###
