@@ -11,6 +11,24 @@ const codeyStart = new Audio("audio/codey-start.wav");
 const codeyEnd = new Audio("audio/codey-end.wav");
 const numberOfTries = document.querySelector(".score");
 const totalNumberOfTries = document.querySelector(".total-score");
+const unMute = document.querySelector(".unmute");
+const mute = document.querySelector(".mute");
+
+mute.addEventListener("click", () => {
+  walkieTalkie.muted = true;
+  codeyStart.muted = true;
+  codeyEnd.muted = true;
+  mute.classList.add("hidden");
+  unMute.classList.remove("hidden");
+});
+
+unMute.addEventListener("click", () => {
+  walkieTalkie.muted = false;
+  codeyStart.muted = false;
+  codeyEnd.muted = false;
+  unMute.classList.add("hidden");
+  mute.classList.remove("hidden");
+});
 
 const renderAllContent = (question, turnCounter) => {
   renderWrongIframeContent(question);
