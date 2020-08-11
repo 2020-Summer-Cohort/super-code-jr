@@ -1,20 +1,37 @@
+* {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
 body {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
   background-image: linear-gradient(
       to left,
-      rgba(173, 31, 229, 0.2077964975052521),
-      rgb(66, 36, 114)
+      rgba(173, 31, 229, 0.068),
+      rgba(21, 4, 48, 0.671)
     ),
-    url(../images/squareimg.jpg);
+    url(../images/squareimg2.jpg);
 
   width: 100vw;
   height: 100vh;
 }
-container {
+.form-container {
   display: flex;
   flex-flow: column;
   padding-left: 5%;
   color: aliceblue;
-  max-width: 25%;
+  max-width: 65%;
+  background-color: rgba(92, 52, 194, 0.39);
+  border-radius: 5px;
+  margin-bottom: 15%;
+  margin-left: 7%;
+}
+.instructions {
+  background-color: rgba(228, 181, 247, 0.208);
+  border-radius: 5px;
+  padding: 5%;
+  color: aliceblue;
+  max-width: 50%;
+  margin-bottom: 15%;
 }
 h1 {
   font-size: x-large;
@@ -23,10 +40,25 @@ input[type="button"] {
   background-color: rgb(189, 6, 158);
   border-style: ridge;
   border-width: 0.3em;
-  border-color: rgb(105, 3, 88);
+  border-color: rgb(184, 111, 199);
   margin-top: 1em;
   padding: 3px;
-  max-width: 50%;
+  max-width: 100px;
   line-height: 2em;
   color: white;
+}
+.GC {
+  height: 100px;
+  background-color: rgba(70, 15, 92, 0.7);
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 50%;
+}
+.GCli {
+  list-style-type: none;
+}
+
+li {
+  padding: 5px;
 }

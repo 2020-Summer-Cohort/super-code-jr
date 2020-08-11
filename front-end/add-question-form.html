@@ -62,14 +62,14 @@
         <input
           type="text"
           id="codeyStartingDialogue"
-          placeholder="Enter Codey's starting dialogue"
+          placeholder="Codey's starting dialogue"
         />
       </div>
       <div>
         <input
           type="text"
           id="codeyEndingDialogue"
-          placeholder="Enter Codey's ending dialogue"
+          placeholder="Codey's ending dialogue"
         />
       </div>
       <div>
@@ -79,22 +79,44 @@
         <input
           type="text"
           id="groundControlBeginningDialogue"
-          placeholder="Enter Ground Control Beginning Dialogue"
+          placeholder="GC Beginning Dialogue"
         />
       </div>
       <div>
         <input
           type="text"
           id="groundControlCompletedDialogue"
-          placeholder="Enter Ground Control Ending Dialogue"
+          placeholder="GC Ending Dialogue"
         />
       </div>
       <input
         type="button"
         id="submitButton"
         class="submitButton"
-        value="Save Question to the Game "
+        value="Save"
       />
+    </container>
+    <container class="instructions">
+      <h2>Quick Guide to creating a question</h2>
+      <h5>quick tips</h5>
+      <ol>
+        <li>each question should only have one error</li>
+        <li>
+          iframe code should have all code necessary to display a full page
+          (HTML,CSS,JS)
+        </li>
+        <li>Question Code snippets should not exceed 25 lines</li>
+        <li>
+          Visually oriented questions and iframes give a better reward for the
+          viewer!
+        </li>
+        <li>
+          GC stands for "Ground Control", this little guy!
+        </li>
+        <li class="GCli">
+          <img src="./images/missionControldarker.gif" class="GC" />
+        </li>
+      </ol>
     </container>
     <script src="./javascript/submitQuestion.js" type="module"></script>
   </body>
