@@ -31,12 +31,14 @@
       0 0 #ebd8a6;
   }
 }
+
 body {
     background-color: var(--offBlack);  
-    background-image: url("../images/bg-grid.png");
+    background-image: url("../images/space.jpg");
     background-repeat: no-repeat;
     background-size: 100vw;
 }
+
 .about-us-header {
   display: flex;
   justify-content:center;
