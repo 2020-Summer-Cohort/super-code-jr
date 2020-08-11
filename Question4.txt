@@ -1,0 +1,84 @@
+Java
+###
+package shelter;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+
+public class PetShelter {
+
+    private Map<String, Pet> pets = new HashMap<>();
+
+    public Map<String, Pet> getPets() {
+        return pets;
+    }
+
+    public Collection<Pet> retrieveAllPets() {
+        return pets.values();
+    }
+
+    public Pet retrievePet(String petName) {
+        return pets.get(petName);
+    }
+
+    public void addPet(Pet petToAdd) {
+        pets.put(petToAdd.getPetName(), petToAdd);
+    }
+
+    public void removePet(String petName) {
+###
+      for (Map.Entry<String> pet : pets.entrySet())
+###
+      String name = pet.getKey();
+      
+      if (name.equalsIgnoreCase(petName)) {
+          pets.remove(name);
+      }
+    }
+  }
+###
+      for (Map.Entry<String> pet : pets.entrySet()) {
+###
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>My Pets</title>
+</head>
+<body>
+    <ul>
+        <li>Fluffy</li>
+        <li>Fido</li>
+        <li>Princess</li>
+        <li>Charlie</li>
+    </ul>
+</body>
+</html>
+###
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Fluffy</li>
+        <li>Princess</li>
+        <li>Charlie</li>
+    </ul>
+</body>
+</html>
+###
+“I thought I got rid of that horrible dog Fido! Why is he still in my list of pets?”
+###
+“Well, I guess you aren’t as dumb as you look.”
+###
+“Remember: key and value pair”
+###
+“BZzzzzzt!.....”
+###
+“Congratulations! Remember, Map entries require a key and value pair.”

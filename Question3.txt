@@ -1,0 +1,89 @@
+JavaScript
+###
+function createUserForm(element){
+    const nameInput = document.createElement('input');
+    const myBr = document.createElement('br');
+    nameInput.type='text';
+    nameInput.placeholder = 'Enter your first name';
+    nameInput.classList.add('name');
+    element.append(nameInput);
+    element.append(myBr);
+    const surnameInput = document.createElement('input');
+    const myBr2 = document.createElement('br');
+    surnameInput.type='text';
+    surnameInput.placeholder = 'Enter your last name';
+    surnameInput.classList.add('name');
+    element.append(surnameInput);
+    element.append(myBr2);
+    const ageInput = document.createElement('input');
+    const myBr3 = document.createElement('br');
+    ageInput.type='text';
+    ageInput.placeholder = 'Enter your age';
+    ageInput.classList.add('age');
+    element.append(ageInput);
+    element.append(myBr3);
+    const submitButton = document.createElement('button');
+    const myBr4 = document.createElement('br');
+    const myBr5 = document.createElement('br');
+    submitButton.innerText = "Submit";
+    submitButton.classList.add('submit');
+###
+    element.append(submitbutton);
+###
+    element.append(myBr4);
+    element.append(myBr5);
+}
+###
+    element.append(submitbutton);
+###
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="POST">
+    <label for="name">Enter your first name:</label><br>
+    <input type="text" id="name" name="name" value="Name"><br>
+    <form action="" method="POST">
+    <label for="name">Enter your last name:</label><br>
+    <input type="text" id="surname" name="surname" value="Surname"><br>
+    <form action="" method="POST">
+    <label for="name">Enter your age:</label><br>
+    <input type="text" id="age" name="age" value="age"><br>
+    <input type="" value="Submit">
+</body>
+</html>
+###
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="POST">
+    <label for="name">Enter your first name:</label><br>
+    <input type="text" id="name" name="name" value="Name"><br>
+    <form action="" method="POST">
+    <label for="name">Enter your last name:</label><br>
+    <input type="text" id="surname" name="surname" value="Surname"><br>
+    <form action="" method="POST">
+    <label for="name">Enter your age:</label><br>
+    <input type="text" id="age" name="age" value="age"><br>
+    <input type="submit" value="Submit">
+</body>
+</html>
+###
+"Why can't I submit any of this information? Let's see if you can figure it out."
+###
+"I guess you do have some brain cells after all."
+###
+"What type of input do buttons need again?"
+###
+"BZzzzzzt!....."
+###
+"Congratulations! Remember, input needs a submit type to be a functional button."

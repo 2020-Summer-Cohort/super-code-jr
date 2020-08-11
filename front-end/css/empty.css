@@ -50,6 +50,16 @@ body {
   padding: 3px;
   align-self: center;
 }
+.mute-function {
+  max-height: 25px;
+  padding: 3px;
+  align-self: center;
+}
+.mute-function img {
+  width: 25px;
+  height: 25px;
+}
+
 .developer-tab {
   display: flex;
   justify-items: flex-start;
@@ -85,10 +95,14 @@ body {
   background-color: rgba(54, 226, 248, 0.8);
 }
 .game-header,
-.number-of-tries {
+.number-of-tries,
+.mute-function {
   display: flex;
   justify-self: center;
   align-self: center;
+}
+.hidden {
+  display: none;
 }
 /* -------------------DEV MODAL------------------------------------------------- */
 
@@ -172,6 +186,20 @@ body {
   transform: perspective(200px) scale(1.26) rotateX(80deg);
   width: 100%;
 }
+
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 50%; /* Full width (cover the whole page) */
+  height: 50%; /* Full height (cover the whole page) */
+  top: 12.7vh;
+  left: 50.5vw;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: wait; /* Add a pointer on hover */
+}
 /*  -------------------------------------- Background & Grid here---------------------------------------------------*/
 
 /*  -------------------------------------- Background & Grid here Media queries -------------------------------------*/
@@ -214,7 +242,7 @@ body {
 .display-container {
   justify-self: center;
   display: grid;
-  z-index: 100;
+  z-index: 1;
   grid-template-columns: 1fr 1fr;
   column-gap: 10px;
   row-gap: 10px;
@@ -241,7 +269,8 @@ body {
 }
 .clippy-display,
 .question-display,
-.user-display {
+.user-display,
+.victory-container {
   background-color: var(--offBlack);
   /* border: 2px solid var(--cyan); */
   box-shadow: inset 0px 0px 5px 1px rgba(54, 226, 248, 0.5);
@@ -254,7 +283,7 @@ body {
 }
 .question-display {
   padding: 3px;
-  display: flex;
+  display: absolute;
   justify-content: left;
   text-align: left;
   flex-flow: column;
@@ -263,7 +292,7 @@ body {
 
 .header-display {
   display: grid;
-  grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr 1fr 3fr 1fr 1fr 1fr;
   margin-left: 3%;
   height: 10vh;
   width: 95%;
@@ -302,11 +331,21 @@ body {
 }
 
 /* ----------pre------------ */
-pre {
+.whole-code {
   overflow-x: auto;
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
   white-space: -pre-wrap;
   white-space: -o-pre-wrap;
   word-wrap: break-word;
+}
+
+/* ---------------------VICTORY PAGE CSS------------------ */
+.victory-container {
+  display: grid;
+  justify-self: stretch;
+  grid-column: 1 span 3;
+  text-align: center;
+  color: var(--cyan);
+  width: 200%;
 }

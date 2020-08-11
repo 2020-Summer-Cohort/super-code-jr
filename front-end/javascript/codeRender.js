@@ -1,17 +1,42 @@
 export { renderAllContent };
-import { fetchQuestion, fetchQuestions } from "./fetchQuestions.js";
+import {
+  fetchQuestion,
+  fetchQuestions,
+  submitQuestion,
+} from "./fetchQuestions.js";
 import { questionGrabber } from "./gameLoop.js";
 
 const walkieTalkie = new Audio("audio/walkie-talkie.mp3");
+const codeyStart = new Audio("audio/codey-start.wav");
+const codeyEnd = new Audio("audio/codey-end.wav");
 const numberOfTries = document.querySelector(".score");
-const totalNumberOfTries = document.querySelector(".total-score")
+const totalNumberOfTries = document.querySelector(".total-score");
+const unMute = document.querySelector(".unmute");
+const mute = document.querySelector(".mute");
+
+mute.addEventListener("click", () => {
+  walkieTalkie.muted = true;
+  codeyStart.muted = true;
+  codeyEnd.muted = true;
+  mute.classList.add("hidden");
+  unMute.classList.remove("hidden");
+});
+
+unMute.addEventListener("click", () => {
+  walkieTalkie.muted = false;
+  codeyStart.muted = false;
+  codeyEnd.muted = false;
+  unMute.classList.add("hidden");
+  mute.classList.remove("hidden");
+});
 
 const renderAllContent = (question, turnCounter) => {
   renderWrongIframeContent(question);
   renderWholeErrorCode(question, turnCounter);
   renderCodeyStartingDialogue(question);
   renderGroundControlBeginning(question);
-  developerTabClickable()
+  codeyMoodShift("bored");
+  developerTabClickable();
 };
 const renderWrongIframeContent = (question) => {
   const renderIFrameQuestion = document.querySelector(".iframe-display");
@@ -30,7 +55,8 @@ const renderWholeErrorCode = (question, turnCounter) => {
   }
   const beforeError = document.createElement("p");
   beforeError.innerText = `${question.beforeErrorCode}`;
-  beforeError.addEventListener("click", () => {
+  beforeError.addEventListener("click", function beforeListener() {
+    beforeError.removeEventListener("click", beforeListener);
     renderGroundControlHint(question);
     walkieTalkie.play();
     numberOfTries.innerHTML = Number(numberOfTries.innerHTML) + 1;
@@ -40,8 +66,10 @@ const renderWholeErrorCode = (question, turnCounter) => {
   const errorCode = document.createElement("p");
   errorCode.classList.add("error--block");
   errorCode.classList.remove("highlight--corrected");
-  errorCode.innerHTML = `${question.errorCode}`;
-  errorCode.addEventListener("click", () => {
+  errorCode.innerText = `${question.errorCode}`;
+
+  errorCode.addEventListener("click", function listener() {
+    errorCode.removeEventListener("click", listener);
     updateAllDisplays(question, turnCounter);
     numberOfTries.innerHTML = Number(numberOfTries.innerHTML) + 1;
     totalNumberOfTries.innerHTML = Number(totalNumberOfTries.innerHTML) + 1;
@@ -49,26 +77,41 @@ const renderWholeErrorCode = (question, turnCounter) => {
   codeBlock.appendChild(errorCode);
   const afterError = document.createElement("p");
   afterError.innerText = `${question.afterErrorCode}`;
-  afterError.addEventListener("click", () => {
+  afterError.addEventListener("click", function afterListener() {
+    afterError.removeEventListener("click", afterListener);
     renderGroundControlHint(question);
     walkieTalkie.play();
     numberOfTries.innerHTML = Number(numberOfTries.innerHTML) + 1;
     totalNumberOfTries.innerHTML = Number(totalNumberOfTries.innerHTML) + 1;
   });
   codeBlock.appendChild(afterError);
+  const fakeCode = document.querySelector(".overlay");
+  fakeCode.innerText = ``;
+  const fakeCodeContainer = document.createElement("code");
+  fakeCodeContainer.innerText = `${question.beforeErrorCode}${question.errorCode}${question.afterErrorCode}`;
+  fakeCode.appendChild(fakeCodeContainer);
 };
 
 const updateAllDisplays = (question, turnCounter) => {
   renderGroundControlFinished(question, turnCounter);
   renderCorrectIFrameContent(question);
   renderCorrectCodeBlock(question);
+  codeyMoodShift("surprised");
   renderCodeyEndingDialogue(question);
 };
 
 const renderCorrectedError = (question) => {
+  const fakeCode = document.querySelector(".overlay");
+  fakeCode.innerText = ``;
+  const fakeCodeContainer = document.createElement("code");
+  fakeCodeContainer.innerText = `${question.beforeErrorCode}${question.correctedError}${question.afterErrorCode}`;
+  fakeCode.appendChild(fakeCodeContainer);
   const codeTag = document.querySelector(".error--block");
   codeTag.classList.add("highlight--corrected");
-  codeTag.innerHTML = `${question.correctedError}`;
+  codeTag.innerText = `${question.correctedError}`;
+  codeTag.removeEventListener("click", () => {
+    updateAllDisplays(question, turnCounter);
+  });
 };
 
 const renderCorrectCodeBlock = (question) => {
@@ -80,12 +123,17 @@ const renderCodeyEndingDialogue = (question) => {
   pTag.innerHTML = "";
   const text = `${question.codeyEndingDialogue}`;
   let i = 0;
+  codeyEnd.play();
   typeWriter();
   function typeWriter() {
+    on();
     if (i < text.length) {
       pTag.innerHTML += text.charAt(i);
       i++;
-      setTimeout(typeWriter, 50);
+      setTimeout(typeWriter, 30);
+    }
+    if (i == text.length) {
+      off();
     }
   }
 };
@@ -95,12 +143,17 @@ const renderCodeyStartingDialogue = (question) => {
   pTag.innerHTML = "";
   const text = `${question.codeyStartingDialogue}`;
   let i = 0;
+  codeyStart.play();
   typeWriter();
   function typeWriter() {
+    on();
     if (i < text.length) {
       pTag.innerHTML += text.charAt(i);
       i++;
-      setTimeout(typeWriter, 50);
+      setTimeout(typeWriter, 30);
+    }
+    if (i == text.length) {
+      off();
     }
   }
 };
@@ -111,12 +164,16 @@ const renderGroundControlBeginning = (question) => {
   const text = `${question.groundControlBeginningDialogue}`;
   let i = 0;
   typeWriter();
+  on();
   function typeWriter() {
     if (i < text.length) {
       pTag.innerHTML += text.charAt(i);
       i++;
-      setTimeout(typeWriter, 50);
+      setTimeout(typeWriter, 30);
     }
+  }
+  if (i == text.length) {
+    off();
   }
 };
 
@@ -127,13 +184,17 @@ const renderGroundControlFinished = (question, turnCounter) => {
   let i = 0;
   typeWriter();
   function typeWriter() {
+    on();
     if (i < text.length) {
       pTag.innerHTML += text.charAt(i);
       i++;
-      setTimeout(typeWriter, 50);
+      setTimeout(typeWriter, 30);
     }
     if (i == text.length) {
       continueContainer.prepend(continueButton);
+    }
+    if (i == text.length) {
+      off();
     }
   }
   const continueContainer = document.querySelector(".continue-button");
@@ -153,30 +214,59 @@ const renderGroundControlHint = (question) => {
   let i = 0;
   typeWriter();
   function typeWriter() {
+    on();
     if (i < text.length) {
       pTag.innerHTML += text.charAt(i);
       i++;
-      setTimeout(typeWriter, 50);
+      setTimeout(typeWriter, 30);
+    }
+
+    if (i == text.length) {
+      off();
     }
   }
 };
 
-
 const developerTabClickable = () => {
-  const sTag = document.querySelector(".developer-tab")
-  sTag.innerText = `Developers`
-  const gTab = document.querySelector(".game-tab")
-  gTab.innerText = `Codeys Game`
+  const sTag = document.querySelector(".developer-tab");
+  sTag.innerText = `Developers`;
+  const gTab = document.querySelector(".game-tab");
+  gTab.innerText = `Codeys Game`;
   sTag.addEventListener("click", () => {
-    renderDeveloperTab()
-  })
-}
+    renderDeveloperTab();
+  });
+};
 
 const renderDeveloperTab = () => {
-  const modal = document.getElementById("developer-modal")
-  modal.style.display = "block"
+  const modal = document.getElementById("developer-modal");
+  modal.style.display = "block";
   const sTag = document.getElementsByClassName("close-modal")[0];
   sTag.onclick = () => {
-    modal.style.display = "none"
+    modal.style.display = "none";
+  };
+};
+
+const codeyMoodShift = (mood) => {
+  const codeyImg = document.querySelector(".clippy-img");
+  if (mood === "bored") {
+    codeyImg.src = "./images/codeyboredloop1darker.gif";
+  } else if (mood === "surprised") {
+    codeyImg.src = "./images/codeysurprised1darker.gif";
   }
+};
+
+function on() {
+  const overlay = document.querySelector(".overlay");
+  const wholeCode = document.querySelector(".whole-code");
+  wholeCode.style.display = "none";
+  overlay.style.display = "block";
+  overlay.style.zIndex = "2";
+}
+
+function off() {
+  const overlay = document.querySelector(".overlay");
+  const wholeCode = document.querySelector(".whole-code");
+  wholeCode.style.display = "block";
+  overlay.style.zIndex = "-1";
+  overlay.style.display = "none";
 }
