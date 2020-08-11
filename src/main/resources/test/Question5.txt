@@ -1,6 +1,12 @@
 CSS
 ###
-Welcome to Codey Vs. Coder! See if you can defeat the arrogant Codey, who seems to think he's the best coder around. In this game, you will encounter a block of code containing an error. Simply click on the error when you find it to see your error fixed. If you guess wrong, our friendly radio tower will give you a hint. For example, I think the text on the left should be red - not blue. Let's see if you can figure out why it's displaying wrong.
+Welcome to Codey Vs. Coder! See if you can defeat the arrogant Codey, 
+who seems to think he's the best coder around. 
+In this game, you will encounter a block of code containing an error. 
+Simply click on the error when you find it to see your error fixed. 
+If you guess wrong, our friendly radio tower will give you a hint. 
+For example, I think the text on the left should be red - not blue. 
+Let's see if you can figure out why it's displaying wrong.
 
 p {
 font-size: xx-large;
