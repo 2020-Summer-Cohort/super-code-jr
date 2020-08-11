@@ -1,7 +1,4 @@
 
-
-
-
 const createEventListeners = () =>{
 const eventJason = document.getElementById("jason")
 eventJason.addEventListener("mouseover", () =>{
@@ -29,13 +26,7 @@ eventJd.addEventListener("mouseover", () =>{
 })
 }
 
-
 createEventListeners()
-
-
-
-
-
 
 const renderJason = () =>{
 const selectDevBox = document.querySelector(".developer-display")
@@ -65,8 +56,8 @@ const renderMiles = () =>{
     <img class="developer-img" src="images/miles.png">
     </container>
     <section class="developer-info-box">
-        <a class="bio-anchors" href="http://jgibson37.github.io">Miles Shank's Portfolio</a>
-        <a class="bio-anchors" href="http://www.linkedin.com/in/jgibson37">Miles Shank's LinkedIn</a>
+        <a class="bio-anchors" href="http://milesshank.github.io">Miles Shank's Portfolio</a>
+        <a class="bio-anchors" href="http://www.linkedin.com/in/miles-shank">Miles Shank's LinkedIn</a>
         <p class="bio-info">Strengths:</p>
         <ul>
           <li><span class="skill-span"> Java: <div class="skill-bar-1">000000000000</div> </span></li>
@@ -87,7 +78,7 @@ const renderKenny = () =>{
     <img class="developer-img" src="images/kw.png">
     </container>
     <section class="developer-info-box">
-        <a class="bio-anchors" href="http://jgibson37.github.io">Kenny Williams's Portfolio</a>
+        <a class="bio-anchors" href="http://kennycreates.github.io">Kenny Williams's Portfolio</a>
         <a class="bio-anchors" href="http://www.linkedin.com/in/kenny-williams-c">Kenny Williams's LinkedIn</a>
         <p class="bio-info">Strengths:</p>
         <ul>
