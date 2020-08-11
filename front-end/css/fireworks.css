@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
+@import url(https://fonts.googleapis.com/css?family=VT323);
+
+body 
+{
+	background: #000;
+	margin: 0;
+}
+
+.victory 
+{
+	text-align: center;
+	font-family: 'Permanent Marker', cursive;
+	font-variant:small-caps;
+	font-size: 180px;
+	-webkit-transform: skew(-15deg,-15deg);
+	padding-left: 80px;
+	background-image: -webkit-linear-gradient(#51e8f0 0%,  #84ecf1 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin: 0;
+	-webkit-filter: drop-shadow(2px 2px 20px #00cdd8);
+	z-index: 1;
+}
+	  
+.victory:before 
+ {
+    content: '- ';
+	text-align: center;
+	bottom: -98px;
+	left: 254px;
+	background-image: -webkit-linear-gradient(#a8fbff 0%, #a8fbff 100%);
+	-webkit-background-clip: text;
+	text-shadow: 70px -7px #a8fbff;
+}
+	  
+.victory:after 
+{
+	content: '-';
+	text-align: center;
+	bottom: -85px;
+	left: 395px;
+	background-image: -webkit-linear-gradient(#a8fbff 0%, #a8fbff 100%);
+	-webkit-background-clip: text;
+	text-shadow: 70px -5px #a8fbff;
+}
+	  
+.victory-v
+{
+	position: relative;
+	background-image: -webkit-linear-gradient(#51e8f0 0%,  #bffcff 100%);
+	-webkit-background-clip: text;
+	padding-right: 18px;
+	margin-right: -18px;
+}
+	  
+.victory-v:before 
+{
+	content: '-';
+	position: absolute;
+	top: -71px;
+	left: -71px;
+	background-image: -webkit-linear-gradient(#00cdd8 0%,  #a8fbff 100%);
+	-webkit-background-clip: text;
+}
+	  
+.victory-v:after {
+	content: '-';
+	position: absolute;
+	top: -72px;
+	left: 103px;
+	background-image: -webkit-linear-gradient(#00cdd8 0%,  #a8fbff 100%);
+	-webkit-background-clip: text;
+}
+
+:root 
+{
+	--cyan: #51e8f0;
+	--offBlack: rgba(16, 4, 66, 0.671);
+	--glow1: #51e8f0;
+	--text: #84ecf1;
+  }
+canvas 
+{
+	cursor: crosshair;
+	display: block;
+	margin-top: -200px;
+	z-index: -1;
+}
+
+.return
+{	
+    display: block;
+	margin-left: auto;
+  	margin-right: auto;
+	border: none;
+	width:100px;
+	max-width: 100%;
+	height:50px;
+	max-height: 100%;
+	background-color:#47ccd3;
+	font-family: 'VT323';
+	font-size: 24px;
+	font-weight: 700;
+	color:white;
+	-webkit-filter: drop-shadow(2px 2px 20px #84ecf1);
+	cursor: pointer;
+	z-index: 1;
+}
+
+audio
+{
+	display: block;
+	margin-left: auto;
+  	margin-right: auto;
+	border: none;
+	color:#84ecf1;
+	opacity: 50%;
+	margin-top: 20px;
+}
