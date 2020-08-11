@@ -11,10 +11,15 @@
     <h1 class="victory"><span class="victory-v">V</span>ictory</h1>
     <button class="return" a href="index.html" target="_self">Restart</button>
     
+    <audio id="myAudio">
+        <source src="../front-end/audio/win.wav" type="audio/mpeg">
+    </audio>
+    <button onclick="playAudio()" type="button">Play</button>
+<button onclick="stopAudio()" type="button">Stop</button> 
     <canvas id="canvas"></canvas>
 
     <!-- <script src="./javascript/pgtransition.js" type="module"></script> -->
-    
+    <script src="javascript/winsong.js" type="module"></script>
     <script src="./javascript/fireworks.js" type="module"></script>
 </body>
 </html>
