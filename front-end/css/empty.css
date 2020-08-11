@@ -1,14 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=VT323&display=swap");
-
 @font-face {
   font-family: "cyber";
-  src: url("/super-code-jr/Cyberspace\ Raceway\ Front.otf");
+  src: url("../images/raceway.otf") format("opentype");
   font-style: normal;
   font-weight: 400;
   font-size: 50px;
 }
-
+@font-face {
+  font-family: "peepo";
+  src: url("../images/peepo.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+}
+h1 {
+  font-family: "peepo";
+}
 @-webkit-keyframes glow {
   from {
     text-shadow: 1 1 12px #ebd8a6, 0 0 20px #ebd8a6, 0 0 30px #e49a39,
@@ -61,6 +67,7 @@ body {
 }
 
 .developer-tab {
+  font-family: "peepo";
   display: flex;
   justify-items: flex-start;
   justify-content: space-around;
@@ -75,6 +82,7 @@ body {
   font-size: 20px;
 }
 .game-tab {
+  font-family: "peepo";
   display: flex;
   justify-items: center;
   justify-content: space-around;
@@ -97,6 +105,7 @@ body {
 .game-header,
 .number-of-tries,
 .mute-function {
+  font-family: "peepo";
   display: flex;
   justify-self: center;
   align-self: center;
@@ -115,6 +124,7 @@ body {
   height: 100%;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
+  z-index: 3;
 }
 
 .developer-iframe {
