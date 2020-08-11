@@ -1,10 +1,10 @@
 @font-face {
-    font-family: "cyber";
-    src: url("/super-code-jr/front-end/images/Cyberspace\ Raceway\ Front.otf");
-    font-style: normal;
-    font-weight: 400;
-    font-size: 50px;
-  }
+  font-family: "cyber";
+  src: url("../images/raceway.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+}
 
 * {
   margin: 0;
@@ -20,7 +20,9 @@
   --glow1: #e49a39;
   --text: #ebd8a6;
 }
-
+h1 {
+  font-family: "cyber";
+}
 @-webkit-keyframes glow {
   from {
     text-shadow: 1 1 12px #ebd8a6, 0 0 20px #ebd8a6, 0 0 30px #e49a39,
@@ -33,15 +35,15 @@
 }
 
 body {
-    background-color: var(--offBlack);  
-    background-image: url("../images/space.jpg");
-    background-repeat: no-repeat;
-    background-size: 100vw;
+  background-color: var(--offBlack);
+  background-image: url("../images/space.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw;
 }
 
 .about-us-header {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   margin-top: 20px;
   font-family: cyber;
   color: var(--text);
@@ -52,17 +54,17 @@ body {
 }
 
 .bio-grid {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 5em 5em 5em 5em 5em 5em;
-    padding-bottom: 2em;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 5em 5em 5em 5em 5em 5em;
+  padding-bottom: 2em;
 }
 
 .bio-img {
-    width: 100px;
-    height: 100px;
-    padding-top: 2px;
-    clip-path: polygon(25% 0, 100% 0, 75% 100%, 0 100%);
+  width: 100px;
+  height: 100px;
+  padding-top: 2px;
+  clip-path: polygon(25% 0, 100% 0, 75% 100%, 0 100%);
 }
 
 .bio-img:hover {
@@ -86,24 +88,23 @@ body {
 }
 
 .developer-img-container {
-  display:flex;
+  display: flex;
   justify-content: flex-end;
   padding-right: 3em;
 }
 
 .developer-info-box {
-    display: grid;
+  display: grid;
 }
 
 .footer {
-  display:flex;
+  display: flex;
   justify-content: center;
-  padding-top:5em;
+  padding-top: 5em;
   position: absolute;
   bottom: 0;
   width: 100vw;
   padding-bottom: 1em;
-
 }
 
 .skill-ul {
@@ -137,5 +138,5 @@ body {
 }
 
 .skill-span {
-  display:flex;
+  display: flex;
 }
