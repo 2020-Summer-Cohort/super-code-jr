@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "peepo";
+  src: url("../images/Peepo.otf") format("opentype");
+}
+body {
+  background-image: linear-gradient(
+      to left,
+      rgba(173, 31, 229, 0.068),
+      rgba(21, 4, 48, 0.671)
+    ),
+    url(../images/inputbg.jpg);
+
+  width: 100vw;
+  height: 100vh;
+}
+* {
+  font-family: "peepo";
+}
+.bigcontainer {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+}
+.form-container {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 5%;
+  color: rgb(194, 224, 250);
+  max-width: 65%;
+  max-height: 65vh;
+  background-color: rgba(92, 52, 194, 0.39);
+  border-radius: 5px;
+  margin-bottom: 15%;
+  margin-left: 7%;
+}
+.instructions {
+  background-color: rgba(108, 16, 145, 0.315);
+  border-radius: 5px;
+  padding: 5%;
+  padding-top: 0%;
+  color: rgb(194, 224, 250);
+  max-width: 50%;
+  margin-bottom: 15%;
+}
+h1 {
+  font-size: xx-large;
+}
+input[type="button"],
+button {
+  background-color: rgb(189, 6, 158);
+  border-style: ridge;
+  border-width: 0.3em;
+  border-color: rgb(184, 111, 199);
+  margin-top: 1em;
+  padding: 3px;
+  max-width: 100px;
+  line-height: 2em;
+  color: white;
+}
+button {
+  padding-right: 5px;
+  margin-bottom: 15px;
+}
+button:hover {
+  background-color: rgb(223, 32, 188);
+  box-shadow: 0px 0px 7px 2px cyan;
+  border-color: rgb(160, 51, 182);
+}
+input[type="button"]:hover {
+  background-color: rgb(223, 32, 188);
+  box-shadow: 0px 0px 7px 2px cyan;
+  border-color: rgb(160, 51, 182);
+}
+.GC {
+  height: 100px;
+  background-color: rgba(70, 15, 92, 0.7);
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 50%;
+}
+.GCli {
+  list-style-type: none;
+}
+
+li {
+  padding: 5px;
+}
+
+footer {
+  bottom: 0;
+}
+
+textarea,
+input[type="text"] {
+  background-color: rgb(194, 224, 250);
+}
