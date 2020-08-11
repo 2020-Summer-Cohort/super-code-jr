@@ -2,7 +2,7 @@ Codey Vs. Coder AKA Super Coder Junior
 
 Final Project For WCCI Summer Cohort of 2020 Team 3
 
-![gif image of Codey] (https://github.com/2020-Summer-Cohort/super-code-jr/blob/dev/front-end/images/CODEYSURPRISEDCOLORFIX.gif)
+<img src=https://github.com/2020-Summer-Cohort/super-code-jr/blob/dev/front-end/images/CODEYSURPRISEDCOLORFIX.gif></a>
 
 
 What is Codey Vs. Coder?
