@@ -1,16 +1,5 @@
 CSS
 ###
-.eye-right{
-  position: absolute;
-  background: yellow;
-  width: 20%;
-  height: 20%;
-  top: 37%;
-  right: 21%;
-  border-radius: 50%;
-  z-index: 3;
-}
-
 .pupil{
   position: absolute;
   width: 40%;
