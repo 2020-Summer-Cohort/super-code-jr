@@ -104,7 +104,17 @@ const renderCorrectedError = (question) => {
   const fakeCode = document.querySelector(".overlay");
   fakeCode.innerText = ``;
   const fakeCodeContainer = document.createElement("code");
-  fakeCodeContainer.innerText = `${question.beforeErrorCode}${question.correctedError}${question.afterErrorCode}`;
+  const beforeError = document.createElement("p");
+  beforeError.innerText = `${question.beforeErrorCode}`;
+  const correctedError = document.createElement("p");
+  correctedError.classList.add("highlight--corrected");
+  correctedError.innerText = `${question.correctedError}`;
+  const afterError = document.createElement("p");
+  afterError.innerText = `${question.afterErrorCode}`;
+  // fakeCodeContainer.innerText = `${question.beforeErrorCode}${question.correctedError}${question.afterErrorCode}`;
+  fakeCodeContainer.appendChild(beforeError);
+  fakeCodeContainer.appendChild(correctedError);
+  fakeCodeContainer.appendChild(afterError);
   fakeCode.appendChild(fakeCodeContainer);
   const codeTag = document.querySelector(".error--block");
   codeTag.classList.add("highlight--corrected");

@@ -349,7 +349,9 @@ body {
   border-top-left-radius: 0px;
   margin-left: 4px;
 }
-
+.highlight--corrected{
+  color: aqua;
+}
 /* ----------pre------------ */
 .whole-code {
   overflow-x: auto;
