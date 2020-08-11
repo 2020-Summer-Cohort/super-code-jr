@@ -65,7 +65,17 @@ body {
   width: 25px;
   height: 25px;
 }
-
+.AddQuestion {
+  font-size: xx-large;
+  font-family: "cyber";
+  color: var(--text);
+  padding: 1rem;
+  text-decoration: none;
+}
+.AddQuestion:hover {
+  color: var(--cyan)
+  text-shadow: 0px 0px 15px 2px var(--glow1);
+}
 .developer-tab {
   font-family: "peepo";
   display: flex;
