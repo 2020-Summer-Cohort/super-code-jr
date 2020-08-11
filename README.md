@@ -1,6 +1,7 @@
 Codey Vs. Coder AKA Super Coder Junior
 
-Final Project For WCCI Summer Cohort of 2020 Team 3
+Final Project For WCCI Summer Cohort of 2020 
+Team 3
 
 <img src= "https://github.com/2020-Summer-Cohort/super-code-jr/blob/dev/front-end/images/CODEYSURPRISEDCOLORFIX.gif" alt="Codey Gif" width="300" height="300" >
 

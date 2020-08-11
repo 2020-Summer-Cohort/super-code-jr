@@ -1,0 +1,119 @@
+CSS
+###
+.pupil{
+  position: absolute;
+  width: 40%;
+  height: 70%;
+  top: 15%;
+  left: 30%;
+  border-radius: 50%;
+  background: #000000;
+}
+
+###
+nose{
+###
+position: absolute;
+background: #E090A1;
+width: 15%;
+height: 9.5%;
+left: 43%;
+top: 65%;
+border-radius: 50px;
+z-index: 4;
+}
+###
+.nose{
+###
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<head><link rel="stylesheet" href="./css/question-css/catquestion.css"/></head>
+ <div class="box">
+    <div class="head">
+      <div class="head-copy"></div>
+      <div class="ear-left">
+      <div class="inner-ear"></div>
+      </div>
+       <div class="ear-right">
+        <div class="inner-ear"></div>
+      </div>
+      <div class="eye-left">
+        <div class="pupil">
+        </div>
+      </div>
+      <div class="eye-right">
+        <div class="pupil">
+        </div>
+      </div>
+       <div class="">
+       </div>
+    </div>
+ </div>
+</body>
+</html>
+###
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="./css/question-css/catquestion.css"/></head>
+<body>
+ <!-- Begin Image -->
+ <!-- Invisible Box-->
+ <div class="box">
+
+    <!-- Circular Head-->
+    <div class="head">
+
+      <!-- Circular Head Copy -->
+      <div class="head-copy"></div>
+
+       <!-- Left Ear ~ Black-->
+      <div class="ear-left">
+
+       <!-- Inner ear ~ Pink -->
+      <div class="inner-ear"></div>
+      </div>
+
+      <!-- Right Ear ~ Black-->
+       <div class="ear-right">
+
+      <!-- Inner Ear ~ Pink-->
+        <div class="inner-ear"></div>
+      </div>
+
+      <!-- Left Outer Eye ~ Yellow -->
+      <div class="eye-left">
+
+        <!-- Pupil ~ Black -->
+        <div class="pupil">
+        </div>
+      </div>
+
+      <!-- Right Outer Eye ~ Yellow -->
+      <div class="eye-right">
+
+        <!-- Pupil ~ Black -->
+        <div class="pupil">
+        </div>
+      </div>
+
+       <!-- Nose ~ Pink -->
+       <div class="nose">
+       </div>
+
+    <!-- End Head -->
+    </div>
+ <!-- End Invisible Box -->
+ </div>
+</body>
+</html>
+###
+Why isn't my cat's nose showing? You think you can figure it out...really?
+###
+Well, I guess you aren't totally useless after all.
+###
+Remember what you need to access classes...
+###
+Bzzzzzt!
+###
+Congratulations! Remember, you need a period in order to access classes in CSS.
