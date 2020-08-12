@@ -9,6 +9,11 @@ import { questionGrabber } from "./gameLoop.js";
 const walkieTalkie = new Audio("audio/walkie-talkie.mp3");
 const codeyStart = new Audio("audio/codey-start.wav");
 const codeyEnd = new Audio("audio/codey-end.wav");
+const backgroundMusic = new Audio("audio/backgroundMusic.mp3");
+codeyStart.volume = 0.5;
+codeyEnd.volume = 0.5;
+walkieTalkie.volume = 0.5;
+backgroundMusic.volume = 0.05;
 const numberOfTries = document.querySelector(".score");
 const totalNumberOfTries = document.querySelector(".total-score");
 const unMute = document.querySelector(".unmute");
@@ -17,6 +22,7 @@ const mute = document.querySelector(".mute");
 mute.addEventListener("click", () => {
   walkieTalkie.muted = true;
   codeyStart.muted = true;
+  backgroundMusic.muted = true;
   codeyEnd.muted = true;
   mute.classList.add("hidden");
   unMute.classList.remove("hidden");
@@ -25,12 +31,14 @@ mute.addEventListener("click", () => {
 unMute.addEventListener("click", () => {
   walkieTalkie.muted = false;
   codeyStart.muted = false;
+  backgroundMusic.muted = false;
   codeyEnd.muted = false;
   unMute.classList.add("hidden");
   mute.classList.remove("hidden");
 });
 
 const renderAllContent = (question, turnCounter) => {
+  backgroundMusic.play();
   renderWrongIframeContent(question);
   renderWholeErrorCode(question, turnCounter);
   renderCodeyStartingDialogue(question);
