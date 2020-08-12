@@ -1,0 +1,142 @@
+@font-face {
+  font-family: "cyber";
+  src: url("../images/raceway.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text);
+  list-style-type: none;
+}
+
+:root {
+  --cyan: #51e8f0;
+  --offBlack: #18181a;
+  --glow1: #e49a39;
+  --text: #ebd8a6;
+}
+h1 {
+  font-family: "cyber";
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 1 1 12px #ebd8a6, 0 0 20px #ebd8a6, 0 0 30px #e49a39,
+      0 0 40px #e49a39, 50px #e49a39, 0 0 60px #e49a39, 0 0 70px #e49a39;
+  }
+  to {
+    text-shadow: 0 0 20px #ebd8a6, 0 0 30px #ebd8a6, 0 0 40px #ebd8a6,
+      0 0 #ebd8a6;
+  }
+}
+
+body {
+  background-color: var(--offBlack);
+  background-image: url("../images/space.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw;
+}
+
+.about-us-header {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-family: cyber;
+  color: var(--text);
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+  margin-bottom: 1em;
+}
+
+.bio-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 5em 5em 5em 5em 5em 5em;
+  padding-bottom: 2em;
+}
+
+.bio-img {
+  width: 100px;
+  height: 100px;
+  padding-top: 2px;
+  clip-path: polygon(25% 0, 100% 0, 75% 100%, 0 100%);
+}
+
+.bio-img:hover {
+  border: solid;
+  border-color: var(--glow1);
+}
+
+.bio-anchors {
+  text-shadow: 0 0 1em var(--glow1);
+}
+
+.developer-display {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.developer-img {
+  width: 300px;
+  height: 300px;
+  box-shadow: 0px 0px 40px 10px var(--cyan);
+}
+
+.developer-img-container {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 3em;
+}
+
+.developer-info-box {
+  display: grid;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 5em;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  padding-bottom: 1em;
+}
+
+.skill-ul {
+  text-decoration: none;
+}
+.skill-bar-1,
+.skill-bar-2,
+.skill-bar-3,
+.skill-bar-4 {
+  clip-path: polygon(0 30%, 100% 30%, 100% 80%, 0 80%);
+}
+
+.skill-bar-1 {
+  color: #f29b22;
+  background-color: #f29b22;
+}
+
+.skill-bar-2 {
+  color: #e34c26;
+  background-color: #e34c26;
+}
+
+.skill-bar-3 {
+  color: #563d7c;
+  background-color: #563d7c;
+}
+
+.skill-bar-4 {
+  color: #f1e05a;
+  background-color: #f1e05a;
+}
+
+.skill-span {
+  display: flex;
+}

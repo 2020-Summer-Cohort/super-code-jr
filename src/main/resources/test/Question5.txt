@@ -1,0 +1,46 @@
+CSS
+###
+Welcome to Codey Vs. Coder! See if you can defeat the arrogant Codey, 
+who seems to think he's the best coder around. 
+In this game, you will encounter a block of code containing an error. 
+Simply click on the error when you find it to see your error fixed. 
+If you guess wrong, our friendly radio tower will give you a hint. 
+For example, I think the text on the left should be red - not blue. 
+Let's see if you can figure out why it's displaying wrong.
+
+p {
+font-size: xx-large;
+font-family: sans-serif;
+###
+color: blue;
+###
+text-align: center;
+}
+###
+color: red;
+###
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<head><link rel="stylesheet" href="./css/question-css/tutorial-wrong.css"/></head>
+<p>I should be red, not blue!</p>
+</body>
+</html>
+###
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<head><link rel="stylesheet" href="./css/question-css/tutorial-right.css"/></head>
+<p>I should be red, not blue!</p>
+</body>
+</html>
+###
+I'm Codey - the best coder around! So I don't understand why so much of my code has these pesky little errors! Let's see if you're smart enough to figure it out.
+###
+Well, that was just the example question. I doubt you can figure these next ones out.
+###
+I'm here to help if you click on the wrong code! Pay close attention to the colors...
+###
+Bzzzzt! Game begins!
+###
+Great job! Press the continue button to advance to the next question.

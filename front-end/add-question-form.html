@@ -7,84 +7,121 @@
     <title>Add Your Question</title>
   </head>
   <body>
-    <h1>Create a New Challenge</h1>
-    <div>
-      <input type="text" id="codeLanguage" placeholder="Enter Code Language" />
-    </div>
-    <div>
-      <textarea
-        id="beforeErrorCode"
-        name="beforeErrorCode"
-        placeholder="Enter code before the error"
-      ></textarea>
-    </div>
-    <div>
-      <textarea
-        id="errorCode"
-        name="errorCode"
-        placeholder="Enter line of code with the error"
-      ></textarea>
-    </div>
-    <div>
-      <textarea
-        id="afterErrorCode"
-        name="afterErrorCode"
-        placeholder="Enter code after error"
-      ></textarea>
-    </div>
-    <div>
-      <textarea
-        id="correctedError"
-        name="correctedError"
-        placeholder="Enter code with error corrected"
-      ></textarea>
-    </div>
-    <div>
-      <textarea
-        name="iframeWrong"
-        id="iframeWrong"
-        placeholder="Enter iFrame code for wrong code"
-      ></textarea>
-    </div>
-    <div>
-      <textarea
-        id="iframeCorrect"
-        name="iframeCorrect"
-        placeholder="Enter iFrame code for corrected code"
-      ></textarea>
-    </div>
-    <div>
-      <input
-        type="text"
-        id="codeyStartingDialogue"
-        placeholder="Enter Codey's starting dialogue"
-      />
-    </div>
-    <div>
-      <input
-        type="text"
-        id="codeyEndingDialogue"
-        placeholder="Enter Codey's ending dialogue"
-      />
-    </div>
-    <div>
-      <input type="text" id="hintText" placeholder="Enter a hint" />
-    </div>
-    <div>
-      <input
-        type="text"
-        id="groundControlBeginningDialogue"
-        placeholder="Enter Ground Control Beginning Dialogue"
-      />
-    </div>
-    <div>
-      <input
-        type="text"
-        id="groundControlCompletedDialogue"
-        placeholder="Enter Ground Control Ending Dialogue"
-      />
-    </div>
-    <input type="button" id="submitButton" value="Save Question to the Game" />
+    <header>
+      <a href="./Index.html"><button><-Back to CvC</button></a>
+    </header>
+    <container class="bigcontainer">
+      <container class="form-container">
+        <h1>Question Input</h1>
+        <div>
+          <input
+            type="text"
+            id="codeLanguage"
+            placeholder="Enter Code Language"
+          />
+        </div>
+        <div>
+          <textarea
+            id="beforeErrorCode"
+            name="beforeErrorCode"
+            placeholder="Enter code before the error"
+          ></textarea>
+        </div>
+        <div>
+          <textarea
+            id="errorCode"
+            name="errorCode"
+            placeholder="Enter line of code with the error"
+          ></textarea>
+        </div>
+        <div>
+          <textarea
+            id="afterErrorCode"
+            name="afterErrorCode"
+            placeholder="Enter code after error"
+          ></textarea>
+        </div>
+        <div>
+          <textarea
+            id="correctedError"
+            name="correctedError"
+            placeholder="Enter line of code with error corrected"
+          ></textarea>
+        </div>
+        <div>
+          <textarea
+            name="iframeWrong"
+            id="iframeWrong"
+            placeholder="Enter iFrame code for wrong code"
+          ></textarea>
+        </div>
+        <div>
+          <textarea
+            id="iframeCorrect"
+            name="iframeCorrect"
+            placeholder="Enter iFrame code for corrected code"
+          ></textarea>
+        </div>
+        <div>
+          <textarea
+            id="codeyStartingDialogue"
+            placeholder="Codey's starting dialogue"
+          ></textarea>
+        </div>
+        <div>
+          <textarea
+            type="text"
+            id="codeyEndingDialogue"
+            placeholder="Codey's ending dialogue"
+          ></textarea>
+        </div>
+        <div>
+          <textarea id="hintText" placeholder="Enter a hint"></textarea>
+        </div>
+        <div>
+          <textarea
+            id="groundControlBeginningDialogue"
+            placeholder="GC Beginning Dialogue"
+          ></textarea>
+        </div>
+        <div>
+          <textarea
+            id="groundControlCompletedDialogue"
+            placeholder="GC Ending Dialogue"
+          ></textarea>
+        </div>
+        <input
+          type="button"
+          id="submitButton"
+          class="submitButton"
+          value="Save"
+        />
+      </container>
+      <container class="instructions">
+        <h2>Quick Guide to creating a question</h2>
+        <h5>quick tips!</h5>
+        <ol>
+          <li>Each question should only have one error</li>
+          <li>
+            Iframe code should have all code necessary to display a full page
+            (HTML,CSS,JS)
+          </li>
+          <li>Question Code snippets should not exceed 25 lines</li>
+          <li>
+            Visually oriented questions and iframes give a better reward for the
+            viewer!
+          </li>
+          <li>
+            GC stands for "Ground Control", this little guy!
+          </li>
+          <li class="GCli">
+            <img src="./images/missionControldarker.gif" class="GC" />
+          </li>
+        </ol>
+      </container>
+      <container></container>
+    </container>
     <script src="./javascript/submitQuestion.js" type="module"></script>
+    <footer>background image freepix.com</footer>
   </body>
 </html>
