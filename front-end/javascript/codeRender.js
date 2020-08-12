@@ -119,7 +119,6 @@ const renderCorrectedError = (question) => {
   correctedError.innerText = `${question.correctedError}`;
   const afterError = document.createElement("p");
   afterError.innerText = `${question.afterErrorCode}`;
-  // fakeCodeContainer.innerText = `${question.beforeErrorCode}${question.correctedError}${question.afterErrorCode}`;
   fakeCodeContainer.appendChild(beforeError);
   fakeCodeContainer.appendChild(correctedError);
   fakeCodeContainer.appendChild(afterError);
