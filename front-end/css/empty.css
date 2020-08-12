@@ -50,7 +50,13 @@ body {
 }
 
 /* --------------------------TAB & HEADER THINGS--------------------------------------------------------- */
-
+.cvc {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  height: 80px;
+  left: 45vw;
+}
 .clicks {
   max-height: 25px;
   padding: 3px;
