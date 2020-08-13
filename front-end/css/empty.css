@@ -54,33 +54,11 @@ body {
 
 .header-display .logo
 {
-width:105px;
+width:300px;
 align-content: center;
-margin-left: 310px;
+margin-left: 355px;
+margin-top: -20px;
 }
-
-
-/* .game-header
-{
-  text-shadow: 1px  0 rgba(255, 255, 255, 0.5),
-    2px 1px 2px rgba(255, 0, 255, 0.85), -3px -2px 3px rgba(0, 0, 255, 0.85),
-    1px -2px 0 rgba(255, 255, 255, 0.8);
-  color: rgb(255, 0, 234);
-  z-index: -5;
-} */
-
-/* .game-header  {
-  text-shadow: 1px -1px 0 rgba(255, 255, 255, 0.5),
-    2px 1px 2px rgba(255, 0, 255, 0.85), -3px -2px 3px rgba(0, 0, 255, 0.85),
-    1px -2px 0 rgba(255, 255, 255, 0.8);
-  color: rgb(255, 0, 234);
-  font-size: 2em;
-  transform: rotateZ(-15deg);
-  position: absolute;
-  font-family: "Courgette", cursive;
-  transition: font-size 1s;
-  margin-top: 3.5em;
-} */
 
 .clicks 
 {
@@ -88,30 +66,6 @@ margin-left: 310px;
   padding: 3px;
   
 }
-<<<<<<< HEAD
-
-=======
-.mute-function {
-  max-height: 25px;
-  padding: 3px;
-  align-self: center;
-}
-.mute-function img {
-  width: 25px;
-  height: 25px;
-}
-.AddQuestion {
-  font-size: xx-large;
-  font-family: "cyber";
-  color: var(--text);
-  padding: 1rem;
-  text-decoration: none;
-}
-.AddQuestion:hover {
-  color: var(--cyan)
-  text-shadow: 0px 0px 15px 2px var(--glow1);
-}
->>>>>>> c8b6af8973999d86cebc8c238565547709adc9e7
 .developer-tab {
   font-family: "peepo";
   display: flex;
@@ -124,6 +78,7 @@ margin-left: 310px;
   border-top-left-radius: 1em;
   padding: 0.7em;
   margin-top: 0.5em;
+  margin-bottom:1.7em;
   margin-left: 0.2em;
   font-size: 25px;
   font-family: 'Ubuntu mono';
@@ -139,6 +94,7 @@ margin-left: 310px;
   border-top-left-radius: 1em;
   padding: 0.7em;
   margin-top: 0.5em;
+  margin-bottom:1.7em;
   margin-left: 0.2em;
   font-size: 25px;
   font-family: 'Ubuntu mono';
@@ -150,15 +106,8 @@ margin-left: 310px;
 .developer-tab:hover {
   background-color: rgba(54, 226, 248, 0.8);
 }
-<<<<<<< HEAD
 
 .number-of-tries {
-=======
-.game-header,
-.number-of-tries,
-.mute-function {
-  font-family: "peepo";
->>>>>>> c8b6af8973999d86cebc8c238565547709adc9e7
   display: flex;
   justify-self: center;
   align-self: center;
