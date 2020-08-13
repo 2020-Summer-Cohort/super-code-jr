@@ -51,11 +51,14 @@ body {
 
 /* --------------------------TAB & HEADER THINGS--------------------------------------------------------- */
 .cvc {
+  display: block;
   position: absolute;
+  top: -2%;
+  padding-left: 4%;
+
   z-index: 3;
-  top: 0;
-  height: 80px;
-  left: 45vw;
+
+  height: 100px;
 }
 .clicks {
   max-height: 25px;
