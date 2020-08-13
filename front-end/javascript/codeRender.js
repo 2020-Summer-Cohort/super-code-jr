@@ -12,7 +12,7 @@ const codeyEnd = new Audio("audio/codey-end.wav");
 const backgroundMusic = new Audio("audio/backgroundMusic.mp3");
 codeyStart.volume = 0.5;
 codeyEnd.volume = 0.5;
-walkieTalkie.volume = 0.5;
+walkieTalkie.volume = 0.4;
 backgroundMusic.volume = 0.05;
 const numberOfTries = document.querySelector(".score");
 const totalNumberOfTries = document.querySelector(".total-score");
@@ -119,7 +119,6 @@ const renderCorrectedError = (question) => {
   correctedError.innerText = `${question.correctedError}`;
   const afterError = document.createElement("p");
   afterError.innerText = `${question.afterErrorCode}`;
-  // fakeCodeContainer.innerText = `${question.beforeErrorCode}${question.correctedError}${question.afterErrorCode}`;
   fakeCodeContainer.appendChild(beforeError);
   fakeCodeContainer.appendChild(correctedError);
   fakeCodeContainer.appendChild(afterError);
