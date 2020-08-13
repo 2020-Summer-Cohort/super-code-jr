@@ -35,45 +35,6 @@ submitButton.addEventListener("click", () => {
 
   console.log(question);
   submitQuestion(question);
-  //   console.log("Hello");
-  //   let data =
-  //     codeLanguage.value +
-  //     "\r\n###\r\n" +
-  //     beforeError.value +
-  //     "\r\n###\r\n" +
-  //     errorCode.value +
-  //     "\r\n###\r\n" +
-  //     afterError.value +
-  //     "\r\n###\r\n" +
-  //     correctedError.value +
-  //     "\r\n###\r\n" +
-  //     iframeWrong.value +
-  //     "\r\n###\r\n" +
-  //     iframeCorrect.value +
-  //     "\r\n###\r\n" +
-  //     codeyStartingDialogue.value +
-  //     "\r\n###\r\n" +
-  //     codeyEndingDialogue.value +
-  //     "\r\n###\r\n" +
-  //     hintText.value +
-  //     "\r\n###\r\n" +
-  //     groundControlBeginningDialogue.value +
-  //     "\r\n###\r\n" +
-  //     groundControlCompletedDialogue.value;
-
-  //   const textToBlob = new Blob([data], { type: "text/plain" });
-  //   const fileName = "testQuestion.txt";
-
-  //   /// call api
-  //   let newLink = document.createElement("a");
-  //   newLink.download = fileName;
-
-  //   if (window.webkitURL != null) {
-  //     newLink.href = window.webkitURL.createObjectURL(textToBlob);
-  //   } else {
-  //     newLink.href = window.URL.createObjectURL(textToBlOB);
-  //     newLink.style.display = "none";
-  //     document.body.appendChild(newLink);
-  //   }
-  //   newLink.click();
+  alert("Thanks for your submission!");
+  document.location.reload(true);
 });
