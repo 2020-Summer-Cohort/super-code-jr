@@ -1,46 +1,128 @@
-CSS
+Javascript
 ###
-Welcome to Codey Vs. Coder! See if you can defeat the arrogant Codey, 
-who seems to think he's the best coder around. 
-In this game, you will encounter a block of code containing an error. 
-Simply click on the error when you find it to see your error fixed. 
-If you guess wrong, our friendly radio tower will give you a hint. 
-For example, I think the text on the left should be red - not blue. 
-Let's see if you can figure out why it's displaying wrong.
+const canvas = document.querySelector("canvas");
+      var ctx = canvas.getContext("2d");
+      var redColor = 0;
+      var colorSwitch = true;
+###
+ const drawSquare = ()  {
+###
+if (redColor == 255) {
+          colorSwitch = false;
+        } else if (redColor == 0) {
+          colorSwitch = true;
+        }
+        if (colorSwitch == true) {
+          redColor++;
+        } else {
+          redColor--;
+        }
+        var x = event.clientX; // Get the horizontal coordinate
+        var y = event.clientY;
 
-p {
-font-size: xx-large;
-font-family: sans-serif;
+        ctx.beginPath();
+        ctx.lineWidth = "6";
+        ctx.strokeStyle = "rgb(" + redColor + ", 255, 255)";
+        ctx.rect(x, y, 10, 10);
+        ctx.stroke();
+      };
 ###
-color: blue;
-###
-text-align: center;
-}
-###
-color: red;
+ const drawSquare = () => {
 ###
 <!DOCTYPE html>
 <html lang="en">
-<body>
-<head><link rel="stylesheet" href="./css/question-css/tutorial-wrong.css"/></head>
-<p>I should be red, not blue!</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas
+      id="canvas"
+      width="690"
+      height="651"
+      onmousemove="drawSquare()"
+    ></canvas>
+    <script>
+      const canvas = document.querySelector("canvas");
+      var ctx = canvas.getContext("2d");
+      var redColor = 0;
+      var colorSwitch = true;
+
+      const drawSquare = ()  {
+        if (redColor == 255) {
+          colorSwitch = false;
+        } else if (redColor == 0) {
+          colorSwitch = true;
+        }
+        if (colorSwitch == true) {
+          redColor++;
+        } else {
+          redColor--;
+        }
+        var x = event.clientX; // Get the horizontal coordinate
+        var y = event.clientY;
+
+        ctx.beginPath();
+        ctx.lineWidth = "6";
+        ctx.strokeStyle = "rgb(" + redColor + ", 255, 255)";
+        ctx.rect(x, y, 10, 10);
+        ctx.stroke();
+      };
+    </script>
+  </body>
 </html>
 ###
 <!DOCTYPE html>
 <html lang="en">
-<body>
-<head><link rel="stylesheet" href="./css/question-css/tutorial-right.css"/></head>
-<p>I should be red, not blue!</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas
+      id="canvas"
+      width="690"
+      height="651"
+      onmousemove="drawSquare()"
+    ></canvas>
+    <script>
+      const canvas = document.querySelector("canvas");
+      var ctx = canvas.getContext("2d");
+      var redColor = 0;
+      var colorSwitch = true;
+
+      const drawSquare = () => {
+        if (redColor == 255) {
+          colorSwitch = false;
+        } else if (redColor == 0) {
+          colorSwitch = true;
+        }
+        if (colorSwitch == true) {
+          redColor++;
+        } else {
+          redColor--;
+        }
+        var x = event.clientX; // Get the horizontal coordinate
+        var y = event.clientY;
+
+        ctx.beginPath();
+        ctx.lineWidth = "6";
+        ctx.strokeStyle = "rgb(" + redColor + ", 255, 255)";
+        ctx.rect(x, y, 10, 10);
+        ctx.stroke();
+      };
+    </script>
+  </body>
 </html>
 ###
-I'm Codey - the best coder around! So I don't understand why so much of my code has these pesky little errors! Let's see if you're smart enough to figure it out.
+All my friends agree that javascript is the dumbest language. This draw square function doesn't even work! When I move my mouse in the window nothing happens!###
+Whatever, it's not like I needed your help. 
 ###
-Well, that was just the example question. I doubt you can figure these next ones out.
+ When you use "const" to define a function, don't forget the parentheses!
+ Even if it's not taking in parameters!
 ###
-I'm here to help if you click on the wrong code! Pay close attention to the colors...
+ Bzzzt.... 
 ###
-Bzzzzt! Game begins!
-###
-Great job! Press the continue button to advance to the next question.
+ Well done! Try moving your mouse in the window now! Codey might have a unique way of expressing gratitude, but he's thankful his code works.
